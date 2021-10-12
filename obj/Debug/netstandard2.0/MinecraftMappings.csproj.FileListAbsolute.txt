@@ -1,0 +1,10 @@
+D:\PixelGraph\MinecraftMappings\bin\Debug\netstandard2.0\MinecraftMappings.deps.json
+D:\PixelGraph\MinecraftMappings\bin\Debug\netstandard2.0\MinecraftMappings.dll
+D:\PixelGraph\MinecraftMappings\bin\Debug\netstandard2.0\MinecraftMappings.pdb
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.GeneratedMSBuildEditorConfig.editorconfig
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.AssemblyInfoInputs.cache
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.AssemblyInfo.cs
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.csproj.CoreCompileInputs.cache
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.dll
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.pdb
+D:\PixelGraph\MinecraftMappings\obj\Debug\netstandard2.0\MinecraftMappings.csproj.AssemblyReference.cache

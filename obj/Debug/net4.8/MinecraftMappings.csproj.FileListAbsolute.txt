@@ -1,0 +1,11 @@
+D:\PixelGraph\MinecraftMappings\bin\Debug\net4.8\MinecraftMappings.dll
+D:\PixelGraph\MinecraftMappings\bin\Debug\net4.8\MinecraftMappings.pdb
+D:\PixelGraph\MinecraftMappings\bin\Debug\net4.8\SharpDX.dll
+D:\PixelGraph\MinecraftMappings\bin\Debug\net4.8\SharpDX.Mathematics.dll
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.csproj.AssemblyReference.cache
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.GeneratedMSBuildEditorConfig.editorconfig
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.AssemblyInfoInputs.cache
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.AssemblyInfo.cs
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.csproj.CoreCompileInputs.cache
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.dll
+D:\PixelGraph\MinecraftMappings\obj\Debug\net4.8\MinecraftMappings.pdb
