@@ -1,0 +1,10 @@
+D:\MinecraftMappings.NET\MinecraftMappings.NET\bin\Debug\netstandard2.0\MinecraftMappings.NET.deps.json
+D:\MinecraftMappings.NET\MinecraftMappings.NET\bin\Debug\netstandard2.0\MinecraftMappings.NET.dll
+D:\MinecraftMappings.NET\MinecraftMappings.NET\bin\Debug\netstandard2.0\MinecraftMappings.NET.pdb
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.csproj.AssemblyReference.cache
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.GeneratedMSBuildEditorConfig.editorconfig
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.AssemblyInfoInputs.cache
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.AssemblyInfo.cs
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.csproj.CoreCompileInputs.cache
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.dll
+D:\MinecraftMappings.NET\MinecraftMappings.NET\obj\Debug\netstandard2.0\MinecraftMappings.NET.pdb
