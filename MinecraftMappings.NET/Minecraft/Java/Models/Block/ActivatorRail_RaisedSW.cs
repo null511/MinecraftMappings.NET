@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class ActivatorRail_RaisedSW : JavaModelData
+    public class ActivatorRail_RaisedSW : JavaBlockModel
     {
         public ActivatorRail_RaisedSW() : base("Activator Rail, Raised SW")
         {

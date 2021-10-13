@@ -1,9 +1,9 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class Lever : JavaBlockData
+    public class Lever : JavaBlockTexture
     {
         public Lever() : base("Lever")
         {

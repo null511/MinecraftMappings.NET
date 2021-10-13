@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BeeNestBottom : JavaBlockData
+    public class BeeNestBottom : JavaBlockTexture
     {
-        public const string BlockId = "bee_nest_bottom";
-        public const string BlockName = "Bee Nest Bottom";
-
-
-        public BeeNestBottom() : base(BlockName)
+        public BeeNestBottom() : base("Bee Nest Bottom")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.BeeNestBottom.BlockId,
-            });
+            AddVersion("bee_nest_bottom")
+                .MapsToBedrockBlock<BedrockBlocks.BeeNestBottom>();
         }
     }
 }

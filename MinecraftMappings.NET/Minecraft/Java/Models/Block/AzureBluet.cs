@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class AzureBluet : JavaModelData
+    public class AzureBluet : JavaBlockModel
     {
         public AzureBluet() : base("Azure Bluet")
         {

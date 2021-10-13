@@ -1,15 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class Rail : JavaBlockData
+    public class Rail : JavaBlockTexture
     {
         public Rail() : base("Rail")
         {
             AddVersion("rail")
-                .WithDefaultModel<Java.Models.Block.Rail>()
-                .MapsToBedrockBlock<BedrockBlocks.BlueIce>();
+                .WithDefaultModel<Java.Models.Block.Rail>();
+                //.MapsToBedrockBlock<BedrockBlocks.Rail>();
         }
     }
 }

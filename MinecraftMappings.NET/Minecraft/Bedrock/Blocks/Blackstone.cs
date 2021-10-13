@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class Blackstone : BedrockBlockData
+    public class Blackstone : BedrockBlockTexture
     {
-        public const string BlockId = "blackstone";
-        public const string BlockName = "Blackstone";
-
-
-        public Blackstone() : base(BlockName)
+        public Blackstone() : base("Blackstone")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Java.Textures.Block.Blackstone.BlockId,
-            });
+            AddVersion("blackstone")
+                .MapsToJavaBlock<Java.Textures.Block.Blackstone>();
         }
     }
 }

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 using SharpDX;
+using System.Collections.Generic;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Boat : JavaEntityData
+    public class Boat : JavaEntityModel
     {
         public Boat() : base("Boat")
         {

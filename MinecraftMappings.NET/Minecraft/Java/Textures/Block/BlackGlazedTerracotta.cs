@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BlackGlazedTerracotta : JavaBlockData
+    public class BlackGlazedTerracotta : JavaBlockTexture
     {
-        public const string BlockId = "black_glazed_terracotta";
-        public const string BlockName = "Black Glazed Terracotta";
-
-
-        public BlackGlazedTerracotta() : base(BlockName)
+        public BlackGlazedTerracotta() : base("Black Glazed Terracotta")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.GlazedTerracottaBlack.BlockId,
-            });
+            AddVersion("black_glazed_terracotta")
+                .MapsToBedrockBlock<BedrockBlocks.GlazedTerracottaBlack>();
         }
     }
 }

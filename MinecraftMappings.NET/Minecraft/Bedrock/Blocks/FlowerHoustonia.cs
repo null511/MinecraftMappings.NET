@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class FlowerHoustonia : BedrockBlockData
+    public class FlowerHoustonia : BedrockBlockTexture
     {
-        public const string BlockId = "flower_houstonia";
-        public const string BlockName = "Flower Houstonia";
-
-
-        public FlowerHoustonia() : base(BlockName)
+        public FlowerHoustonia() : base("Flower Houstonia")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaBlock = typeof(AzureBluet),
-            });
+            AddVersion("flower_houstonia")
+                .MapsToJavaBlock<Java.Textures.Block.AzureBluet>();
         }
     }
 }

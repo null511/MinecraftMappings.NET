@@ -1,21 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class ShulkerTopBlack : BedrockBlockData
+    public class ShulkerTopBlack : BedrockBlockTexture
     {
-        public const string BlockId = "shulker_top_black";
-        public const string BlockName = "Shulker Top Black";
-
-
-        public ShulkerTopBlack() : base(BlockName)
+        public ShulkerTopBlack() : base("Shulker Top Black")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BlackShulkerBox.BlockId,
-            });
+            AddVersion("shulker_top_black")
+                .MapsToJavaBlock<Java.Textures.Block.BlackShulkerBox>();
         }
     }
 }

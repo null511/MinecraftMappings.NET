@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class ConcreteBlack : BedrockBlockData
+    public class ConcreteBlack : BedrockBlockTexture
     {
-        public const string BlockId = "concrete_black";
-        public const string BlockName = "Concrete Black";
-
-
-        public ConcreteBlack() : base(BlockName)
+        public ConcreteBlack() : base("Concrete Black")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToJavaId = BlackConcrete.BlockId;
-            });
+            AddVersion("concrete_black")
+                .MapsToJavaBlock<BlackConcrete>();
         }
     }
 }

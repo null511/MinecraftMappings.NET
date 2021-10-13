@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BellSide : JavaBlockData
+    public class BellSide : JavaBlockTexture
     {
-        public const string BlockId = "bell_side";
-        public const string BlockName = "Bell Side";
-
-
-        public BellSide() : base(BlockName)
+        public BellSide() : base("Bell Side")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.BellSide.BlockId,
-            });
+            AddVersion("bell_side")
+                //.WithDefaultModel<Java.Models.Block.Bell>()
+                .MapsToBedrockBlock<BedrockBlocks.BellSide>();
         }
     }
 }

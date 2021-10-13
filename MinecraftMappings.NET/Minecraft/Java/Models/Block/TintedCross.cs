@@ -1,9 +1,10 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class TintedCross : JavaModelData
+    public class TintedCross : JavaBlockModel
     {
         public TintedCross() : base("Tinted Cross")
         {

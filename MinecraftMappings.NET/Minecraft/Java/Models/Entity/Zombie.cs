@@ -1,14 +1,14 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Zombie : JavaEntityData
+    public class Zombie : JavaEntityModel
     {
         public Zombie() : base("Zombie")
         {
             AddVersion("zombie", "1.0.0")
-                .WithPath("models/block/zombie")
+                .WithPath("entity/zombie")
                 .AddElement("head", element => {
                     element.Position = new Vector3(-4f, 24f, -4f);
                     element.Size = new Vector3(8f, 8f, 8f);

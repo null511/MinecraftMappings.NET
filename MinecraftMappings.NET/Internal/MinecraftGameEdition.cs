@@ -1,7 +1,7 @@
-﻿using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Internal.Entities;
-using MinecraftMappings.Internal.Items;
-using MinecraftMappings.Internal.Models;
+﻿using MinecraftMappings.Internal.Items;
+using MinecraftMappings.Internal.Models.Block;
+using MinecraftMappings.Internal.Models.Entity;
+using MinecraftMappings.Internal.Textures.Block;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,15 +9,15 @@ using System.Linq;
 namespace MinecraftMappings.Internal
 {
     public abstract class MinecraftGameEdition<TBlockTexture, TItem, TEntity, TModel>
-        where TBlockTexture : IBlockData
+        where TBlockTexture : IBlockTexture
         where TItem : IItemData
-        where TEntity : IEntityData
-        where TModel : IModelData
+        where TEntity : IEntityModel
+        where TModel : IBlockModel
     {
-        private static readonly Lazy<IEnumerable<TBlockTexture>> allBlocksLazy = new Lazy<IEnumerable<TBlockTexture>>(BlockData.FromAssembly<TBlockTexture>);
+        private static readonly Lazy<IEnumerable<TBlockTexture>> allBlocksLazy = new Lazy<IEnumerable<TBlockTexture>>(BlockTexture.FromAssembly<TBlockTexture>);
         private static readonly Lazy<IEnumerable<TItem>> allItemsLazy = new Lazy<IEnumerable<TItem>>(ItemData.FromAssembly<TItem>);
-        private static readonly Lazy<IEnumerable<TEntity>> allEntitiesLazy = new Lazy<IEnumerable<TEntity>>(EntityData.FromAssembly<TEntity>);
-        private static readonly Lazy<IEnumerable<TModel>> allModelsLazy = new Lazy<IEnumerable<TModel>>(ModelData.FromAssembly<TModel>);
+        private static readonly Lazy<IEnumerable<TEntity>> allEntitiesLazy = new Lazy<IEnumerable<TEntity>>(EntityModel.FromAssembly<TEntity>);
+        private static readonly Lazy<IEnumerable<TModel>> allModelsLazy = new Lazy<IEnumerable<TModel>>(BlockModel.FromAssembly<TModel>);
 
         public IEnumerable<TBlockTexture> AllBlocks => allBlocksLazy.Value;
         public IEnumerable<TItem> AllItems => allItemsLazy.Value;
@@ -26,9 +26,9 @@ namespace MinecraftMappings.Internal
 
 
         public IEnumerable<TBlockVersion> FindLatestBlockTextureVersionById<TBlockVersion>(string id)
-            where TBlockVersion : BlockDataVersion, new()
+            where TBlockVersion : BlockTextureVersion, new()
         {
-            return allBlocksLazy.Value.OfType<IBlockData<TBlockVersion>>()
+            return allBlocksLazy.Value.OfType<IBlockTexture<TBlockVersion>>()
                 .Select(block => block.GetLatestVersion())
                 .Where(latest => latest.Id.Equals(id));
         }
@@ -42,29 +42,29 @@ namespace MinecraftMappings.Internal
         }
 
         public IEnumerable<TEntityVersion> FindEntityVersionById<TEntityVersion>(string id)
-            where TEntityVersion : EntityDataVersion, new()
+            where TEntityVersion : EntityModelVersion, new()
         {
-            return allEntitiesLazy.Value.OfType<IEntityData<TEntityVersion>>()
+            return allEntitiesLazy.Value.OfType<IEntityModel<TEntityVersion>>()
                 .Select(entity => entity.GetLatestVersion())
                 .Where(latest => latest.Id.Equals(id));
         }
 
         public IEnumerable<TEntityVersion> GetEntitiesByVersion<TEntityVersion>(Version version)
-            where TEntityVersion : EntityDataVersion, new()
+            where TEntityVersion : EntityModelVersion, new()
         {
-            return allEntitiesLazy.Value.OfType<IEntityData<TEntityVersion>>()
+            return allEntitiesLazy.Value.OfType<IEntityModel<TEntityVersion>>()
                 .Select(entity => entity.GetVersion(version));
         }
 
-        public IEnumerable<ModelVersion> FindModelVersionById(string id)
+        public IEnumerable<BlockModelVersion> FindModelVersionById(string id)
         {
             return allModelsLazy.Value
                 .Select(model => model.GetLatestVersion())
                 .Where(latest => latest.Id.Equals(id));
         }
 
-        public IModelData GetModelForTexture<TBlockVersion>(string textureId)
-            where TBlockVersion : BlockDataVersion, new()
+        public IBlockModel GetModelForTexture<TBlockVersion>(string textureId)
+            where TBlockVersion : BlockTextureVersion, new()
         {
             if (textureId == null) return null;
 
@@ -72,7 +72,7 @@ namespace MinecraftMappings.Internal
             var modelType = blockTextures.FirstOrDefault()?.DefaultModel;
             if (modelType == null) return null;
 
-            return (IModelData)Activator.CreateInstance(modelType);
+            return (IBlockModel)Activator.CreateInstance(modelType);
         }
     }
 }

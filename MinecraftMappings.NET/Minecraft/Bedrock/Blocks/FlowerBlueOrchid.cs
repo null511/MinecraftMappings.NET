@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class FlowerBlueOrchid : BedrockBlockData
+    public class FlowerBlueOrchid : BedrockBlockTexture
     {
-        public const string BlockId = "flower_blue_orchid";
-        public const string BlockName = "Flower Blue Orchid";
-
-
-        public FlowerBlueOrchid() : base(BlockName)
+        public FlowerBlueOrchid() : base("Flower Blue Orchid")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaBlock = typeof(BlueOrchid),
-            });
+            AddVersion("flower_blue_orchid")
+                .MapsToJavaBlock<BlueOrchid>();
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class TemplateLantern : JavaModelData
+    public class TemplateLantern : JavaBlockModel
     {
         public TemplateLantern() : base("Template Lantern")
         {

@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BirchDoor : JavaBlockData
+    public class BirchDoor : JavaBlockTexture
     {
         public BirchDoor() : base("Birch Door")
         {

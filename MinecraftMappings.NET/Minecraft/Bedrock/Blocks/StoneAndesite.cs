@@ -1,21 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class StoneAndesite : BedrockBlockData
+    public class StoneAndesite : BedrockBlockTexture
     {
-        public const string BlockId = "stone_andesite";
-        public const string BlockName = "Stone Andesite";
-
-
-        public StoneAndesite() : base(BlockName)
+        public StoneAndesite() : base("Stone Andesite")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Andesite.BlockId,
-            });
+            AddVersion("stone_andesite")
+                .MapsToJavaBlock<Andesite>();
         }
     }
 }

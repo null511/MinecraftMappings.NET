@@ -1,19 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BrownConcretePowder : JavaBlockData
+    public class BrownConcretePowder : JavaBlockTexture
     {
-        public const string BlockId = "brown_concrete_powder";
-        public const string BlockName = "Brown Concrete Powder";
-
-
-        public BrownConcretePowder() : base(BlockName)
+        public BrownConcretePowder() : base("Brown Concrete Powder")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToBedrockId = BedrockBlocks.ConcretePowderBrown.BlockId;
-            });
+            AddVersion("brown_concrete_powder")
+                .MapsToBedrockBlock<BedrockBlocks.ConcretePowderBrown>();
         }
     }
 }

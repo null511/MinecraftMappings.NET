@@ -1,21 +1,15 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class AncientDebrisTop : BedrockBlockData
+    public class AncientDebrisTop : BedrockBlockTexture
     {
-        public const string BlockId = "ancient_debris_top";
-        public const string BlockName = "Ancient Debris Top";
-
-
-        public AncientDebrisTop() : base(BlockName)
+        public AncientDebrisTop() : base("Ancient Debris, Top")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Java.Textures.Block.AncientDebrisTop.BlockId,
-                MinVersion = new GameVersion(1, 16),
-            });
+            AddVersion("ancient_debris_top")
+                .WithMinVersion(new GameVersion(1, 16))
+                .MapsToJavaBlock<Java.Textures.Block.AncientDebrisTop>();
         }
     }
 }

@@ -1,18 +1,12 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Arrow : JavaEntityData
+    public class Arrow : JavaEntityModel
     {
-        public const string EntityId = "arrow";
-        public const string EntityName = "Arrow";
-
-
-        public Arrow() : base(EntityName)
+        public Arrow() : base("Arrow")
         {
-            Versions.Add(new JavaEntityDataVersion {
-                Id = EntityId,
-            });
+            AddVersion("arrow", "1.0");
         }
     }
 }

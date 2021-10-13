@@ -1,22 +1,12 @@
-﻿using System.Linq;
-using MinecraftMappings.Internal.Entities;
-
-namespace MinecraftMappings.Minecraft.Java.Textures.Models
+﻿namespace MinecraftMappings.Minecraft.Java.Textures.Models
 {
     public class GoldenArmor1 : Armor1
     {
-        public const string EntityId = "gold_layer_1";
-        public const string EntityName = "Golden Armor [1]";
-
-
-        public GoldenArmor1() : base(EntityName)
+        public GoldenArmor1() : base("Golden Armor [1]")
         {
-            Versions.Add(new JavaEntityDataVersion {
-                Id = EntityId,
-                TextVersion = "1.0.0",
-                Path = "models/armor/gold_layer_1",
-                UVMappings = DefaultUVRegions.ToList(),
-            });
+            AddVersion("gold_layer_1", "1.0.0")
+                .WithPath("armor/gold_layer_1")
+                .WithUVMappings(DefaultUVRegions);
         }
     }
 }

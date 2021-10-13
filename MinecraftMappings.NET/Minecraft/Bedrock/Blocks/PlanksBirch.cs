@@ -1,21 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class PlanksBirch : BedrockBlockData
+    public class PlanksBirch : BedrockBlockTexture
     {
-        public const string BlockId = "planks_birch";
-        public const string BlockName = "Planks Birch";
-
-
-        public PlanksBirch() : base(BlockName)
+        public PlanksBirch() : base("Planks Birch")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BirchPlanks.BlockId,
-            });
+            AddVersion("planks_birch")
+                .MapsToJavaBlock<Java.Textures.Block.BirchPlanks>();
         }
     }
 }

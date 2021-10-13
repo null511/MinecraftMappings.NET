@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BirchTrapdoorTop : JavaModelData
+    public class BirchTrapdoorTop : JavaBlockModel
     {
         public BirchTrapdoorTop() : base("Birch Trapdoor, Top")
         {

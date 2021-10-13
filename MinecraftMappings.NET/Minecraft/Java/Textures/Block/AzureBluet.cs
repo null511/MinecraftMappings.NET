@@ -1,10 +1,10 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class AzureBluet : JavaBlockData
+    public class AzureBluet : JavaBlockTexture
     {
         public AzureBluet() : base("Azure Bluet")
         {

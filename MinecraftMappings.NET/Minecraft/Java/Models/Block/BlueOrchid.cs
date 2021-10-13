@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BlueOrchid : JavaModelData
+    public class BlueOrchid : JavaBlockModel
     {
         public BlueOrchid() : base("Blue Orchid")
         {

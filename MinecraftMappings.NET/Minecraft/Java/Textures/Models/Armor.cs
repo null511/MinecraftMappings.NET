@@ -1,9 +1,9 @@
-﻿using MinecraftMappings.Internal.Entities;
-using MinecraftMappings.Internal.Models;
+﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Entity;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Models
 {
-    public abstract class Armor1 : JavaEntityData
+    public abstract class Armor1 : JavaEntityModel
     {
         protected static readonly UVRegion[] DefaultUVRegions = {
             new UVRegion {

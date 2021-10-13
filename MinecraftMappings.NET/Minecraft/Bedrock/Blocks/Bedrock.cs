@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class Bedrock : BedrockBlockData
+    public class Bedrock : BedrockBlockTexture
     {
         public Bedrock() : base("Bedrock")
         {

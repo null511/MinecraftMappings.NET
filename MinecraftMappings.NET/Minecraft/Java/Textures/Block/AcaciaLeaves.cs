@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class AcaciaLeaves : JavaBlockData
+    public class AcaciaLeaves : JavaBlockTexture
     {
-        public const string BlockId = "acacia_leaves";
-        public const string BlockName = "Acacia Leaves";
-
-
-        public AcaciaLeaves() : base(BlockName)
+        public AcaciaLeaves() : base("Acacia Leaves")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.LeavesAcacia.BlockId,
-            });
+            AddVersion("acacia_leaves")
+                .WithDefaultModel<Java.Models.Block.AcaciaLeaves>()
+                .MapsToBedrockBlock<BedrockBlocks.LeavesAcacia>();
         }
     }
 }

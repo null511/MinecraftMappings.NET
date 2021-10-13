@@ -1,10 +1,10 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BarrelSide : JavaBlockData
+    public class BarrelSide : JavaBlockTexture
     {
         public BarrelSide() : base("Barrel Side")
         {

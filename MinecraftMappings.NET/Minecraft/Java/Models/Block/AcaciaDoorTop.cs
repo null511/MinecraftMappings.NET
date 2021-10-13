@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class AcaciaDoorTop : JavaModelData
+    public class AcaciaDoorTop : JavaBlockModel
     {
         public AcaciaDoorTop() : base("Acacia Door, Top")
         {

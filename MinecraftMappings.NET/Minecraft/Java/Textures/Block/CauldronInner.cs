@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class CauldronInner : JavaBlockData
+    public class CauldronInner : JavaBlockTexture
     {
         public CauldronInner() : base("Cauldron, Inner")
         {

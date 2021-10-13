@@ -1,18 +1,12 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Alex : JavaEntityData
+    public class Alex : JavaEntityModel
     {
-        public const string EntityId = "alex";
-        public const string EntityName = "Alex";
-
-
-        public Alex() : base(EntityName)
+        public Alex() : base("Alex")
         {
-            Versions.Add(new JavaEntityDataVersion {
-                Id = EntityId,
-            });
+            AddVersion("alex", "1.0");
         }
     }
 }

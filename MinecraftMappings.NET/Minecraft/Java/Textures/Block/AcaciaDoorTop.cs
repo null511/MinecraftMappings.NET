@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class AcaciaDoorTop : JavaBlockData
+    public class AcaciaDoorTop : JavaBlockTexture
     {
-        public const string BlockId = "acacia_door_top";
-        public const string BlockName = "Acacia Door Top";
-
-
-        public AcaciaDoorTop() : base(BlockName)
+        public AcaciaDoorTop() : base("Acacia Door, Top")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.DoorAcaciaUpper.BlockId,
-            });
+            AddVersion("acacia_door_top")
+                .WithDefaultModel<Java.Models.Block.AcaciaDoorTop>()
+                .MapsToBedrockBlock<BedrockBlocks.DoorAcaciaUpper>();
         }
     }
 }

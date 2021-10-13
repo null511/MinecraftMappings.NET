@@ -1,16 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class Allium : JavaBlockData
+    public class Allium : JavaBlockTexture
     {
         public Allium() : base("Allium")
         {
-            AddVersion("allium", version => {
-                version.DefaultModel = typeof(Java.Models.Block.Allium);
-                version.MapsToBedrockBlock = typeof(BedrockBlocks.FlowerAllium);
-            });
+            AddVersion("allium")
+                .WithDefaultModel<Java.Models.Block.Allium>()
+                .MapsToBedrockBlock<BedrockBlocks.FlowerAllium>();
         }
     }
 }

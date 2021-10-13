@@ -1,9 +1,9 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BarrelSide : BedrockBlockData
+    public class BarrelSide : BedrockBlockTexture
     {
         public BarrelSide() : base("Barrel Side")
         {

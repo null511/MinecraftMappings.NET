@@ -1,19 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BlueIce : JavaBlockData
+    public class BlueIce : JavaBlockTexture
     {
-        public const string BlockId = "blue_ice";
-        public const string BlockName = "Blue Ice";
-
-
-        public BlueIce() : base(BlockName)
+        public BlueIce() : base("Blue Ice")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToBedrockId = BedrockBlocks.BlueIce.BlockId;
-            });
+            AddVersion("blue_ice")
+                .MapsToBedrockBlock<BedrockBlocks.BlueIce>();
         }
     }
 }

@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BoneBlockTop : JavaBlockData
+    public class BoneBlockTop : JavaBlockTexture
     {
-        public const string BlockId = "bone_block_top";
-        public const string BlockName = "Bone Block Top";
-
-
-        public BoneBlockTop() : base(BlockName)
+        public BoneBlockTop() : base("Bone Block Top")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.BoneBlockTop.BlockId,
-            });
+            AddVersion("bone_block_top")
+                .MapsToBedrockBlock<BedrockBlocks.BoneBlockTop>();
         }
     }
 }

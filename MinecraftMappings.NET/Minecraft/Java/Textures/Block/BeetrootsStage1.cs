@@ -1,9 +1,9 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BeetrootsStage1 : JavaBlockData
+    public class BeetrootsStage1 : JavaBlockTexture
     {
         public BeetrootsStage1() : base("Beetroots, Stage 1")
         {

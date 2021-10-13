@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BlackCandle_OneCandle : JavaModelData
+    public class BlackCandle_OneCandle : JavaBlockModel
     {
         public BlackCandle_OneCandle() : base("Black Candle, One Candle")
         {

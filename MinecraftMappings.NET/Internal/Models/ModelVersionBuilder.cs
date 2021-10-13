@@ -1,13 +1,14 @@
 ﻿using System;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Internal.Models
 {
     public class ModelVersionBuilder
     {
-        private readonly ModelVersion modelVersion;
+        private readonly BlockModelVersion modelVersion;
 
 
-        public ModelVersionBuilder(ModelVersion modelVersion)
+        public ModelVersionBuilder(BlockModelVersion modelVersion)
         {
             this.modelVersion = modelVersion;
         }

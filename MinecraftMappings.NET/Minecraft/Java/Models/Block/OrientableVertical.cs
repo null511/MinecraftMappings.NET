@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class OrientableVertical : JavaModelData
+    public class OrientableVertical : JavaBlockModel
     {
         public OrientableVertical() : base("Orientable, Vertical")
         {

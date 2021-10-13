@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class Bookshelf : BedrockBlockData
+    public class Bookshelf : BedrockBlockTexture
     {
-        public const string BlockId = "bookshelf";
-        public const string BlockName = "Bookshelf";
-
-
-        public Bookshelf() : base(BlockName)
+        public Bookshelf() : base("Bookshelf")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Java.Textures.Block.Bookshelf.BlockId,
-            });
+            AddVersion("bookshelf")
+                .MapsToJavaBlock<Java.Textures.Block.Bookshelf>();
         }
     }
 }

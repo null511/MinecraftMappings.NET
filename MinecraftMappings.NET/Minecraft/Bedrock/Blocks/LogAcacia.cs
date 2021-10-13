@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class LogAcacia : BedrockBlockData
+    public class LogAcacia : BedrockBlockTexture
     {
-        public const string BlockId = "log_acacia";
-        public const string BlockName = "Log Acacia";
-
-
-        public LogAcacia() : base(BlockName)
+        public LogAcacia() : base("Log Acacia")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToJavaId = AcaciaLog.BlockId;
-            });
+            AddVersion("log_acacia")
+                .MapsToJavaBlock<AcaciaLog>();
         }
     }
 }

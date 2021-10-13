@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class DetectorRail : JavaModelData
+    public class DetectorRail : JavaBlockModel
     {
         public DetectorRail() : base("Detector Rail")
         {

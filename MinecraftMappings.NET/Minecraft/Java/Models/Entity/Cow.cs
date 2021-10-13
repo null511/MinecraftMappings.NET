@@ -1,14 +1,14 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Cow : JavaEntityData
+    public class Cow : JavaEntityModel
     {
         public Cow() : base("Cow")
         {
             AddVersion("cow", "1.0.0")
-                .WithPath("models/block/cow")
+                .WithPath("block/cow")
                 .AddElement("body", element => {
                     element.Position = new Vector3(-6f, 11f, -5f);
                     element.Size = new Vector3(12f, 18f, 10f);

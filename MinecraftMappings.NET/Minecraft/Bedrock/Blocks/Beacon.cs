@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class Beacon : BedrockBlockData
+    public class Beacon : BedrockBlockTexture
     {
         public Beacon() : base("Beacon")
         {

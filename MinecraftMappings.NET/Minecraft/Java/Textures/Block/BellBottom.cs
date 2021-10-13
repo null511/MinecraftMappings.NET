@@ -1,20 +1,14 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BellBottom : JavaBlockData
+    public class BellBottom : JavaBlockTexture
     {
-        public const string BlockId = "bell_bottom";
-        public const string BlockName = "Bell Bottom";
-
-
-        public BellBottom() : base(BlockName)
+        public BellBottom() : base("Bell Bottom")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.BellBottom.BlockId,
-            });
+            AddVersion("bell_bottom")
+                .MapsToBedrockBlock<BedrockBlocks.BellBottom>();
         }
     }
 }

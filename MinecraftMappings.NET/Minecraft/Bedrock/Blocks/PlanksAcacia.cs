@@ -1,21 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class PlanksAcacia : BedrockBlockData
+    public class PlanksAcacia : BedrockBlockTexture
     {
-        public const string BlockId = "planks_acacia";
-        public const string BlockName = "Planks Acacia";
-
-
-        public PlanksAcacia() : base(BlockName)
+        public PlanksAcacia() : base("Planks Acacia")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = AcaciaPlanks.BlockId,
-            });
+            AddVersion("planks_acacia")
+                .MapsToJavaBlock<Java.Textures.Block.AcaciaPlanks>();
         }
     }
 }

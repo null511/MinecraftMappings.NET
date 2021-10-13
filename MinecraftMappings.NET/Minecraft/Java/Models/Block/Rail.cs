@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class Rail : JavaModelData
+    public class Rail : JavaBlockModel
     {
         public Rail() : base("Rail")
         {

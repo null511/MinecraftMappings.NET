@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class AcaciaTrapdoor : BedrockBlockData
+    public class AcaciaTrapdoor : BedrockBlockTexture
     {
         public AcaciaTrapdoor() : base("Acacia Trapdoor")
         {

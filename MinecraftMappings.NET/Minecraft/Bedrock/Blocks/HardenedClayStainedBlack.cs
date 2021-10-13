@@ -1,21 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class HardenedClayStainedBlack : BedrockBlockData
+    public class HardenedClayStainedBlack : BedrockBlockTexture
     {
-        public const string BlockId = "hardened_clay_stained_black";
-        public const string BlockName = "Hardened Clay Stained Black";
-
-
-        public HardenedClayStainedBlack() : base(BlockName)
+        public HardenedClayStainedBlack() : base("Hardened Clay Stained Black")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BlackTerracotta.BlockId,
-            });
+            AddVersion("hardened_clay_stained_black")
+                .MapsToJavaBlock<BlackTerracotta>();
         }
     }
 }

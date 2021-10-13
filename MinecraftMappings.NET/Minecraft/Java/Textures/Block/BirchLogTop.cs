@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BirchLogTop : JavaBlockData
+    public class BirchLogTop : JavaBlockTexture
     {
-        public const string BlockId = "birch_log_top";
-        public const string BlockName = "Birch Log Top";
-
-
-        public BirchLogTop() : base(BlockName)
+        public BirchLogTop() : base("Birch Log, Top")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.LogBirchTop.BlockId,
-            });
+            AddVersion("birch_log_top")
+                //.WithDefaultModel<Java.Models.Block.BirchLog>()
+                .MapsToBedrockBlock<BedrockBlocks.LogBirchTop>();
         }
     }
 }

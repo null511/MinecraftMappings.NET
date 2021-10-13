@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class Dispenser : JavaModelData
+    public class Dispenser : JavaBlockModel
     {
         public Dispenser() : base("Dispenser")
         {

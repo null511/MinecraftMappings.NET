@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class CubeBottomTop : JavaModelData
+    public class CubeBottomTop : JavaBlockModel
     {
         public CubeBottomTop() : base("Cube, Bottom & Top")
         {

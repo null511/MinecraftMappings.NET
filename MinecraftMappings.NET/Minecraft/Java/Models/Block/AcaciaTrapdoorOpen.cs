@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class AcaciaTrapdoorOpen : JavaModelData
+    public class AcaciaTrapdoorOpen : JavaBlockModel
     {
         public AcaciaTrapdoorOpen() : base("Acacia Trapdoor, Open")
         {

@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BeetrootsStage1 : JavaModelData
+    public class BeetrootsStage1 : JavaBlockModel
     {
         public BeetrootsStage1() : base("Beetroots, Stage 1")
         {

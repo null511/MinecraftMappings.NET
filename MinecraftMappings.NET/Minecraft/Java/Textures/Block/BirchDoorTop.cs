@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BirchDoorTop : JavaBlockData
+    public class BirchDoorTop : JavaBlockTexture
     {
-        public const string BlockId = "birch_door_top";
-        public const string BlockName = "Birch Door Top";
-
-
-        public BirchDoorTop() : base(BlockName)
+        public BirchDoorTop() : base("Birch Door, Top")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.DoorBirchUpper.BlockId,
-            });
+            AddVersion("birch_door_top")
+                .WithDefaultModel<Java.Models.Block.BirchDoorTop>()
+                .MapsToBedrockBlock<BedrockBlocks.DoorBirchUpper>();
         }
     }
 }

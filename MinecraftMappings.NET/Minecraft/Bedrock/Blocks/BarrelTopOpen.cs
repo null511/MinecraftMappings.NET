@@ -1,20 +1,15 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BarrelTopOpen : BedrockBlockData
+    public class BarrelTopOpen : BedrockBlockTexture
     {
-        public const string BlockId = "barrel_top_open";
-        public const string BlockName = "Barrel Top Open";
-
-
-        public BarrelTopOpen() : base(BlockName)
+        public BarrelTopOpen() : base("Barrel Top, Open")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToJavaId = Java.Textures.Block.BarrelTopOpen.BlockId;
-                version.MinVersion = new GameVersion(1, 9);
-            });
+            AddVersion("barrel_top_open")
+                .WithMinVersion(new GameVersion(1, 9))
+                .MapsToJavaBlock<Java.Textures.Block.BarrelTopOpen>();
         }
     }
 }

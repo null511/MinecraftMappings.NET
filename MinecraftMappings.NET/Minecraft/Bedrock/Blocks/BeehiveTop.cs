@@ -1,21 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BeehiveTop : BedrockBlockData
+    public class BeehiveTop : BedrockBlockTexture
     {
-        public const string BlockId = "beehive_top";
-        public const string BlockName = "Beehive Top";
-
-
-        public BeehiveTop() : base(BlockName)
+        public BeehiveTop() : base("Beehive Top")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BeehiveEnd.BlockId,
-            });
+            AddVersion("beehive_top")
+                .MapsToJavaBlock<BeehiveEnd>();
         }
     }
 }

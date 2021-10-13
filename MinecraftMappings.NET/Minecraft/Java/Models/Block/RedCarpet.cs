@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class RedCarpet : JavaModelData
+    public class RedCarpet : JavaBlockModel
     {
         public RedCarpet() : base("Red Carpet")
         {

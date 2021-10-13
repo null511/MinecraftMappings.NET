@@ -1,22 +1,16 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class AncientDebrisSide : JavaBlockData
+    public class AncientDebrisSide : JavaBlockTexture
     {
-        public const string BlockId = "ancient_debris_side";
-        public const string BlockName = "Ancient Debris Side";
-
-
-        public AncientDebrisSide() : base(BlockName)
+        public AncientDebrisSide() : base("Ancient Debris, Side")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.AncientDebrisSide.BlockId,
-                MinVersion = new GameVersion(1, 16),
-            });
+            AddVersion("ancient_debris_side")
+                .WithMinVersion("1.16")
+                .WithDefaultModel<Java.Models.Block.AncientDebris>()
+                .MapsToBedrockBlock<BedrockBlocks.AncientDebrisSide>();
         }
     }
 }

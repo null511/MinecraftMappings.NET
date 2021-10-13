@@ -1,19 +1,13 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BellTop : BedrockBlockData
+    public class BellTop : BedrockBlockTexture
     {
-        public const string BlockId = "bell_top";
-        public const string BlockName = "Bell Top";
-
-
-        public BellTop() : base(BlockName)
+        public BellTop() : base("Bell Top")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaBlock = typeof(Java.Textures.Block.BellTop),
-            });
+            AddVersion("bell_top")
+                .MapsToJavaBlock<Java.Textures.Block.BellTop>();
         }
     }
 }

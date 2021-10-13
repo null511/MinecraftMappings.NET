@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class Candle : JavaBlockData
+    public class Candle : JavaBlockTexture
     {
         public Candle() : base("Candle")
         {

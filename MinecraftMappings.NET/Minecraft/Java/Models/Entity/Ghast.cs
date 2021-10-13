@@ -1,14 +1,14 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class Ghast : JavaEntityData
+    public class Ghast : JavaEntityModel
     {
         public Ghast() : base("Ghast")
         {
             AddVersion("ghast", "1.2.0")
-                .WithPath("textures/entity/ghast")
+                .WithPath("entity/ghast")
                 .AddElement("body", element => {
                     element.Position = new Vector3(-8f, 12f, -8f);
                     element.Size = new Vector3(16f, 16f, 16f);

@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class MushroomBrown : BedrockBlockData
+    public class MushroomBrown : BedrockBlockTexture
     {
-        public const string BlockId = "mushroom_brown";
-        public const string BlockName = "Mushroom Brown";
-
-
-        public MushroomBrown() : base(BlockName)
+        public MushroomBrown() : base("Mushroom Brown")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToJavaId = BrownMushroom.BlockId;
-            });
+            AddVersion("mushroom_brown")
+                .MapsToJavaBlock<Java.Textures.Block.BrownMushroom>();
         }
     }
 }

@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class SpruceLeaves : JavaModelData
+    public class SpruceLeaves : JavaBlockModel
     {
         public SpruceLeaves() : base("Spruce Leaves")
         {

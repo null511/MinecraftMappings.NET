@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BasaltTop : BedrockBlockData
+    public class BasaltTop : BedrockBlockTexture
     {
-        public const string BlockId = "basalt_top";
-        public const string BlockName = "Basalt Top";
-
-
-        public BasaltTop() : base(BlockName)
+        public BasaltTop() : base("Basalt Top")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Java.Textures.Block.BasaltTop.BlockId,
-            });
+            AddVersion("basalt_top")
+                .MapsToJavaBlock<Java.Textures.Block.BasaltTop>();
         }
     }
 }

@@ -1,8 +1,8 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BrewingStand : BedrockBlockData
+    public class BrewingStand : BedrockBlockTexture
     {
         public BrewingStand() : base("Brewing Stand")
         {

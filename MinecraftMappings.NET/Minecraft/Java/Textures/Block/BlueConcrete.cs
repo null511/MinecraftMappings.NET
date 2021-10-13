@@ -1,21 +1,16 @@
 ﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BlueConcrete : JavaBlockData
+    public class BlueConcrete : JavaBlockTexture
     {
-        public const string BlockId = "blue_concrete";
-        public const string BlockName = "Blue Concrete";
-
-
-        public BlueConcrete() : base(BlockName)
+        public BlueConcrete() : base("Blue Concrete")
         {
-            AddVersion(BlockId, version => {
-                version.MapsToBedrockId = BedrockBlocks.ConcreteBlue.BlockId;
-                version.MinVersion = new GameVersion(1, 12);
-            });
+            AddVersion("blue_concrete")
+                .WithMinVersion(new GameVersion(1, 12))
+                .MapsToBedrockBlock<BedrockBlocks.ConcreteBlue>();
         }
     }
 }

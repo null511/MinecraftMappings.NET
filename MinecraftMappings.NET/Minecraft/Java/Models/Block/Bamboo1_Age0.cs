@@ -1,9 +1,10 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class Bamboo1_Age0 : JavaModelData
+    public class Bamboo1_Age0 : JavaBlockModel
     {
         public Bamboo1_Age0() : base("Bamboo 1, Age 0")
         {

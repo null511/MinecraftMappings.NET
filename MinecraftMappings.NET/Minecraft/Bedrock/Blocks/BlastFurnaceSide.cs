@@ -1,20 +1,13 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class BlastFurnaceSide : BedrockBlockData
+    public class BlastFurnaceSide : BedrockBlockTexture
     {
-        public const string BlockId = "blast_furnace_side";
-        public const string BlockName = "Blast Furnace Side";
-
-
-        public BlastFurnaceSide() : base(BlockName)
+        public BlastFurnaceSide() : base("Blast Furnace Side")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = Java.Textures.Block.BlastFurnaceSide.BlockId,
-            });
+            AddVersion("blast_furnace_side")
+                .MapsToJavaBlock<Java.Textures.Block.BlastFurnaceSide>();
         }
     }
 }

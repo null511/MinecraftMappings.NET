@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class ActivatorRail : JavaBlockData
+    public class ActivatorRail : JavaBlockTexture
     {
-        public const string BlockId = "activator_rail";
-        public const string BlockName = "Activator Rail";
-
-
-        public ActivatorRail() : base(BlockName)
+        public ActivatorRail() : base("Activator Rail")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.RailActivator.BlockId,
-            });
+            AddVersion("activator_rail")
+                .WithDefaultModel<Java.Models.Block.ActivatorRail>()
+                .MapsToBedrockBlock<BedrockBlocks.RailActivator>();
         }
     }
 }

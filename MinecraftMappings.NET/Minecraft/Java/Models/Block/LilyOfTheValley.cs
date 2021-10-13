@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class LilyOfTheValley : JavaModelData
+    public class LilyOfTheValley : JavaBlockModel
     {
         public LilyOfTheValley() : base("Lily Of The Valley")
         {

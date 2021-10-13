@@ -1,15 +1,13 @@
-﻿using MinecraftMappings.Internal.Blocks;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
+﻿using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class SaplingAcacia : BedrockBlockData
+    public class SaplingAcacia : BedrockBlockTexture
     {
         public SaplingAcacia() : base("Sapling Acacia")
         {
-            AddVersion("sapling_acacia", version => {
-                version.MapsToJavaBlock = typeof(AcaciaSapling);
-            });
+            AddVersion("sapling_acacia")
+                .MapsToJavaBlock<Java.Textures.Block.AcaciaSapling>();
         }
     }
 }

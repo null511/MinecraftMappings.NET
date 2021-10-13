@@ -1,20 +1,15 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BeehiveSide : JavaBlockData
+    public class BeehiveSide : JavaBlockTexture
     {
-        public const string BlockId = "beehive_side";
-        public const string BlockName = "Beehive Side";
-
-
-        public BeehiveSide() : base(BlockName)
+        public BeehiveSide() : base("Beehive Side")
         {
-            Versions.Add(new JavaBlockDataVersion {
-                Id = BlockId,
-                MapsToBedrockId = BedrockBlocks.BeehiveSide.BlockId,
-            });
+            AddVersion("beehive_side")
+                .WithDefaultModel<Java.Models.Block.Beehive>()
+                .MapsToBedrockBlock<BedrockBlocks.BeehiveSide>();
         }
     }
 }

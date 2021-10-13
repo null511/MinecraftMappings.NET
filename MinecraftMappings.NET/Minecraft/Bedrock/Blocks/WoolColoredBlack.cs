@@ -1,21 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class WoolColoredBlack : BedrockBlockData
+    public class WoolColoredBlack : BedrockBlockTexture
     {
-        public const string BlockId = "wool_colored_black";
-        public const string BlockName = "Wool Colored Black";
-
-
-        public WoolColoredBlack() : base(BlockName)
+        public WoolColoredBlack() : base("Wool Colored Black")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BlackWool.BlockId,
-            });
+            AddVersion("wool_colored_black")
+                .MapsToJavaBlock<BlackWool>();
         }
     }
 }

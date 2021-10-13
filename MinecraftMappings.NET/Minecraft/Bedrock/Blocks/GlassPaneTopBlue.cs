@@ -1,21 +1,14 @@
-﻿using MinecraftMappings.Internal;
-using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Blocks
 {
-    public class GlassPaneTopBlue : BedrockBlockData
+    public class GlassPaneTopBlue : BedrockBlockTexture
     {
-        public const string BlockId = "glass_pane_top_blue";
-        public const string BlockName = "Glass Pane Top Blue";
-
-
-        public GlassPaneTopBlue() : base(BlockName)
+        public GlassPaneTopBlue() : base("Glass Pane Top Blue")
         {
-            Versions.Add(new BedrockBlockDataVersion {
-                Id = BlockId,
-                MapsToJavaId = BlueStainedGlassPaneTop.BlockId,
-            });
+            AddVersion("glass_pane_top_blue")
+                .MapsToJavaBlock<BlueStainedGlassPaneTop>();
         }
     }
 }

@@ -1,9 +1,10 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class Lever : JavaModelData
+    public class Lever : JavaBlockModel
     {
         public Lever() : base("Lever")
         {

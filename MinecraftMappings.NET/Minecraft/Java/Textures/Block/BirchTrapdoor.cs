@@ -1,9 +1,9 @@
-﻿using MinecraftMappings.Internal.Blocks;
+﻿using MinecraftMappings.Internal.Textures.Block;
 using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class BirchTrapdoor : JavaBlockData
+    public class BirchTrapdoor : JavaBlockTexture
     {
         public BirchTrapdoor() : base("Birch Trapdoor")
         {

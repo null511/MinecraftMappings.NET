@@ -1,14 +1,14 @@
-﻿using MinecraftMappings.Internal.Entities;
+﻿using MinecraftMappings.Internal.Models.Entity;
 using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
-    public class BellBody : JavaEntityData
+    public class BellBody : JavaEntityModel
     {
         public BellBody() : base("Bell Body")
         {
             AddVersion("bell_body", "1.0.0")
-                .WithPath("models/block/bell")
+                .WithPath("block/bell")
                 .AddElement("top", element => {
                     element.Position = new Vector3(-3f, -7f, -3f);
                     element.Size = new Vector3(6f, 7f, 6f);

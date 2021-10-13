@@ -1,8 +1,9 @@
 ﻿using MinecraftMappings.Internal.Models;
+using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class OrientableWithBottom : JavaModelData
+    public class OrientableWithBottom : JavaBlockModel
     {
         public OrientableWithBottom() : base("Orientable, With Bottom")
         {
