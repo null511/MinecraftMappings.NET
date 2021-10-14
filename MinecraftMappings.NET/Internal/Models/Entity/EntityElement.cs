@@ -11,14 +11,19 @@ namespace MinecraftMappings.Internal.Models.Entity
         public Vector3 Position;
         public Vector3 Size;
         public Vector2 UV;
-        public Vector2 TextureSize;
+        //public Vector2 TextureSize;
         //public ModelElementRotation Rotation;
         public Vector3 RotationOrigin;
-        public decimal RotationAngleX;
-        public decimal RotationAngleY;
-        public decimal RotationAngleZ;
+        public float RotationAngleX;
+        public float RotationAngleY;
+        public float RotationAngleZ;
         public bool Rescale;
         public float Inflate;
+        public bool InvertAxisX;
+        public bool InvertAxisY;
+        public bool InvertAxisZ;
+        public bool MirrorTextureU;
+        public bool MirrorTextureV;
 
         public List<EntityElement> Elements {get; set;}
 
@@ -28,16 +33,25 @@ namespace MinecraftMappings.Internal.Models.Entity
             .OfType<ElementFaces>().Select(face => (face, GetFaceRectangle(face)));
 
 
-        public EntityElement()
-        {
-            TextureSize = new Vector2(16f, 16f);
-        }
+        //public EntityElement()
+        //{
+        //    TextureSize = new Vector2(16f, 16f);
+        //}
 
         public RectangleF GetFaceRectangle(ElementFaces face)
         {
+            //var lookupFace = face;
+
+            //if (MirrorTextureU) {
+            //    if (face == ElementFaces.Up)
+            //        lookupFace = ElementFaces.Down;
+            //    else if (face == ElementFaces.Down)
+            //        lookupFace = ElementFaces.Up;
+            //}
+
             switch (face) {
                 case ElementFaces.Up:
-                    return new RectangleF(UV.X + Size.Z, UV.Y, Size.X, Size.Z);
+                    return new RectangleF(UV.X + Size.Z, UV.Y + Size.Z, Size.X, -Size.Z);
                 case ElementFaces.Down:
                     return new RectangleF(UV.X + Size.Z + Size.X, UV.Y, Size.X, Size.Z);
                 case ElementFaces.East:
@@ -59,21 +73,21 @@ namespace MinecraftMappings.Internal.Models.Entity
                 case ElementFaces.Up:
                 case ElementFaces.Down:
                     return (
-                        width: Size.X,
-                        height: Size.Z,
-                        offset: Size.Y);
+                        width: Size.X + Inflate,
+                        height: Size.Z + Inflate,
+                        offset: Size.Y + Inflate);
                 case ElementFaces.North:
                 case ElementFaces.South:
                     return (
-                        width: Size.X,
-                        height: Size.Y,
-                        offset: Size.Z);
+                        width: Size.X + Inflate,
+                        height: Size.Y + Inflate,
+                        offset: Size.Z + Inflate);
                 case ElementFaces.East:
                 case ElementFaces.West:
                     return (
-                        width: Size.Z,
-                        height: Size.Y,
-                        offset: Size.X);
+                        width: Size.Z + Inflate,
+                        height: Size.Y + Inflate,
+                        offset: Size.X + Inflate);
                 default:
                     throw new ApplicationException($"Unknown element face '{face}'!");
             }

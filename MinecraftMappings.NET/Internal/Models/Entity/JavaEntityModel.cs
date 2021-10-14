@@ -1,9 +1,9 @@
 ﻿namespace MinecraftMappings.Internal.Models.Entity
 {
-    public abstract class JavaEntityModel : EntityModel<JavaEntityDataVersion>
+    public abstract class JavaEntityModel : EntityModel<JavaEntityModelVersion>
     {
         protected JavaEntityModel(string name) : base(name) {}
     }
 
-    public class JavaEntityDataVersion : EntityModelVersion {}
+    public class JavaEntityModelVersion : EntityModelVersion {}
 }

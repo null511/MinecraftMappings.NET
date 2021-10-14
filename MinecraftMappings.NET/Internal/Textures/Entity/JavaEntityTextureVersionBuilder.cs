@@ -7,6 +7,12 @@ namespace MinecraftMappings.Internal.Textures.Entity
     {
         public JavaEntityTextureVersionBuilder(TVersion entityVersion) : base(entityVersion) {}
 
+        public new JavaEntityTextureVersionBuilder<TVersion> WithPath(string path)
+        {
+            base.WithPath(path);
+            return this;
+        }
+
         public new JavaEntityTextureVersionBuilder<TVersion> WithDefaultModel<TModel>()
             where TModel : JavaEntityModel
         {

@@ -8,7 +8,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
         public ChestLargeRight() : base("Chest (Large Right)")
         {
             AddVersion("normal_right", "1.0")
-                .WithPath("entity/chest")
+                //.WithPath("entity/chest")
                 .WithUVMappings(
                     new UVRegion {
                         Name = "Base-Down",

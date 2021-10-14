@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpDX;
+using System;
 
 namespace MinecraftMappings.Internal.Models.Entity
 {
@@ -13,9 +14,15 @@ namespace MinecraftMappings.Internal.Models.Entity
             this.entityVersion = entityVersion;
         }
 
-        public EntityVersionBuilder<TVersion> WithPath(string path)
+        //public EntityVersionBuilder<TVersion> WithPath(string path)
+        //{
+        //    entityVersion.Path = path;
+        //    return this;
+        //}
+
+        public EntityVersionBuilder<TVersion> WithTextureSize(int width, int height)
         {
-            entityVersion.Path = path;
+            entityVersion.TextureSize = new Vector2(width, height);
             return this;
         }
 

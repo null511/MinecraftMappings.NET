@@ -1,5 +1,6 @@
-﻿using MinecraftMappings.Internal.Models;
-using MinecraftMappings.Internal.Models.Entity;
+﻿using MinecraftMappings.Internal.Models.Entity;
+using SharpDX;
+using System.Collections.Generic;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
@@ -10,522 +11,115 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("witch", "1.4.2");
 
             AddVersion("witch", "1.14")
-                .WithUVMappings(
-                    new UVRegion {
-                        Name = "Head-Up",
-                        Left = 8 / 64d,
-                        Top = 0,
-                        Width = 8 / 64d,
-                        Height = 8 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Head-Down",
-                        Left = 16 / 64d,
-                        Top = 0,
-                        Width = 8 / 64d,
-                        Height = 8 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Head-East",
-                        Left = 0,
-                        Top = 8 / 128d,
-                        Width = 8 / 64d,
-                        Height = 10 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Head-North",
-                        Left = 8 / 64d,
-                        Top = 8 / 128d,
-                        Width = 8 / 64d,
-                        Height = 10 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Head-West",
-                        Left = 16 / 64d,
-                        Top = 8 / 128d,
-                        Width = 8 / 64d,
-                        Height = 10 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Head-South",
-                        Left = 24 / 64d,
-                        Top = 8 / 128d,
-                        Width = 8 / 64d,
-                        Height = 10 / 128d,
-                    },
+                .WithTextureSize(64, 128)
+                .AddElement("head", element => {
+                    element.Position = new Vector3(-4f, 24f, -4f);
+                    element.Size = new Vector3(8f, 10f, 8f);
+                    element.UV = Vector2.Zero;
+                    element.RotationOrigin = new Vector3(0f, 24f, 0f);
+                })
+                .AddElement("headwear", element => {
+                    element.Position = new Vector3(-5f, 32.05f, -5f);
+                    element.Size = new Vector3(10f, 2f, 10f);
+                    element.UV = new Vector2(0f, 64f);
+                    element.RotationOrigin = new Vector3(0f, 24f, 0f);
 
-                    new UVRegion {
-                        Name = "Nose-Up",
-                        Left = 26 / 64d,
-                        Top = 0,
-                        Width = 2 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Nose-Down",
-                        Left = 28 / 64d,
-                        Top = 0,
-                        Width = 2 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Nose-East",
-                        Left = 24 / 64d,
-                        Top = 2 / 128d,
-                        Width = 2 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Nose-North",
-                        Left = 26 / 64d,
-                        Top = 2 / 128d,
-                        Width = 2 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Nose-West",
-                        Left = 28 / 64d,
-                        Top = 2 / 128d,
-                        Width = 2 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Nose-South",
-                        Left = 30 / 64d,
-                        Top = 2 / 128d,
-                        Width = 2 / 64d,
-                        Height = 4 / 128d,
-                    },
+                    element.Elements = new List<EntityElement> {
+                        new EntityElement {
+                            Name = "hat2",
+                            Position = new Vector3(-3.75f, 34.05f, -3f),
+                            Size = new Vector3(7f, 4f, 7f),
+                            UV = new Vector2(0f, 76f),
+                            RotationOrigin = new Vector3(3.25f, 38.05f, -3f),
+                            RotationAngleX = 3f,
+                            RotationAngleZ = 1.5f,
 
-                    new UVRegion {
-                        Name = "Mole-Up",
-                        Left = 1 / 64d,
-                        Top = 0,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Mole-Down",
-                        Left = 2 / 64d,
-                        Top = 0,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Mole-East",
-                        Left = 0,
-                        Top = 1 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Mole-North",
-                        Left = 1 / 64d,
-                        Top = 1 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Mole-West",
-                        Left = 2 / 64d,
-                        Top = 1 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Mole-South",
-                        Left = 3 / 64d,
-                        Top = 1 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
+                            Elements = new List<EntityElement> {
+                                new EntityElement {
+                                    Name = "hat3",
+                                    Position = new Vector3(-2.5f, 38.05f, -1f),
+                                    Size = new Vector3(4f, 4f, 4f),
+                                    UV = new Vector2(0f, 87f),
+                                    RotationOrigin = new Vector3(1.5f, 42.05f, -1f),
+                                    RotationAngleX = 6f,
+                                    RotationAngleZ = 3f,
 
-                    new UVRegion {
-                        Name = "Body-Up",
-                        Left = 22 / 64d,
-                        Top = 20 / 128d,
-                        Width = 8 / 64d,
-                        Height = 6 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Body-Down",
-                        Left = 30 / 64d,
-                        Top = 20 / 128d,
-                        Width = 8 / 64d,
-                        Height = 6 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Body-East",
-                        Left = 16 / 64d,
-                        Top = 26 / 128d,
-                        Width = 6 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Body-North",
-                        Left = 22 / 64d,
-                        Top = 26 / 128d,
-                        Width = 8 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Body-West",
-                        Left = 30 / 64d,
-                        Top = 26 / 128d,
-                        Width = 6 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Body-South",
-                        Left = 36 / 64d,
-                        Top = 26 / 128d,
-                        Width = 8 / 64d,
-                        Height = 12 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "BodyWear-Up",
-                        Left = 6 / 64d,
-                        Top = 38 / 128d,
-                        Width = 8 / 64d,
-                        Height = 6 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "BodyWear-Down",
-                        Left = 14 / 64d,
-                        Top = 38 / 128d,
-                        Width = 8 / 64d,
-                        Height = 6 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "BodyWear-East",
-                        Left = 0,
-                        Top = 44 / 128d,
-                        Width = 6 / 64d,
-                        Height = 18 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "BodyWear-North",
-                        Left = 6 / 64d,
-                        Top = 44 / 128d,
-                        Width = 8 / 64d,
-                        Height = 18 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "BodyWear-West",
-                        Left = 14 / 64d,
-                        Top = 44 / 128d,
-                        Width = 6 / 64d,
-                        Height = 18 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "BodyWear-South",
-                        Left = 20 / 64d,
-                        Top = 44 / 128d,
-                        Width = 8 / 64d,
-                        Height = 18 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "Legs-Up",
-                        Left = 4 / 64d,
-                        Top = 22 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Legs-Down",
-                        Left = 8 / 64d,
-                        Top = 22 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Legs-East",
-                        Left = 0,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Legs-North",
-                        Left = 4 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Legs-West",
-                        Left = 8 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 12 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Legs-South",
-                        Left = 12 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 12 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "Arms1-Up",
-                        Left = 48 / 64d,
-                        Top = 22 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms1-Down",
-                        Left = 52 / 64d,
-                        Top = 22 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms1-East",
-                        Left = 44 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 8 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms1-North",
-                        Left = 48 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 8 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms1-West",
-                        Left = 52 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 8 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms1-South",
-                        Left = 56 / 64d,
-                        Top = 26 / 128d,
-                        Width = 4 / 64d,
-                        Height = 8 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "Arms2-Up",
-                        Left = 44 / 64d,
-                        Top = 38 / 128d,
-                        Width = 8 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms2-Down",
-                        Left = 52 / 64d,
-                        Top = 38 / 128d,
-                        Width = 8 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms2-East",
-                        Left = 40 / 64d,
-                        Top = 42 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms2-North",
-                        Left = 44 / 64d,
-                        Top = 42 / 128d,
-                        Width = 8 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms2-West",
-                        Left = 52 / 64d,
-                        Top = 42 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "Arms2-South",
-                        Left = 56 / 64d,
-                        Top = 42 / 128d,
-                        Width = 8 / 64d,
-                        Height = 4 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "HeadWear1-Up",
-                        Left = 10 / 64d,
-                        Top = 64 / 128d,
-                        Width = 10 / 64d,
-                        Height = 10 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear1-Down",
-                        Left = 20 / 64d,
-                        Top = 64 / 128d,
-                        Width = 10 / 64d,
-                        Height = 10 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear1-East",
-                        Left = 0 / 64d,
-                        Top = 74 / 128d,
-                        Width = 10 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear1-North",
-                        Left = 10 / 64d,
-                        Top = 74 / 128d,
-                        Width = 10 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear1-West",
-                        Left = 20 / 64d,
-                        Top = 74 / 128d,
-                        Width = 10 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear1-South",
-                        Left = 30 / 64d,
-                        Top = 74 / 128d,
-                        Width = 10 / 64d,
-                        Height = 2 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "HeadWear2-Up",
-                        Left = 7 / 64d,
-                        Top = 76 / 128d,
-                        Width = 7 / 64d,
-                        Height = 7 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear2-Down",
-                        Left = 14 / 64d,
-                        Top = 76 / 128d,
-                        Width = 7 / 64d,
-                        Height = 7 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear2-East",
-                        Left = 0 / 64d,
-                        Top = 83 / 128d,
-                        Width = 7 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear2-North",
-                        Left = 7 / 64d,
-                        Top = 83 / 128d,
-                        Width = 7 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear2-West",
-                        Left = 14 / 64d,
-                        Top = 83 / 128d,
-                        Width = 7 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear2-South",
-                        Left = 21 / 64d,
-                        Top = 83 / 128d,
-                        Width = 7 / 64d,
-                        Height = 4 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "HeadWear3-Up",
-                        Left = 4 / 64d,
-                        Top = 87 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear3-Down",
-                        Left = 8 / 64d,
-                        Top = 87 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear3-East",
-                        Left = 0 / 64d,
-                        Top = 91 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear3-North",
-                        Left = 4 / 64d,
-                        Top = 91 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear3-West",
-                        Left = 8 / 64d,
-                        Top = 91 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear3-South",
-                        Left = 12 / 64d,
-                        Top = 91 / 128d,
-                        Width = 4 / 64d,
-                        Height = 4 / 128d,
-                    },
-
-                    new UVRegion {
-                        Name = "HeadWear4-Up",
-                        Left = 1 / 64d,
-                        Top = 95 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear4-Down",
-                        Left = 2 / 64d,
-                        Top = 95 / 128d,
-                        Width = 1 / 64d,
-                        Height = 1 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear4-East",
-                        Left = 0 / 64d,
-                        Top = 96 / 128d,
-                        Width = 1 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear4-North",
-                        Left = 1 / 64d,
-                        Top = 96 / 128d,
-                        Width = 1 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear4-West",
-                        Left = 2 / 64d,
-                        Top = 96 / 128d,
-                        Width = 1 / 64d,
-                        Height = 2 / 128d,
-                    },
-                    new UVRegion {
-                        Name = "HeadWear4-South",
-                        Left = 3 / 64d,
-                        Top = 96 / 128d,
-                        Width = 1 / 64d,
-                        Height = 2 / 128d,
-                    });
+                                    Elements = new List<EntityElement> {
+                                        new EntityElement {
+                                            Name = "hat4",
+                                            Position = new Vector3(-1.25f, 42.05f, 1f),
+                                            Size = new Vector3(1f, 2f, 1f),
+                                            UV = new Vector2(0f, 95f),
+                                            RotationOrigin = new Vector3(-0.25f, 44.05f, 1f),
+                                            RotationAngleX = 12f,
+                                            RotationAngleZ = 6f,
+                                            Inflate = 0.25f,
+                                        },
+                                    }
+                                },
+                            }
+                        },
+                    };
+                })
+                .AddElement("nose", element => {
+                    element.Position = new Vector3(-1f, 23f, -6f);
+                    element.Size = new Vector3(2f, 4f, 2f);
+                    element.UV = new Vector2(24f, 0f);
+                    element.RotationOrigin = new Vector3(0f, 26f, 0f);
+                })
+                .AddElement("mole", element => {
+                    element.Position = new Vector3(-1f, 24f, -6.75f);
+                    element.Size = new Vector3(1f, 1f, 1f);
+                    element.UV = new Vector2(0f, 0f);
+                    element.RotationOrigin = new Vector3(0f, 28f, 0f);
+                    element.Inflate = -0.25f;
+                })
+                .AddElement("body", element => {
+                    element.Position = new Vector3(-4f, 12f, -3f);
+                    element.Size = new Vector3(8f, 12f, 6f);
+                    element.UV = new Vector2(16f, 20f);
+                    element.RotationOrigin = new Vector3(0f, 24f, 0f);
+                })
+                .AddElement("bodywear", element => {
+                    element.Position = new Vector3(-4f, 6f, -3f);
+                    element.Size = new Vector3(8f, 18f, 6f);
+                    element.UV = new Vector2(0f, 38f);
+                    element.RotationOrigin = new Vector3(0f, 24f, 0f);
+                    element.Inflate = 0.5f;
+                })
+                .AddElement("left_leg", element => {
+                    element.Position = new Vector3(-4f, 0f, -2f);
+                    element.Size = new Vector3(4f, 12f, 4f);
+                    element.UV = new Vector2(0f, 22f);
+                    element.RotationOrigin = new Vector3(2f, 12f, 0f);
+                })
+                .AddElement("right_leg", element => {
+                    element.Position = new Vector3(0f, 0f, -2f);
+                    element.Size = new Vector3(4f, 12f, 4f);
+                    element.UV = new Vector2(0f, 22f);
+                    element.RotationOrigin = new Vector3(-2f, 12f, 0f);
+                })
+                .AddElement("right_arm", element => {
+                    element.Position = new Vector3(4f, 14.5f, -1.65f);
+                    element.Size = new Vector3(4f, 8f, 4f);
+                    element.UV = new Vector2(44f, 22f);
+                    element.RotationOrigin = new Vector3(0f, 22.5f, 0.35f);
+                    element.RotationAngleX = 43f;
+                })
+                .AddElement("right_arm", element => {
+                    element.Position = new Vector3(-8f, 14.5f, -1.65f);
+                    element.Size = new Vector3(4f, 8f, 4f);
+                    element.UV = new Vector2(44f, 22f);
+                    element.RotationOrigin = new Vector3(0f, 22.5f, 0.35f);
+                    element.RotationAngleX = 43f;
+                })
+                .AddElement("arms_crossed", element => {
+                    element.Position = new Vector3(-4f, 14.5f, -1.65f);
+                    element.Size = new Vector3(8f, 4f, 4f);
+                    element.UV = new Vector2(40f, 38f);
+                    element.RotationOrigin = new Vector3(0f, 22.5f, 0.35f);
+                    element.RotationAngleX = 43f;
+                });
         }
     }
 }

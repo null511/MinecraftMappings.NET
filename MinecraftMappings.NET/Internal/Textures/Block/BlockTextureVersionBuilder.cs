@@ -26,7 +26,7 @@ namespace MinecraftMappings.Internal.Textures.Block
             return this;
         }
 
-        public new BlockTextureVersionBuilder<TVersion> WithFrameCount(int frameCount)
+        protected BlockTextureVersionBuilder<TVersion> WithFrameCount(int frameCount)
         {
             BlockVersion.FrameCount = frameCount;
             return this;

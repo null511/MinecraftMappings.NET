@@ -1,5 +1,5 @@
-﻿using MinecraftMappings.Internal.Models;
-using MinecraftMappings.Internal.Models.Entity;
+﻿using MinecraftMappings.Internal.Models.Entity;
+using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
@@ -8,179 +8,51 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
         public Enderman() : base("Enderman")
         {
             AddVersion("enderman", "1.8")
-                .WithPath("entity/enderman")
-                .WithUVMappings(
-                    new UVRegion {
-                        Name = "Head-Up",
-                        Left = 8 / 64d,
-                        Top = 0 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Head-Down",
-                        Left = 16 / 64d,
-                        Top = 0 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Head-East",
-                        Left = 0 / 64d,
-                        Top = 8 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Head-North",
-                        Left = 8 / 64d,
-                        Top = 8 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Head-West",
-                        Left = 16 / 64d,
-                        Top = 8 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Head-South",
-                        Left = 24 / 64d,
-                        Top = 8 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-
-                    new UVRegion {
-                        Name = "Headwear-Up",
-                        Left = 8 / 64d,
-                        Top = 16 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Headwear-Down",
-                        Left = 16 / 64d,
-                        Top = 16 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Headwear-East",
-                        Left = 0 / 64d,
-                        Top = 24 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Headwear-North",
-                        Left = 8 / 64d,
-                        Top = 24 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Headwear-West",
-                        Left = 16 / 64d,
-                        Top = 24 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Headwear-South",
-                        Left = 24 / 64d,
-                        Top = 24 / 32d,
-                        Width = 8 / 64d,
-                        Height = 8 / 32d,
-                    },
-
-                    new UVRegion {
-                        Name = "Body-Up",
-                        Left = 36 / 64d,
-                        Top = 16 / 32d,
-                        Width = 8 / 64d,
-                        Height = 4 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Body-Down",
-                        Left = 44 / 64d,
-                        Top = 16 / 32d,
-                        Width = 8 / 64d,
-                        Height = 4 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Body-East",
-                        Left = 32 / 64d,
-                        Top = 20 / 32d,
-                        Width = 4 / 64d,
-                        Height = 12 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Body-North",
-                        Left = 36 / 64d,
-                        Top = 20 / 32d,
-                        Width = 8 / 64d,
-                        Height = 12 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Body-West",
-                        Left = 44 / 64d,
-                        Top = 20 / 32d,
-                        Width = 4 / 64d,
-                        Height = 12 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Body-South",
-                        Left = 48 / 64d,
-                        Top = 20 / 32d,
-                        Width = 8 / 64d,
-                        Height = 12 / 32d,
-                    },
-
-                    new UVRegion {
-                        Name = "Limb-Up",
-                        Left = 58 / 64d,
-                        Top = 0 / 32d,
-                        Width = 2 / 64d,
-                        Height = 2 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Limb-Down",
-                        Left = 60 / 64d,
-                        Top = 0 / 32d,
-                        Width = 2 / 64d,
-                        Height = 2 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Limb-East",
-                        Left = 56 / 64d,
-                        Top = 2 / 32d,
-                        Width = 2 / 64d,
-                        Height = 30 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Limb-North",
-                        Left = 58 / 64d,
-                        Top = 2 / 32d,
-                        Width = 2 / 64d,
-                        Height = 30 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Limb-West",
-                        Left = 60 / 64d,
-                        Top = 2 / 32d,
-                        Width = 2 / 64d,
-                        Height = 30 / 32d,
-                    },
-                    new UVRegion {
-                        Name = "Limb-South",
-                        Left = 62 / 64d,
-                        Top = 2 / 32d,
-                        Width = 2 / 64d,
-                        Height = 30 / 32d,
-                    });
+                //.WithPath("entity/enderman")
+                .WithTextureSize(64, 32)
+                .AddElement("head", element => {
+                    element.Position = new Vector3(-4f, 39f, -4f);
+                    element.Size = new Vector3(8f, 8f, 8f);
+                    element.UV = new Vector2(0f, 0f);
+                    element.RotationOrigin = new Vector3(0f, 39f, 0f);
+                })
+                .AddElement("headwear", element => {
+                    element.Position = new Vector3(-4f, 39f, -4f);
+                    element.Size = new Vector3(8f, 8f, 8f);
+                    element.UV = new Vector2(0f, 16f);
+                    element.RotationOrigin = new Vector3(0f, 39f, 0f);
+                    element.Inflate = -0.5f;
+                })
+                .AddElement("body", element => {
+                    element.Position = new Vector3(-4f, 27f, -2f);
+                    element.Size = new Vector3(8f, 12f, 4f);
+                    element.UV = new Vector2(32f, 16f);
+                    element.RotationOrigin = new Vector3(0f, 39f, 0f);
+                })
+                .AddElement("right_arm", element => {
+                    element.Position = new Vector3(4f, 9f, -1f);
+                    element.Size = new Vector3(2f, 30f, 2f);
+                    element.UV = new Vector2(56f, 0f);
+                    element.RotationOrigin = new Vector3(-5f, 37f, 0f);
+                })
+                .AddElement("left_arm", element => {
+                    element.Position = new Vector3(-6f, 9f, -1f);
+                    element.Size = new Vector3(2f, 30f, 2f);
+                    element.UV = new Vector2(56f, 0f);
+                    element.RotationOrigin = new Vector3(5f, 37f, 0f);
+                })
+                .AddElement("right_leg", element => {
+                    element.Position = new Vector3(1f, 0f, -1f);
+                    element.Size = new Vector3(2f, 30f, 2f);
+                    element.UV = new Vector2(56f, 0f);
+                    element.RotationOrigin = new Vector3(-2f, 30f, 0f);
+                })
+                .AddElement("left_leg", element => {
+                    element.Position = new Vector3(-3f, 0f, -1f);
+                    element.Size = new Vector3(2f, 30f, 2f);
+                    element.UV = new Vector2(56f, 0f);
+                    element.RotationOrigin = new Vector3(2f, 30f, 0f);
+                });
         }
     }
 }

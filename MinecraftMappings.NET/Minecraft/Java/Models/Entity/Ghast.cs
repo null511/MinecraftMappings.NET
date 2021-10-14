@@ -8,7 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
         public Ghast() : base("Ghast")
         {
             AddVersion("ghast", "1.2.0")
-                .WithPath("entity/ghast")
+                //.WithPath("entity/ghast")
+                .WithTextureSize(64, 32)
                 .AddElement("body", element => {
                     element.Position = new Vector3(-8f, 12f, -8f);
                     element.Size = new Vector3(16f, 16f, 16f);
@@ -59,99 +60,6 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.Size = new Vector3(2f, 9f, 2f);
                     element.UV = new Vector2(0f, 0f);
                 });
-
-            //Versions.Add(new JavaEntityDataVersion {
-            //    Id = EntityId,
-            //    TextVersion = "1.2.0",
-            //    Path = ,
-            //    UVMappings = {
-            //        new UVRegion {
-            //            Name = "Body-Up",
-            //            Left = 16 /64d,
-            //            Top = 0 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Body-Down",
-            //            Left = 32 /64d,
-            //            Top = 0 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Body-East",
-            //            Left = 0 /64d,
-            //            Top = 16 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Body-North",
-            //            Left = 16 /64d,
-            //            Top = 16 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Body-West",
-            //            Left = 32 /64d,
-            //            Top = 16 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Body-South",
-            //            Left = 48 /64d,
-            //            Top = 16 /32d,
-            //            Width = 16 /64d,
-            //            Height = 16 /32d,
-            //        },
-
-            //        new UVRegion {
-            //            Name = "Tentacle-Up",
-            //            Left = 2 /64d,
-            //            Top = 0 /32d,
-            //            Width = 2 /64d,
-            //            Height = 2 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Tentacle-Down",
-            //            Left = 4 /64d,
-            //            Top = 0 /32d,
-            //            Width = 2 /64d,
-            //            Height = 2 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Tentacle-East",
-            //            Left = 0 /64d,
-            //            Top = 2 /32d,
-            //            Width = 2 /64d,
-            //            Height = 13 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Tentacle-North",
-            //            Left = 2 /64d,
-            //            Top = 2 /32d,
-            //            Width = 2 /64d,
-            //            Height = 13 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Tentacle-West",
-            //            Left = 4 /64d,
-            //            Top = 2 /32d,
-            //            Width = 2 /64d,
-            //            Height = 13 /32d,
-            //        },
-            //        new UVRegion {
-            //            Name = "Tentacle-South",
-            //            Left = 6 /64d,
-            //            Top = 2 /32d,
-            //            Width = 2 /64d,
-            //            Height = 13 /32d,
-            //        },
-            //    },
-            //});
         }
     }
 }

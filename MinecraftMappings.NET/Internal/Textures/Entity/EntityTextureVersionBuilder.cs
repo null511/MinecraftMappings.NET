@@ -13,6 +13,12 @@ namespace MinecraftMappings.Internal.Textures.Entity
             EntityVersion = blockVersion;
         }
 
+        protected EntityTextureVersionBuilder<TVersion> WithPath(string path)
+        {
+            EntityVersion.Path = path; 
+            return this;
+        }
+
         protected EntityTextureVersionBuilder<TVersion> WithDefaultModel<TModel>()
             where TModel : IEntityModel
         {

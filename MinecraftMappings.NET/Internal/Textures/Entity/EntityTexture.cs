@@ -1,5 +1,4 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -28,7 +27,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
         }
 
         public static IEnumerable<T> FromAssembly<T>()
-            where T : IBlockTexture
+            where T : IEntityTexture
         {
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => t.IsClass && !t.IsAbstract)
