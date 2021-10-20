@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BlackStainedGlassPaneTop() : base("Black Stained Glass Pane, Top")
         {
             AddVersion("black_stained_glass_pane_top")
-                .MapsToBedrockBlock<BedrockBlocks.GlassPaneTopBlack>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlassPaneTopBlack>();
         }
     }
 }

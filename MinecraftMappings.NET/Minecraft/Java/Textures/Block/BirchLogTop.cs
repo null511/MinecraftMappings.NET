@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BirchLogTop() : base("Birch Log, Top")
         {
             AddVersion("birch_log_top")
-                //.WithDefaultModel<Java.Models.Block.BirchLog>()
-                .MapsToBedrockBlock<BedrockBlocks.LogBirchTop>();
+                .WithDefaultModel<Java.Models.Block.BirchLog>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LogBirchTop>();
         }
     }
 }

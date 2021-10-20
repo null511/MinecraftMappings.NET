@@ -1,6 +1,5 @@
 ﻿using MinecraftMappings.Internal;
 using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -9,9 +8,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BarrelSide() : base("Barrel Side")
         {
             AddVersion("barrel_side")
+                .WithMinVersion(new GameVersion(1, 14))
                 .WithDefaultModel<Java.Models.Block.Barrel>()
-                .MapsToBedrockBlock<BedrockBlocks.BarrelSide>()
-                .WithMinVersion(new GameVersion(1, 14));
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BarrelSide>();
         }
     }
 }

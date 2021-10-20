@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -9,7 +8,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("birch_trapdoor")
                 .WithDefaultModel<Java.Models.Block.BirchTrapdoorTop>()
-                .MapsToBedrockBlock<BedrockBlocks.BirchTrapdoor>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BirchTrapdoor>();
         }
     }
 }

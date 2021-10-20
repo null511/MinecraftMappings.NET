@@ -20,11 +20,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Rescale = true,
                     };
                     element.FaceNorth = new ModelFace {
-                        UV = new RectangleF(0f, 0f, 16f, 16f),
+                        UV = UVMap(0f, 0f, 16f, 16f),
                         Texture = "#cross",
                     };
                     element.FaceSouth = new ModelFace {
-                        UV = new RectangleF(0f, 0f, 16f, 16f),
+                        UV = UVMap(0f, 0f, 16f, 16f),
                         Texture = "#cross",
                     };
                 })
@@ -38,11 +38,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Rescale = true,
                     };
                     element.FaceWest = new ModelFace {
-                        UV = new RectangleF(0f, 0f, 16f, 16f),
+                        UV = UVMap(0f, 0f, 16f, 16f),
                         Texture = "#cross",
                     };
                     element.FaceEast = new ModelFace {
-                        UV = new RectangleF(0f, 0f, 16f, 16f),
+                        UV = UVMap(0f, 0f, 16f, 16f),
                         Texture = "#cross",
                     };
                 });

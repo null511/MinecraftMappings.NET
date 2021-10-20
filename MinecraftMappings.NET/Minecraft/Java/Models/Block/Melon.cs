@@ -1,0 +1,16 @@
+﻿using MinecraftMappings.Internal.Models.Block;
+
+namespace MinecraftMappings.Minecraft.Java.Models.Block
+{
+    public class Melon : JavaBlockModel
+    {
+        public Melon() : base("Melon")
+        {
+            AddVersion("melon", "1.0.0")
+                .WithPath("models/block")
+                .WithParent("block/cube_column")
+                .AddTexture("end", "block/melon_top")
+                .AddTexture("side", "block/melon_side");
+        }
+    }
+}

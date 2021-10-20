@@ -1,6 +1,5 @@
 ﻿using MinecraftMappings.Internal;
 using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -10,7 +9,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("black_concrete")
                 .WithMinVersion(new GameVersion(1, 12))
-                .MapsToBedrockBlock<BedrockBlocks.ConcreteBlack>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ConcreteBlack>();
         }
     }
 }

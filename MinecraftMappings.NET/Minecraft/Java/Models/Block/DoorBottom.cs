@@ -13,25 +13,20 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 0f);
                     element.To = new Vector3(3f, 16f, 16f);
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#bottom") {
                         UV = UVMap(13f, 0f, 16f, 16f),
-                        Texture = "#bottom",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#bottom") {
                         UV = UVMap(3f, 0f, 0f, 16f),
-                        Texture = "#bottom",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#bottom") {
                         UV = UVMap(0f, 0f, 3f, 16f),
-                        Texture = "#bottom",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#bottom") {
                         UV = UVMap(0f, 0f, 16f, 16f),
-                        Texture = "#bottom",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#bottom") {
                         UV = UVMap(16f, 0f, 0f, 16f),
-                        Texture = "#bottom",
                     };
                 });
         }

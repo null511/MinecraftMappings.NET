@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -10,7 +9,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
             AddVersion("beacon")
                 .WithMinVersion("1.4.2")
                 .WithDefaultModel<Java.Models.Block.Beacon>()
-                .MapsToBedrockBlock<BedrockBlocks.Beacon>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Beacon>();
         }
     }
 }

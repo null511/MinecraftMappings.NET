@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,7 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BoneBlockSide() : base("Bone Block Side")
         {
             AddVersion("bone_block_side")
-                .MapsToBedrockBlock<BedrockBlocks.BoneBlockSide>();
+                .WithDefaultModel<Java.Models.Block.BoneBlock>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BoneBlockSide>();
         }
     }
 }

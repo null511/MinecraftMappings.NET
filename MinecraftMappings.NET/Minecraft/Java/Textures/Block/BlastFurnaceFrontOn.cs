@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -9,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("blast_furnace_front_on")
                 .WithFrameCount(2)
-                //.WithDefaultModel<Java.Models.Block.BlastFurnace>()
-                .MapsToBedrockBlock<BedrockBlocks.BlastFurnaceFrontOn>();
+                .WithDefaultModel<Java.Models.Block.BlastFurnaceOn>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BlastFurnaceFrontOn>();
         }
     }
 }

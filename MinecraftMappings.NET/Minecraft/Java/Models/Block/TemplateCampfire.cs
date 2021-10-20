@@ -15,34 +15,139 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(1f, 0f, 0f);
                     element.To = new Vector3(5f, 4f, 16f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#log") {
                         UV = UVMap(0f, 0f, 16f, 4f),
-                        Texture = "#log",
                         Rotation = 90,
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#log") {
                         UV = UVMap(0f, 0f, 16f, 4f),
-                        Texture = "#log",
                         Rotation = 90,
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#log") {
                         UV = UVMap(0f, 4f, 4f, 8f),
-                        Texture = "#log",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#log") {
                         UV = UVMap(0f, 4f, 4f, 8f),
-                        Texture = "#log",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#log") {
                         UV = UVMap(16f, 0f, 0f, 4f),
-                        Texture = "#log",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#lit_log") {
                         UV = UVMap(0f, 1f, 16f, 5f),
-                        Texture = "#lit_log",
                     };
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(0f, 3f, 11f);
+                    element.To = new Vector3(16f, 7f, 15f);
+                    element.FaceUp = new ModelFace("#log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                        Rotation = 180,
+                    };
+                    element.FaceDown = new ModelFace("#lit_log") {
+                        UV = UVMap(0f, 4f, 16f, 8f),
+                    };
+                    element.FaceNorth = new ModelFace("#lit_log") {
+                        UV = UVMap(16f, 0f, 0f, 4f),
+                    };
+                    element.FaceSouth = new ModelFace("#lit_log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                    };
+                    element.FaceWest = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                    element.FaceEast = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(11f, 0f, 0f);
+                    element.To = new Vector3(15f, 4f, 16f);
+                    element.FaceUp = new ModelFace("#log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                        Rotation = 90,
+                    };
+                    element.FaceDown = new ModelFace("#log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                        Rotation = 90,
+                    };
+                    element.FaceNorth = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                    element.FaceSouth = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                    element.FaceWest = new ModelFace("#lit_log") {
+                        UV = UVMap(16f, 1f, 0f, 5f),
+                    };
+                    element.FaceEast = new ModelFace("#log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                    };
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(0f, 3f, 1f);
+                    element.To = new Vector3(16f, 7f, 5f);
+                    element.FaceUp = new ModelFace("#log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                        Rotation = 180,
+                    };
+                    element.FaceDown = new ModelFace("#lit_log") {
+                        UV = UVMap(0f, 4f, 16f, 8f),
+                    };
+                    element.FaceNorth = new ModelFace("#lit_log") {
+                        UV = UVMap(0f, 0f, 16f, 4f),
+                    };
+                    element.FaceSouth = new ModelFace("#lit_log") {
+                        UV = UVMap(16f, 0f, 0f, 4f),
+                    };
+                    element.FaceWest = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                    element.FaceEast = new ModelFace("#log") {
+                        UV = UVMap(0f, 4f, 4f, 8f),
+                    };
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(5f, 0f, 0f);
+                    element.To = new Vector3(11f, 1f, 16f);
+                    element.FaceUp = new ModelFace("#lit_log") {
+                        UV = UVMap(0f, 8f, 16f, 14f),
+                        Rotation = 90,
+                    };
+                    element.FaceDown = new ModelFace("#log") {
+                        UV = UVMap(0f, 8f, 16f, 4f),
+                        Rotation = 90,
+                    };
+                    element.FaceNorth = new ModelFace("#log") {
+                        UV = UVMap(0f, 15f, 6f, 16f),
+                    };
+                    element.FaceSouth = new ModelFace("#log") {
+                        UV = UVMap(10f, 15f, 16f, 16f),
+                    };
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(0.8f, 1f, 8f);
+                    element.To = new Vector3(15.2f, 17f, 8f);
+                    element.Rotation = new ModelElementRotation {
+                        Origin = new Vector3(8f, 8f, 8f),
+                        Axis = ModelAxis.Y,
+                        Angle = 45,
+                        Rescale = true,
+                    };
+                    element.FaceNorth = new ModelFace("#fire", UVFull);
+                    element.FaceSouth = new ModelFace("#fire", UVFull);
+                })
+                .AddElement(element => {
+                    element.From = new Vector3(8f, 1f, 0.8f);
+                    element.To = new Vector3(8f, 17f, 15.2f);
+                    element.Rotation = new ModelElementRotation {
+                        Origin = new Vector3(8f, 8f, 8f),
+                        Axis = ModelAxis.Y,
+                        Angle = 45,
+                        Rescale = true,
+                    };
+                    element.FaceWest = new ModelFace("#fire", UVFull);
+                    element.FaceEast = new ModelFace("#fire", UVFull);
                 });
-            // TODO: UNFINISHED!
         }
     }
 }

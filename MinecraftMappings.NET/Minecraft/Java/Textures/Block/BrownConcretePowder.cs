@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BrownConcretePowder() : base("Brown Concrete Powder")
         {
             AddVersion("brown_concrete_powder")
-                .MapsToBedrockBlock<BedrockBlocks.ConcretePowderBrown>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ConcretePowderBrown>();
         }
     }
 }

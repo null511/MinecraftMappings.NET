@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -9,7 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("barrel_top_open")
                 .WithMinVersion("1.14")
-                .MapsToBedrockBlock<BedrockBlocks.BarrelTopOpen>();
+                .WithDefaultModel<Java.Models.Block.BarrelOpen>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BarrelTopOpen>();
         }
     }
 }

@@ -15,11 +15,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                     element.To = new Vector3(16f, 1f, 16f);
                     element.FaceUp = new ModelFace {
                         Texture = "#rail",
-                        UV = new RectangleF(0f, 0f, 16f, 16f),
+                        UV = UVMap(0f, 0f, 16f, 16f),
                     };
                     element.FaceDown = new ModelFace {
                         Texture = "#rail",
-                        UV = new RectangleF(0f, 16f, 16f, -16f),
+                        UV = UVMap(0f, 16f, 16f, 0f),
                     };
                 });
         }

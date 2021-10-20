@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BeeNestFront() : base("Bee Nest Front")
         {
             AddVersion("bee_nest_front")
-                //.WithDefaultModel<BeeNest>()
-                .MapsToBedrockBlock<BedrockBlocks.BeeNestFront>();
+                .WithDefaultModel<Java.Models.Block.BeeNest>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BeeNestFront>();
         }
     }
 }

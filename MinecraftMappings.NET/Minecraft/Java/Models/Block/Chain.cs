@@ -20,11 +20,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Angle = 45,
                     };
                     element.FaceNorth = new ModelFace {
-                        UV = new RectangleF(3f, 0f, -3f, 13f),
+                        UV = UVMap(3f, 0f, 0f, 13f),
                         Texture = "#all",
                     };
                     element.FaceSouth = new ModelFace {
-                        UV = new RectangleF(0f, 0f, 3f, 16f),
+                        UV = UVMap(0f, 0f, 3f, 16f),
                         Texture = "#all",
                     };
                 })
@@ -37,11 +37,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Angle = 45,
                     };
                     element.FaceWest = new ModelFace {
-                        UV = new RectangleF(6f, 0f, -3f, 16f),
+                        UV = UVMap(6f, 0f, 3f, 16f),
                         Texture = "#all",
                     };
                     element.FaceEast = new ModelFace {
-                        UV = new RectangleF(3f, 0f, 3f, 16f),
+                        UV = UVMap(3f, 0f, 6f, 16f),
                         Texture = "#all",
                     };
                 });

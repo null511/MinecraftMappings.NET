@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using BedrockBlocks = MinecraftMappings.Minecraft.Bedrock.Blocks;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -8,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BrownGlazedTerracotta() : base("Brown Glazed Terracotta")
         {
             AddVersion("brown_glazed_terracotta")
-                .MapsToBedrockBlock<BedrockBlocks.GlazedTerracottaBrown>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlazedTerracottaBrown>();
         }
     }
 }

@@ -15,109 +15,87 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(5f, 0f, 5f);
                     element.To = new Vector3(6f, 6f, 11f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 5f, 6f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 5f, 6f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#flowerpot") {
                         UV = UVMap(10f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 6f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(10f, 0f, 5f);
                     element.To = new Vector3(11f, 6f, 11f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#flowerpot") {
                         UV = UVMap(10f, 5f, 11f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#flowerpot") {
                         UV = UVMap(10f, 5f, 11f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 6f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#flowerpot") {
                         UV = UVMap(10f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#flowerpot") {
                         UV = UVMap(5f, 10f, 11f, 16f),
-                        Texture = "#flowerpot",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(6f, 0f, 5f);
                     element.To = new Vector3(10f, 6f, 6f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 5f, 10f, 6f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 16f),
-                        Texture = "#flowerpot",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(6f, 0f, 10f);
                     element.To = new Vector3(10f, 6f, 11f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 11f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 5f, 10f, 6f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 16f),
-                        Texture = "#flowerpot",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 10f, 10f, 16f),
-                        Texture = "#flowerpot",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(6f, 0f, 6f);
                     element.To = new Vector3(10f, 4f, 10f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#dirt") {
                         UV = UVMap(6f, 6f, 10f, 10f),
-                        Texture = "#dirt",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#flowerpot") {
                         UV = UVMap(6f, 12f, 10f, 16f),
-                        Texture = "#flowerpot",
                     };
                 });
         }
