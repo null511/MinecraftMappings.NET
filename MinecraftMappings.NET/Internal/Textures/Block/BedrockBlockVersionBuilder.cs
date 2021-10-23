@@ -14,6 +14,12 @@ namespace MinecraftMappings.Internal.Textures.Block
             return this;
         }
 
+        public new BedrockBlockVersionBuilder<TVersion> WithMinVersion(string version)
+        {
+            base.WithMinVersion(version);
+            return this;
+        }
+
         public new BedrockBlockVersionBuilder<TVersion> WithMinVersion(GameVersion version)
         {
             base.WithMinVersion(version);

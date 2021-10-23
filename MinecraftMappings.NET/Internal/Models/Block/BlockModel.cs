@@ -27,7 +27,7 @@ namespace MinecraftMappings.Internal.Models.Block
             Versions = new List<BlockModelVersion>();
         }
 
-        public ModelVersionBuilder AddVersion(string id, string version)
+        public BlockModelVersionBuilder AddVersion(string id, string version)
         {
             var modelVersion = new BlockModelVersion {
                 Id = id,
@@ -35,7 +35,7 @@ namespace MinecraftMappings.Internal.Models.Block
             };
 
             Versions.Add(modelVersion);
-            return new ModelVersionBuilder(modelVersion);
+            return new BlockModelVersionBuilder(modelVersion);
         }
 
         public BlockModelVersion GetLatestVersion()

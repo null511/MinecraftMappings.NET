@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Dandelion() : base("Dandelion")
         {
             AddVersion("dandelion")
-                .WithDefaultModel<Java.Models.Block.Dandelion>();
-                //.MapsToBedrockBlock<BedrockBlocks.FlowerDandelion>();
+                .WithDefaultModel<Java.Models.Block.Dandelion>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerDandelion>();
         }
     }
 }

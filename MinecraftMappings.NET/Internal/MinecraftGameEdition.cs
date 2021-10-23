@@ -37,6 +37,14 @@ namespace MinecraftMappings.Internal
                 .Where(latest => latest.Id.Equals(id));
         }
 
+        public IEnumerable<TEntityVersion> FindLatestEntityTextureVersionById<TEntityVersion>(string id)
+            where TEntityVersion : EntityTextureVersion, new()
+        {
+            return allEntityTexturesLazy.Value.OfType<IEntityTexture<TEntityVersion>>()
+                .Select(entity => entity.GetLatestVersion())
+                .Where(latest => latest.Id.Equals(id));
+        }
+
         public IEnumerable<TItemVersion> FindItemVersionById<TItemVersion>(string id)
             where TItemVersion : ItemDataVersion, new()
         {
@@ -68,23 +76,35 @@ namespace MinecraftMappings.Internal
                 .Select(entity => entity.GetVersion(version));
         }
 
-        public IEnumerable<BlockModelVersion> FindModelVersionById(string id)
+        public IEnumerable<BlockModelVersion> FindBlockModelVersionById(string id)
         {
-            return allBlockModelsLazy.Value
+            return allBlockModelsLazy.Value.OfType<IBlockModel>()
                 .Select(model => model.GetLatestVersion())
                 .Where(latest => latest.Id.Equals(id));
         }
 
-        public IBlockModel GetModelForTexture<TBlockVersion>(string textureId)
-            where TBlockVersion : BlockTextureVersion, new()
+        public TBlockModel GetBlockModelForTexture<TBlockTextureVersion>(string textureId)
+            where TBlockTextureVersion : BlockTextureVersion, new()
         {
-            if (textureId == null) return null;
+            if (textureId == null) return default;
 
-            var blockTextures = FindLatestBlockTextureVersionById<TBlockVersion>(textureId);
+            var blockTextures = FindLatestBlockTextureVersionById<TBlockTextureVersion>(textureId);
             var modelType = blockTextures.FirstOrDefault()?.DefaultModel;
-            if (modelType == null) return null;
+            if (modelType == null) return default;
 
-            return (IBlockModel)Activator.CreateInstance(modelType);
+            return (TBlockModel)Activator.CreateInstance(modelType);
+        }
+
+        public TEntityModel GetEntityModelForTexture<TEntityVersion>(string textureId)
+            where TEntityVersion : EntityTextureVersion, new()
+        {
+            if (textureId == null) return default;
+
+            var entityTextures = FindLatestEntityTextureVersionById<TEntityVersion>(textureId);
+            var modelType = entityTextures.FirstOrDefault()?.DefaultModel;
+            if (modelType == null) return default;
+
+            return (TEntityModel)Activator.CreateInstance(modelType);
         }
     }
 }

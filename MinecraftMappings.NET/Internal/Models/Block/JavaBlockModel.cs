@@ -1,6 +1,6 @@
 ﻿namespace MinecraftMappings.Internal.Models.Block
 {
-    public abstract class JavaBlockModel : BlockModel
+    public class JavaBlockModel : BlockModel
     {
         public JavaBlockModel(string name) : base(name) {}
     }

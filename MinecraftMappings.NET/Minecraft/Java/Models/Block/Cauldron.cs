@@ -17,228 +17,112 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(0f, 3f, 0f);
                     element.To = new Vector3(2f, 16f, 16f);
-                    element.FaceUp = new ModelFace {
-                        Texture = "#top",
-                    };
-                    element.FaceDown = new ModelFace {
-                        Texture = "#inside",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceUp = new ModelFace("#top");
+                    element.FaceDown = new ModelFace("#inside");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(2f, 3f, 2f);
                     element.To = new Vector3(14f, 4f, 14f);
-                    element.FaceUp = new ModelFace {
-                        Texture = "#inside",
-                    };
-                    element.FaceDown = new ModelFace {
-                        Texture = "#inside",
-                    };
+                    element.FaceUp = new ModelFace("#inside");
+                    element.FaceDown = new ModelFace("#inside");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(14f, 3f, 0f);
                     element.To = new Vector3(16f, 16f, 16f);
-                    element.FaceUp = new ModelFace {
-                        Texture = "#top",
-                    };
-                    element.FaceDown = new ModelFace {
-                        Texture = "#inside",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceUp = new ModelFace("#top");
+                    element.FaceDown = new ModelFace("#inside");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(2f, 3f, 0f);
                     element.To = new Vector3(14f, 16f, 2f);
-                    element.FaceUp = new ModelFace {
-                        Texture = "#top",
-                    };
-                    element.FaceDown = new ModelFace {
-                        Texture = "#inside",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceUp = new ModelFace("#top");
+                    element.FaceDown = new ModelFace("#inside");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(2f, 3f, 14f);
                     element.To = new Vector3(14f, 16f, 16f);
-                    element.FaceUp = new ModelFace {
-                        Texture = "#top",
-                    };
-                    element.FaceDown = new ModelFace {
-                        Texture = "#inside",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceUp = new ModelFace("#top");
+                    element.FaceDown = new ModelFace("#inside");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 0f);
                     element.To = new Vector3(4f, 3f, 2f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 2f);
                     element.To = new Vector3(2f, 3f, 4f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(12f, 0f, 0f);
                     element.To = new Vector3(16f, 3f, 2f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(14f, 0f, 2f);
                     element.To = new Vector3(16f, 3f, 4f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 14f);
                     element.To = new Vector3(4f, 3f, 16f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 12f);
                     element.To = new Vector3(2f, 3f, 14f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(12f, 0f, 14f);
                     element.To = new Vector3(16f, 3f, 16f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceSouth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 })
                 .AddElement(element => {
                     element.From = new Vector3(14f, 0f, 12f);
                     element.To = new Vector3(16f, 3f, 14f);
-                    element.FaceDown = new ModelFace {
-                        Texture = "#bottom",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceWest = new ModelFace {
-                        Texture = "#side",
-                    };
-                    element.FaceEast = new ModelFace {
-                        Texture = "#side",
-                    };
+                    element.FaceDown = new ModelFace("#bottom");
+                    element.FaceNorth = new ModelFace("#side");
+                    element.FaceWest = new ModelFace("#side");
+                    element.FaceEast = new ModelFace("#side");
                 });
         }
     }

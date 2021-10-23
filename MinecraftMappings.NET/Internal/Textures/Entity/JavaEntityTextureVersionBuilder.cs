@@ -13,6 +13,13 @@ namespace MinecraftMappings.Internal.Textures.Entity
             return this;
         }
 
+        public new JavaEntityTextureVersionBuilder<TVersion> WithBaseLayer<TTexture>()
+            where TTexture : JavaEntityTexture
+        {
+            base.WithBaseLayer<TTexture>();
+            return this;
+        }
+
         public new JavaEntityTextureVersionBuilder<TVersion> WithDefaultModel<TModel>()
             where TModel : JavaEntityModel
         {
@@ -29,6 +36,12 @@ namespace MinecraftMappings.Internal.Textures.Entity
         public new JavaEntityTextureVersionBuilder<TVersion> WithMinVersion(GameVersion version)
         {
             base.WithMinVersion(version);
+            return this;
+        }
+
+        public new JavaEntityTextureVersionBuilder<TVersion> WithMaxVersion(string version)
+        {
+            base.WithMaxVersion(version);
             return this;
         }
 

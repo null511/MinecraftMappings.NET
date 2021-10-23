@@ -14,53 +14,42 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(5f, 0f, 5f);
                     element.To = new Vector3(11f, 7f, 11f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#lantern") {
                         UV = UVMap(0f, 9f, 6f, 15f),
-                        Texture = "#lantern",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#lantern") {
                         UV = UVMap(0f, 9f, 6f, 15f),
-                        Texture = "#lantern",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#lantern") {
                         UV = UVMap(0f, 2f, 6f, 9f),
-                        Texture = "#lantern",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#lantern") {
                         UV = UVMap(0f, 2f, 6f, 9f),
-                        Texture = "#lantern",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#lantern") {
                         UV = UVMap(0f, 2f, 6f, 9f),
-                        Texture = "#lantern",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#lantern") {
                         UV = UVMap(0f, 2f, 6f, 9f),
-                        Texture = "#lantern",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(6f, 7f, 6f);
                     element.To = new Vector3(10f, 9f, 10f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#lantern") {
                         UV = UVMap(1f, 10f, 5f, 14f),
-                        Texture = "#lantern",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#lantern") {
                         UV = UVMap(1f, 0f, 5f, 2f),
-                        Texture = "#lantern",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#lantern") {
                         UV = UVMap(1f, 0f, 5f, 2f),
-                        Texture = "#lantern",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#lantern") {
                         UV = UVMap(1f, 0f, 5f, 2f),
-                        Texture = "#lantern",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#lantern") {
                         UV = UVMap(1f, 0f, 5f, 2f),
-                        Texture = "#lantern",
                     };
                 })
                 .AddElement(element => {
@@ -71,13 +60,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Axis = ModelAxis.Y,
                         Angle = 45,
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#lantern") {
                         UV = UVMap(14f, 1f, 11f, 3f),
-                        Texture = "#lantern",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#lantern") {
                         UV = UVMap(11f, 1f, 14f, 3f),
-                        Texture = "#lantern",
                     };
                 })
                 .AddElement(element => {
@@ -88,13 +75,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                         Axis = ModelAxis.Y,
                         Angle = 45,
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#lantern") {
                         UV = UVMap(14f, 10f, 11f, 12f),
-                        Texture = "#lantern",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#lantern") {
                         UV = UVMap(11f, 10f, 14f, 12f),
-                        Texture = "#lantern",
                     };
                 });
         }

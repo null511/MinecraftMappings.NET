@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
 {
@@ -8,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
         public LogSpruceTop() : base("Log Spruce, Top")
         {
             AddVersion("log_spruce_top")
-                .MapsToJavaBlock<SpruceLogTop>();
+                .MapsToJavaBlock<Java.Textures.Block.SpruceLogTop>();
         }
     }
 }

@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Rail() : base("Rail")
         {
             AddVersion("rail")
-                .WithDefaultModel<Java.Models.Block.Rail>();
-                //.MapsToBedrockBlock<BedrockBlocks.Rail>();
+                .WithDefaultModel<Java.Models.Block.Rail>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.RailNormal>();
         }
     }
 }

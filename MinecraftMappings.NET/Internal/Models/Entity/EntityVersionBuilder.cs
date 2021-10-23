@@ -14,12 +14,6 @@ namespace MinecraftMappings.Internal.Models.Entity
             this.entityVersion = entityVersion;
         }
 
-        //public EntityVersionBuilder<TVersion> WithPath(string path)
-        //{
-        //    entityVersion.Path = path;
-        //    return this;
-        //}
-
         public EntityVersionBuilder<TVersion> WithTextureSize(int width, int height)
         {
             entityVersion.TextureSize = new Vector2(width, height);
@@ -38,17 +32,6 @@ namespace MinecraftMappings.Internal.Models.Entity
 
             //var elementBuilder = new ModelElementBuilder(element);
             elementAction(element);
-
-            return this;
-        }
-
-        public EntityVersionBuilder<TVersion> AddUVMapping(Action<UVRegion> uvAction)
-        {
-            var region = new UVRegion();
-            entityVersion.UVMappings.Add(region);
-
-            //var elementBuilder = new ModelElementBuilder(element);
-            uvAction(region);
 
             return this;
         }
