@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public KelpPlant() : base("Kelp Plant")
         {
             AddVersion("kelp_plant")
-                .WithDefaultModel<Java.Models.Block.KelpPlant>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.KelpPlant>();
+                .WithDefaultModel<Java.Models.Block.KelpPlant>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.KelpA>();
         }
     }
 }

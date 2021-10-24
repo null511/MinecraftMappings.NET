@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("orange_tulip")
                 .WithMinVersion("1.0.0")
-                .WithDefaultModel<Java.Models.Block.OrangeTulip>();
-                //.MapsToBedrockBlock<BedrockBlocks.OrangeTulip>();
+                .WithDefaultModel<Java.Models.Block.OrangeTulip>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerOrangeTulip>();
         }
     }
 }

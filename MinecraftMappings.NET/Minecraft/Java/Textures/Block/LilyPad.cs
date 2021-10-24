@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public LilyPad() : base("Lily Pad")
         {
             AddVersion("lily_pad")
-                .WithDefaultModel<Java.Models.Block.LilyPad>();
-                //.MapsToBedrockBlock<BedrockBlocks.LilyPad>();
+                .WithDefaultModel<Java.Models.Block.LilyPad>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Waterlily>();
         }
     }
 }

@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public ComposterSide() : base("Composter Side")
         {
             AddVersion("composter_side")
-                .WithDefaultModel<Java.Models.Block.Composter>();
-                //.MapsToBedrockBlock<BedrockBlocks.ComposterSide>();
+                .WithDefaultModel<Java.Models.Block.Composter>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ComposterSide>();
         }
     }
 }

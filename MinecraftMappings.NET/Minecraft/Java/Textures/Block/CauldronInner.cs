@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CauldronInner() : base("Cauldron, Inner")
         {
             AddVersion("cauldron_inner")
-                .WithDefaultModel<Java.Models.Block.Cauldron>();
-                //.MapsToBedrockBlock<BedrockBlocks.CauldronInner>();
+                .WithDefaultModel<Java.Models.Block.Cauldron>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CauldronInner>();
         }
     }
 }

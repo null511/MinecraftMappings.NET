@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public LilyOfTheValley() : base("Lily Of The Valley")
         {
             AddVersion("lily_of_the_valley")
-                .WithDefaultModel<Java.Models.Block.LilyOfTheValley>();
-                //.MapsToBedrockBlock<BedrockBlocks.LilyOfTheValley>();
+                .WithDefaultModel<Java.Models.Block.LilyOfTheValley>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerLilyOfTheValley>();
         }
     }
 }

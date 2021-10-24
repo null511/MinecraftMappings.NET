@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CraftingTableTop() : base("Crafting Table, Top")
         {
             AddVersion("crafting_table_top")
-                .WithDefaultModel<Java.Models.Block.CraftingTable>();
-                //.MapsToBedrockBlock<BedrockBlocks.CraftingTableSide>();
+                .WithDefaultModel<Java.Models.Block.CraftingTable>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CraftingTableTop>();
         }
     }
 }

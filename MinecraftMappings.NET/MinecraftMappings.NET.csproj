@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.0;net4.8</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.0;net4.8</TargetFrameworks>
     <Authors>Null511</Authors>
     <Description>A collection of Block and Entity mappings for Minecraft Java and Bedrock.</Description>
     <Copyright>Copyright 2021 Joshua Miller</Copyright>

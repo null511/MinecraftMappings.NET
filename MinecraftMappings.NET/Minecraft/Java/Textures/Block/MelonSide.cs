@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public MelonSide() : base("Melon Side")
         {
             AddVersion("melon_side")
-                .WithDefaultModel<Java.Models.Block.Melon>();
-                //.MapsToBedrockBlock<BedrockBlocks.MelonSide>();
+                .WithDefaultModel<Java.Models.Block.Melon>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.MelonSide>();
         }
     }
 }

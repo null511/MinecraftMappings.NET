@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public MyceliumTop() : base("Mycelium Top")
         {
             AddVersion("mycelium_top")
-                .WithDefaultModel<Java.Models.Block.Mycelium>();
-                //.MapsToBedrockBlock<BedrockBlocks.MyceliumTop>();
+                .WithDefaultModel<Java.Models.Block.Mycelium>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.MyceliumTop>();
         }
     }
 }

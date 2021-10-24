@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CauldronBottom() : base("Cauldron, Bottom")
         {
             AddVersion("cauldron_bottom")
-                .WithDefaultModel<Java.Models.Block.Cauldron>();
-                //.MapsToBedrockBlock<BedrockBlocks.CauldronBottom>();
+                .WithDefaultModel<Java.Models.Block.Cauldron>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CauldronBottom>();
         }
     }
 }

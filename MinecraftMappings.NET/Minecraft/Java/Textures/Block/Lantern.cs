@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Lantern() : base("Lantern")
         {
             AddVersion("lantern")
-                .WithDefaultModel<Java.Models.Block.Lantern>();
-                //.MapsToBedrockBlock<BedrockBlocks.Lantern>();
+                .WithDefaultModel<Java.Models.Block.Lantern>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Lantern>();
         }
     }
 }

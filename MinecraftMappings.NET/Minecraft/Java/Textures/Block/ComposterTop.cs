@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public ComposterTop() : base("Composter Top")
         {
             AddVersion("composter_top")
-                .WithDefaultModel<Java.Models.Block.Composter>();
-                //.MapsToBedrockBlock<BedrockBlocks.ComposterTop>();
+                .WithDefaultModel<Java.Models.Block.Composter>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ComposterTop>();
         }
     }
 }

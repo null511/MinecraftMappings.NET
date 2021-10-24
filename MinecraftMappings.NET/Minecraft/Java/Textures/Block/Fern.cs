@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("fern")
                 .WithMinVersion("1.0.0")
-                .WithDefaultModel<Java.Models.Block.Fern>();
-                //.MapsToBedrockBlock<BedrockBlocks.Fern>();
+                .WithDefaultModel<Java.Models.Block.Fern>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Fern>();
         }
     }
 }

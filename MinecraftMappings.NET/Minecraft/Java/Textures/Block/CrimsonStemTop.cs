@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("crimson_stem_top")
                 .WithMinVersion("1.16")
-                .WithDefaultModel<Java.Models.Block.CrimsonStem>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonStemTop>();
+                .WithDefaultModel<Java.Models.Block.CrimsonStem>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonLogTop>();
         }
     }
 }

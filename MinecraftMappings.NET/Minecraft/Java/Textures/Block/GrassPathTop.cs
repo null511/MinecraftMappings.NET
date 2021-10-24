@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public GrassPathTop() : base("Grass Path, Top")
         {
             AddVersion("grass_path_top")
-                .WithDefaultModel<Java.Models.Block.GrassPath>();
-                //.MapsToBedrockBlock<BedrockBlocks.Grass>();
+                .WithDefaultModel<Java.Models.Block.GrassPath>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GrassPathTop>();
         }
     }
 }

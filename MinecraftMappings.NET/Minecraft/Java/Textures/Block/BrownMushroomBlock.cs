@@ -7,6 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BrownMushroomBlock() : base("Brown Mushroom Block")
         {
             AddVersion("brown_mushroom_block")
+                .WithDefaultModel<Java.Models.Block.BrownMushroomBlock>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.MushroomBlockSkinBrown>();
         }
     }

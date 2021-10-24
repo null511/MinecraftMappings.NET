@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public GrassBlockSide() : base("Grass Block, Side")
         {
             AddVersion("grass_block_side")
-                .WithDefaultModel<Java.Models.Block.GrassBlock>();
-                //.MapsToBedrockBlock<BedrockBlocks.Grass>();
+                .WithDefaultModel<Java.Models.Block.GrassBlock>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GrassSide>();
         }
     }
 }

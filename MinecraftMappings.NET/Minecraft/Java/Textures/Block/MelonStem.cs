@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public MelonStem() : base("Melon Stem")
         {
             AddVersion("melon_stem")
-                .WithDefaultModel<Java.Models.Block.MelonStem_Stage7>();
-                //.MapsToBedrockBlock<BedrockBlocks.Grass>();
+                .WithDefaultModel<Java.Models.Block.MelonStem_Stage7>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.MelonStemDisconnected>();
         }
     }
 }

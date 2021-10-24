@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("fletching_table_side")
                 .WithMinVersion("1.14")
-                .WithDefaultModel<Java.Models.Block.FletchingTable>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FletchingTable_Side>();
+                .WithDefaultModel<Java.Models.Block.FletchingTable>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FletcherTable_Side1>();
         }
     }
 }

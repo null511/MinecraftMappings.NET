@@ -21,21 +21,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                     element.FaceUp = new ModelFace("#top") {
                         UV = UVMap(0f, 16f, 16f, 0f),
                     };
-                    element.FaceDown = new ModelFace("#top") {
-                        UV = UVMap(0f, 0f, 16f, 16f),
-                    };
-                    element.FaceNorth = new ModelFace("#front") {
-                        UV = UVMap(0f, 0f, 16f, 16f),
-                    };
-                    element.FaceSouth = new ModelFace("#bottom") {
-                        UV = UVMap(0f, 0f, 16f, 16f),
-                    };
-                    element.FaceWest = new ModelFace("#side") {
-                        UV = UVMap(0f, 0f, 16f, 16f),
-                    };
-                    element.FaceEast = new ModelFace("#side") {
-                        UV = UVMap(0f, 0f, 16f, 16f),
-                    };
+                    element.FaceDown = new ModelFace("#top", UVFull);
+                    element.FaceNorth = new ModelFace("#front", UVFull);
+                    element.FaceSouth = new ModelFace("#bottom", UVFull);
+                    element.FaceWest = new ModelFace("#side", UVFull);
+                    element.FaceEast = new ModelFace("#side", UVFull);
                 });
         }
     }

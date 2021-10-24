@@ -1,5 +1,4 @@
-﻿using MinecraftMappings.Internal.Models;
-using MinecraftMappings.Internal.Models.Block;
+﻿using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
@@ -7,7 +6,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
     {
         public Dispenser() : base("Dispenser")
         {
-            AddVersion("dispenser", "1.2")
+            AddVersion("dispenser", "1.0.0")
                 .WithPath("models/block")
                 .WithParent("block/orientable")
                 .AddTexture("top", "block/furnace_top")

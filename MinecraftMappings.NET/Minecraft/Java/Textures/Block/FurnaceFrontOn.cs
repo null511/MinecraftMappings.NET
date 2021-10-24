@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public FurnaceFrontOn() : base("Furnace Front, On")
         {
             AddVersion("furnace_front_on")
-                .WithDefaultModel<Java.Models.Block.FurnaceOn>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FurnaceFrontOff>();
+                .WithDefaultModel<Java.Models.Block.FurnaceOn>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FurnaceFrontOn>();
         }
     }
 }

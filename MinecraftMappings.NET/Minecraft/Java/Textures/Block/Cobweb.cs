@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Cobweb() : base("Cobweb")
         {
             AddVersion("cobweb")
-                .WithDefaultModel<Java.Models.Block.Cobweb>();
-                //.MapsToBedrockBlock<BedrockBlocks.Cobweb>();
+                .WithDefaultModel<Java.Models.Block.Cobweb>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Web>();
         }
     }
 }

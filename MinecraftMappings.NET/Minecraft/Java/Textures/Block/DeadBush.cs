@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public DeadBush() : base("Dead Bush")
         {
             AddVersion("dead_bush")
-                .WithDefaultModel<Java.Models.Block.DeadBush>();
-                //.MapsToBedrockBlock<BedrockBlocks.DeadBush>();
+                .WithDefaultModel<Java.Models.Block.DeadBush>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deadbush>();
         }
     }
 }

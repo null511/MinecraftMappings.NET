@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public NetherSprouts() : base("Nether Sprouts")
         {
             AddVersion("nether_sprouts")
-                .WithDefaultModel<Java.Models.Block.NetherSprouts>();
-                //.MapsToBedrockBlock<BedrockBlocks.NetherSprouts>();
+                .WithDefaultModel<Java.Models.Block.NetherSprouts>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.NetherSprouts>();
         }
     }
 }

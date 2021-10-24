@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CauldronTop() : base("Cauldron, Top")
         {
             AddVersion("cauldron_top")
-                .WithDefaultModel<Java.Models.Block.Cauldron>();
-                //.MapsToBedrockBlock<BedrockBlocks.CauldronTop>();
+                .WithDefaultModel<Java.Models.Block.Cauldron>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CauldronTop>();
         }
     }
 }

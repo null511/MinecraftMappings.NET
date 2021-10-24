@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("cartography_table_top")
                 .WithMinVersion("1.14")
-                .WithDefaultModel<Java.Models.Block.CartographyTable>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StoneCalcite>();
+                .WithDefaultModel<Java.Models.Block.CartographyTable>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CartographyTable_Top>();
         }
     }
 }

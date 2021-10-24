@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Comparator() : base("Comparator")
         {
             AddVersion("comparator")
-                .WithDefaultModel<Java.Models.Block.Comparator>();
-                //.MapsToBedrockBlock<BedrockBlocks.Comparator>();
+                .WithDefaultModel<Java.Models.Block.Comparator>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ComparatorOff>();
         }
     }
 }

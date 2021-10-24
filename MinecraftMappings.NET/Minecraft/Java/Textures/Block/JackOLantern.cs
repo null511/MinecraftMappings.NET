@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public JackOLantern() : base("Jack O'Lantern")
         {
             AddVersion("jack_o_lantern")
-                .WithDefaultModel<Java.Models.Block.JackOLantern>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.JackOLantern>();
+                .WithDefaultModel<Java.Models.Block.JackOLantern>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.PumpkinFaceOn>();
         }
     }
 }

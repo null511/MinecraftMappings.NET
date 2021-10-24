@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Lever() : base("Lever")
         {
             AddVersion("lever")
-                .WithDefaultModel<Java.Models.Block.Lever>();
-                //.MapsToBedrockBlock<BedrockBlocks.Brick>();
+                .WithDefaultModel<Java.Models.Block.Lever>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Lever>();
         }
     }
 }

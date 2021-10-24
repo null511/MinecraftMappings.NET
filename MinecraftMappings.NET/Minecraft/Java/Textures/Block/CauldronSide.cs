@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CauldronSide() : base("Cauldron, Side")
         {
             AddVersion("cauldron_side")
-                .WithDefaultModel<Java.Models.Block.Cauldron>();
-                //.MapsToBedrockBlock<BedrockBlocks.CauldronSide>();
+                .WithDefaultModel<Java.Models.Block.Cauldron>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CauldronSide>();
         }
     }
 }

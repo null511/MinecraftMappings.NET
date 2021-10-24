@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CrimsonRoots() : base("Crimson Roots")
         {
             AddVersion("crimson_roots")
-                .WithDefaultModel<Java.Models.Block.CrimsonRoots>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonRoots>();
+                .WithDefaultModel<Java.Models.Block.CrimsonRoots>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonRoots>();
         }
     }
 }

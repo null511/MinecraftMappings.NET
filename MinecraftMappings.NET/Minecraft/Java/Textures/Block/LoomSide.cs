@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public LoomSide() : base("Loom Side")
         {
             AddVersion("loom_side")
-                .WithDefaultModel<Java.Models.Block.Loom>();
-                //.MapsToBedrockBlock<BedrockBlocks.LoomSide>();
+                .WithDefaultModel<Java.Models.Block.Loom>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LoomSide>();
         }
     }
 }

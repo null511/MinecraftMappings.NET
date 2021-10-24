@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public DarkOakLeaves() : base("Dark Oak Leaves")
         {
             AddVersion("dark_oak_leaves")
-                .WithDefaultModel<Java.Models.Block.DarkOakLeaves>();
-                //.MapsToBedrockBlock<BedrockBlocks.LeavesDarkOak>();
+                .WithDefaultModel<Java.Models.Block.DarkOakLeaves>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LeavesBigOak>();
         }
     }
 }

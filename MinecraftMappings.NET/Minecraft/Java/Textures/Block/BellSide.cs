@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BellSide() : base("Bell Side")
         {
             AddVersion("bell_side")
-                //.WithDefaultModel<Java.Models.Block.Bell>()
+                .WithDefaultModel<Java.Models.Block.BellFloor>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BellSide>();
         }
     }

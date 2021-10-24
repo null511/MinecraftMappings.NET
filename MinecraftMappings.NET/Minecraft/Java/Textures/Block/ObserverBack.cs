@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("observer_back")
                 .WithMinVersion("1.11")
-                .WithDefaultModel<Java.Models.Block.Observer>();
-                //.MapsToBedrockBlock<BedrockBlocks.ObserverSide>();
+                .WithDefaultModel<Java.Models.Block.Observer>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ObserverBack>();
         }
     }
 }

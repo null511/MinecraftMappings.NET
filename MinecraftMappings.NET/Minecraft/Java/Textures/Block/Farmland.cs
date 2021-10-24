@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("farmland")
                 .WithMinVersion("1.0.0")
-                .WithDefaultModel<Java.Models.Block.Farmland>();
-                //.MapsToBedrockBlock<BedrockBlocks.Farmland>();
+                .WithDefaultModel<Java.Models.Block.Farmland>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FarmlandDry>();
         }
     }
 }

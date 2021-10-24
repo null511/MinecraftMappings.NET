@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public LoomBottom() : base("Loom Bottom")
         {
             AddVersion("loom_bottom")
-                .WithDefaultModel<Java.Models.Block.Loom>();
-                //.MapsToBedrockBlock<BedrockBlocks.LoomBottom>();
+                .WithDefaultModel<Java.Models.Block.Loom>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LoomBottom>();
         }
     }
 }

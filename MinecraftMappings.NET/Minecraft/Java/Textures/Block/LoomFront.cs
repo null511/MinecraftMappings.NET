@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public LoomFront() : base("Loom Front")
         {
             AddVersion("loom_front")
-                .WithDefaultModel<Java.Models.Block.Loom>();
-                //.MapsToBedrockBlock<BedrockBlocks.LoomFront>();
+                .WithDefaultModel<Java.Models.Block.Loom>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LoomFront>();
         }
     }
 }

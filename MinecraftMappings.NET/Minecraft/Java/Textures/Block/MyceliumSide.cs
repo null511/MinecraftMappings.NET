@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public MyceliumSide() : base("Mycelium Side")
         {
             AddVersion("mycelium_side")
-                .WithDefaultModel<Java.Models.Block.Mycelium>();
-                //.MapsToBedrockBlock<BedrockBlocks.MyceliumSide>();
+                .WithDefaultModel<Java.Models.Block.Mycelium>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.MyceliumSide>();
         }
     }
 }
