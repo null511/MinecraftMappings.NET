@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
         public LecternSides() : base("Lectern Sides")
         {
             AddVersion("lectern_sides")
-                .MapsToJavaBlock<Java.Textures.Block.LecternSide>();
+                .MapsToJavaBlock<Java.Textures.Block.LecternSides>();
         }
     }
 }

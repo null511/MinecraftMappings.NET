@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public GrassBlockSideOverlay() : base("Grass Block, Side Overlay")
         {
             AddVersion("grass_block_side_overlay")
-                .WithDefaultModel<Java.Models.Block.GrassBlock>();
+                .WithDefaultModel<Java.Models.Block.GrassBlockOverlay>();
                 //.MapsToBedrockBlock<BedrockBlocks.Grass>();
         }
     }

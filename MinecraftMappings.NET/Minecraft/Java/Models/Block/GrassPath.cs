@@ -8,7 +8,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
     {
         public GrassPath() : base("Grass Path")
         {
-            AddVersion("grass_block", "1.0.0")
+            AddVersion("grass_path", "1.0.0", "1.17")
                 .WithPath("models/block")
                 .WithParent("block/block")
                 .AddTexture("top", "block/grass_path_top")
@@ -16,7 +16,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddTexture("side", "block/grass_path_side")
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 0f);
-                    element.To = new Vector3(16f, 16f, 16f);
+                    element.To = new Vector3(16f, 15f, 16f);
                     element.FaceUp = new ModelFace("#top", UVFull);
                     element.FaceDown = new ModelFace("#bottom", UVFull);
                     element.FaceNorth = new ModelFace("#side") {

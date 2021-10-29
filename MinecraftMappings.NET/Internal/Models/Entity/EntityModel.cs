@@ -52,7 +52,7 @@ namespace MinecraftMappings.Internal.Models.Entity
         {
             var entityVersion = new TVersion {
                 Id = id,
-                TextVersion = version,
+                MinVersion = version,
             };
 
             Versions.Add(entityVersion);
@@ -61,14 +61,14 @@ namespace MinecraftMappings.Internal.Models.Entity
 
         public TVersion GetLatestVersion()
         {
-            return Versions.OrderByDescending(v => v.ParsedVersion)
+            return Versions.OrderByDescending(v => v.ParsedMinVersion)
                 .FirstOrDefault();
         }
 
         public TVersion GetVersion(Version version)
         {
-            return Versions.OrderByDescending(e => e.ParsedVersion)
-                .FirstOrDefault(e => e.ParsedVersion <= version);
+            return Versions.OrderByDescending(e => e.ParsedMinVersion)
+                .FirstOrDefault(e => e.ParsedMinVersion <= version);
         }
     }
 }

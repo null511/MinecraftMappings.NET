@@ -1,5 +1,4 @@
-﻿using MinecraftMappings.Internal.Models;
-using MinecraftMappings.Internal.Models.Block;
+﻿using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Internal.Textures.Block
 {
@@ -24,6 +23,12 @@ namespace MinecraftMappings.Internal.Textures.Block
         public new JavaBlockTextureVersionBuilder<TVersion> WithMinVersion(GameVersion version)
         {
             base.WithMinVersion(version);
+            return this;
+        }
+
+        public new JavaBlockTextureVersionBuilder<TVersion> WithMaxVersion(string version)
+        {
+            base.WithMaxVersion(version);
             return this;
         }
 

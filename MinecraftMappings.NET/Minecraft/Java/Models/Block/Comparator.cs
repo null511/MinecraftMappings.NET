@@ -17,113 +17,85 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 0f);
                     element.To = new Vector3(16f, 2f, 16f);
-                    element.FaceUp = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#top",
-                    };
-                    element.FaceDown = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#slab",
-                    };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceUp = new ModelFace("#top", UVFull);
+                    element.FaceDown = new ModelFace("#slab", UVFull);
+                    element.FaceNorth = new ModelFace("#slab") {
                         UV = UVMap(0f, 14f, 16f, 16f),
-                        Texture = "#slab",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#slab") {
                         UV = UVMap(0f, 14f, 16f, 16f),
-                        Texture = "#slab",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#slab") {
                         UV = UVMap(0f, 14f, 16f, 16f),
-                        Texture = "#slab",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#slab") {
                         UV = UVMap(0f, 14f, 16f, 16f),
-                        Texture = "#slab",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(4f, 2f, 11f);
                     element.To = new Vector3(6f, 7f, 13f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 8f),
-                        Texture = "#unlit",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#unlit") {
                         UV = UVMap(7f, 13f, 9f, 15f),
-                        Texture = "#unlit",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(10f, 2f, 11f);
                     element.To = new Vector3(12f, 7f, 13f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 8f),
-                        Texture = "#unlit",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#unlit") {
                         UV = UVMap(7f, 13f, 9f, 15f),
-                        Texture = "#unlit",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
                 })
                 .AddElement(element => {
                     element.From = new Vector3(7f, 2f, 2f);
                     element.To = new Vector3(9f, 4f, 4f);
-                    element.FaceUp = new ModelFace {
+                    element.FaceUp = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 8f),
-                        Texture = "#unlit",
                     };
-                    element.FaceDown = new ModelFace {
+                    element.FaceDown = new ModelFace("#unlit") {
                         UV = UVMap(7f, 13f, 9f, 15f),
-                        Texture = "#unlit",
                     };
-                    element.FaceNorth = new ModelFace {
+                    element.FaceNorth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceSouth = new ModelFace {
+                    element.FaceSouth = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceWest = new ModelFace {
+                    element.FaceWest = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
-                    element.FaceEast = new ModelFace {
+                    element.FaceEast = new ModelFace("#unlit") {
                         UV = UVMap(7f, 6f, 9f, 11f),
-                        Texture = "#unlit",
                     };
                 });
         }

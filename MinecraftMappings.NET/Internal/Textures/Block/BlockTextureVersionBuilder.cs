@@ -26,6 +26,12 @@ namespace MinecraftMappings.Internal.Textures.Block
             return this;
         }
 
+        protected BlockTextureVersionBuilder<TVersion> WithMaxVersion(string version)
+        {
+            BlockVersion.MaxVersion = GameVersion.Parse(version);
+            return this;
+        }
+
         protected BlockTextureVersionBuilder<TVersion> WithFrameCount(int frameCount)
         {
             BlockVersion.FrameCount = frameCount;

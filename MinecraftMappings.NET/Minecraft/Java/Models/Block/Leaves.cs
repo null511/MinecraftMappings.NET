@@ -14,30 +14,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
                 .AddElement(element => {
                     element.From = new Vector3(0f, 0f, 0f);
                     element.To = new Vector3(16f, 16f, 16f);
-                    element.FaceUp = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
-                    element.FaceDown = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
-                    element.FaceNorth = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
-                    element.FaceSouth = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
-                    element.FaceWest = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
-                    element.FaceEast = new ModelFace {
-                        UV = UVFull,
-                        Texture = "#all",
-                    };
+                    element.FaceUp = new ModelFace("#all", UVFull);
+                    element.FaceDown = new ModelFace("#all", UVFull);
+                    element.FaceNorth = new ModelFace("#all", UVFull);
+                    element.FaceSouth = new ModelFace("#all", UVFull);
+                    element.FaceWest = new ModelFace("#all", UVFull);
+                    element.FaceEast = new ModelFace("#all", UVFull);
                 });
         }
     }

@@ -2,11 +2,11 @@
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class ObserverBackLit : JavaBlockTexture
+    public class ObserverBackOn : JavaBlockTexture
     {
-        public ObserverBackLit() : base("Observer Back, Lit")
+        public ObserverBackOn() : base("Observer Back, On")
         {
-            AddVersion("observer_back_lit")
+            AddVersion("observer_back_on")
                 .WithMinVersion("1.11")
                 .WithDefaultModel<Java.Models.Block.ObserverOn>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ObserverBackLit>();

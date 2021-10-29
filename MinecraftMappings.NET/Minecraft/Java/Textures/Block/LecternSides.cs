@@ -2,11 +2,11 @@
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
-    public class LecternSide : JavaBlockTexture
+    public class LecternSides : JavaBlockTexture
     {
-        public LecternSide() : base("Lectern Side")
+        public LecternSides() : base("Lectern Sides")
         {
-            AddVersion("lectern_side")
+            AddVersion("lectern_sides")
                 .WithDefaultModel<Java.Models.Block.Lectern>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LecternSides>();
         }

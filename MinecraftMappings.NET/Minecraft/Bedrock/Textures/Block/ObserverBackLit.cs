@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
         public ObserverBackLit() : base("Observer Back, Lit")
         {
             AddVersion("observer_back_lit")
-                .MapsToJavaBlock<Java.Textures.Block.ObserverBackLit>();
+                .MapsToJavaBlock<Java.Textures.Block.ObserverBackOn>();
         }
     }
 }

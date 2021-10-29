@@ -4,18 +4,26 @@ namespace MinecraftMappings.Internal
 {
     public abstract class Versionable
     {
-        private readonly Lazy<Version> _parsedVersion;
+        private readonly Lazy<Version> _parsedMinVersion;
+        private readonly Lazy<Version> _parsedMaxVersion;
 
-        public string TextVersion {get; set;}
+        public string MinVersion {get; set;}
+        public string MaxVersion {get; set;}
 
-        public Version ParsedVersion => _parsedVersion.Value;
+        public Version ParsedMinVersion => _parsedMinVersion.Value;
+        public Version ParsedMaxVersion => _parsedMaxVersion.Value;
 
 
         protected Versionable()
         {
-            _parsedVersion = new Lazy<Version>(() => {
-                if (TextVersion == null) return null;
-                return Version.Parse(TextVersion);
+            _parsedMinVersion = new Lazy<Version>(() => {
+                if (MinVersion == null) return null;
+                return Version.Parse(MinVersion);
+            });
+
+            _parsedMaxVersion = new Lazy<Version>(() => {
+                if (MaxVersion == null) return null;
+                return Version.Parse(MaxVersion);
             });
         }
     }

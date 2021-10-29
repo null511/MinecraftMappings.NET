@@ -27,11 +27,12 @@ namespace MinecraftMappings.Internal.Models.Block
             Versions = new List<BlockModelVersion>();
         }
 
-        public BlockModelVersionBuilder AddVersion(string id, string version)
+        public BlockModelVersionBuilder AddVersion(string id, string minVersion, string maxVersion = null)
         {
             var modelVersion = new BlockModelVersion {
                 Id = id,
-                TextVersion = version,
+                MinVersion = minVersion,
+                MaxVersion = maxVersion,
             };
 
             Versions.Add(modelVersion);
@@ -40,7 +41,7 @@ namespace MinecraftMappings.Internal.Models.Block
 
         public BlockModelVersion GetLatestVersion()
         {
-            return Versions.OrderByDescending(v => v.ParsedVersion)
+            return Versions.OrderByDescending(v => v.ParsedMinVersion)
                 .FirstOrDefault();
         }
 
