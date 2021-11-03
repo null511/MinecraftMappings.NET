@@ -14,8 +14,8 @@ namespace MinecraftMappings.Internal.Models.Entity
         public bool InvertAxisX;
         public bool InvertAxisY;
         public bool InvertAxisZ;
-        public bool MirrorUVX;
-        //public bool MirrorUVY;
+        public bool MirrorTexU;
+        //public bool MirrorTexV;
 
         public List<EntityElementCube> Cubes {get; set;}
         public List<EntityElement> Submodels {get; set;}
@@ -27,6 +27,11 @@ namespace MinecraftMappings.Internal.Models.Entity
         {
             Cubes = new List<EntityElementCube>();
             Submodels = new List<EntityElement>();
+        }
+
+        public EntityElement(string name) : this()
+        {
+            Name = name;
         }
     }
 }

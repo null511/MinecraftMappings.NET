@@ -29,7 +29,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                 })
                 .AddElement("right_ear", element => {
                     element.Translate = new Vector3(0f, 23f, 0f);
-                    element.MirrorUVX = true;
+                    element.MirrorTexU = true;
 
                     element.Cubes.Add(new EntityElementCube {
                         Position = new Vector3(-4f, 25f, -2f),
@@ -66,7 +66,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                 })
                 .AddElement("left_wing", element => {
                     element.Translate = new Vector3(0f, 24f, 0f);
-                    element.MirrorUVX = true;
+                    element.MirrorTexU = true;
 
                     element.Cubes.Add(new EntityElementCube {
                         Position = new Vector3(-12f, 7f, 1.5f),
@@ -85,7 +85,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                 })
                 .AddElement("outer_left_wing", element => {
                     element.Translate = new Vector3(12f, 23f, 1.5f);
-                    element.MirrorUVX = true;
+                    element.MirrorTexU = true;
 
                     element.Cubes.Add(new EntityElementCube {
                         Position = new Vector3(-20f, 10f, 1.5f),

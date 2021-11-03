@@ -98,7 +98,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                             new EntityElement {
                                 Name = "arms_flipped",
                                 Translate = new Vector3(0f, -24f, 0f),
-                                MirrorUVX = true,
+                                MirrorTexU = true,
 
                                 Cubes = {
                                     new EntityElementCube {

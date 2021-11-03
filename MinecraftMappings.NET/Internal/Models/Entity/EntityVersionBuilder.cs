@@ -20,14 +20,9 @@ namespace MinecraftMappings.Internal.Models.Entity
             return this;
         }
 
-        public EntityVersionBuilder<TVersion> AddElement(Action<EntityElement> elementAction) => AddElement(null, elementAction);
-
         public EntityVersionBuilder<TVersion> AddElement(string name, Action<EntityElement> elementAction)
         {
-            var element = new EntityElement {
-                Name = name,
-            };
-
+            var element = new EntityElement(name);
             entityVersion.Elements.Add(element);
 
             //var elementBuilder = new ModelElementBuilder(element);
@@ -35,6 +30,8 @@ namespace MinecraftMappings.Internal.Models.Entity
 
             return this;
         }
+
+        public EntityVersionBuilder<TVersion> AddElement(Action<EntityElement> elementAction) => AddElement(null, elementAction);
 
         public EntityVersionBuilder<TVersion> WithUVMappings(params UVRegion[] mappings)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using SharpDX;
 
 namespace MinecraftMappings.Internal.Models.Entity
 {
@@ -25,6 +26,11 @@ namespace MinecraftMappings.Internal.Models.Entity
         protected EntityModel(string name)
         {
             Name = name;
+        }
+
+        protected RectangleF UVMap(float left, float top, float right, float bottom)
+        {
+            return new RectangleF(left, top, right - left, bottom - top);
         }
 
         public static IEnumerable<T> FromAssembly<T>()

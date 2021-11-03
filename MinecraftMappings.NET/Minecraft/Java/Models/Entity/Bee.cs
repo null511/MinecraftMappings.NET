@@ -85,7 +85,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                 })
                 .AddElement("left_wing", element => {
                     element.Translate = new Vector3(1.5f, -9f, 3f);
-                    element.MirrorUVX = true;
+                    element.MirrorTexU = true;
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 

@@ -7,6 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Entity
         public Bat() : base("Bat")
         {
             AddVersion("bat")
+                .WithPath("entity")
                 .WithDefaultModel<Java.Models.Entity.Bat>();
                 //.MapsToBedrockEntity<BedrockEntities.Bat>();
         }
