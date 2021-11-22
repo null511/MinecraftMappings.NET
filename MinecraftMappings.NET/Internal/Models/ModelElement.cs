@@ -22,6 +22,15 @@ namespace MinecraftMappings.Internal.Models
             Enum.GetValues(typeof(ElementFaces)).OfType<ElementFaces>();
 
 
+        public void SetTexture(string texture)
+        {
+            foreach (var face in AllFaces) {
+                var modelFace = GetFace(face);
+                if (modelFace == null) continue;
+                modelFace.Texture = texture;
+            }
+        }
+
         public ModelFace GetFace(in ElementFaces face)
         {
             switch (face) {
