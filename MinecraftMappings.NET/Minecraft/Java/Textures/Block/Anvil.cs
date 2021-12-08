@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public Anvil() : base("Anvil")
         {
-            AddVersion("anvil")
+            AddVersion(0, "anvil")
+                .WithMinVersion("1.4.2")
                 .WithDefaultModel<Java.Models.Block.Anvil>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.AnvilBase>();
         }

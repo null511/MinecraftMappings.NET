@@ -6,7 +6,13 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public OakDoorBottom() : base("Oak Door Bottom")
         {
+            AddVersion("door_bottom")
+                .WithMaxVersion("1.8")
+                .WithDefaultModel<Java.Models.Block.OakDoorBottom>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorWoodLower>();
+
             AddVersion("oak_door_bottom")
+                .WithMinVersion("1.8")
                 .WithDefaultModel<Java.Models.Block.OakDoorBottom>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorWoodLower>();
         }

@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BellBottom() : base("Bell Bottom")
         {
-            AddVersion("bell_bottom")
+            AddVersion(4, "bell_bottom")
+                .WithMinVersion("1.14")
                 .WithDefaultModel<Java.Models.Block.BellFloor>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BellBottom>();
         }

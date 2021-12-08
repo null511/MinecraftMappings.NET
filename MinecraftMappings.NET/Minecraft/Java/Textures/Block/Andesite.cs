@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public Andesite() : base("Andesite")
         {
-            AddVersion("andesite")
+            AddVersion(1, "andesite")
+                .WithMinVersion("1.8")
                 .WithDefaultModel<Java.Models.Block.Andesite>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StoneAndesite>();
         }

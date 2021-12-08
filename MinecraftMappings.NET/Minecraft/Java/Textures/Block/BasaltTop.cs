@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BasaltTop() : base("Basalt Top")
         {
-            AddVersion("basalt_top")
+            AddVersion(5, "basalt_top")
+                .WithMinVersion("1.16")
                 .WithDefaultModel<Java.Models.Block.Basalt>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BasaltTop>();
         }

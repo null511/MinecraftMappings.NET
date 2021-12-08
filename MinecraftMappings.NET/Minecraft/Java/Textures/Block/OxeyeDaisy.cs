@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,8 +7,10 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public OxeyeDaisy() : base("Oxeye Daisy")
         {
-            AddVersion("oxeye_daisy")
-                .WithMinVersion("1.0.0")
+            BlendMode = BlendModes.Cutout;
+
+            AddVersion(1, "oxeye_daisy")
+                .WithMinVersion("1.7.2")
                 .WithDefaultModel<Java.Models.Block.OxeyeDaisy>();
                 //.MapsToBedrockBlock<BedrockBlocks.OxeyeDaisy>();
         }

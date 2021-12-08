@@ -6,7 +6,13 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public OakTrapdoor() : base("Oak Trapdoor")
         {
-            AddVersion("oak_trapdoor")
+            AddVersion(0, "trapdoor")
+                .WithMaxVersion("1.13")
+                .WithDefaultModel<Java.Models.Block.OakTrapdoorTop>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Trapdoor>();
+
+            AddVersion(4, "oak_trapdoor")
+                .WithMinVersion("1.13")
                 .WithDefaultModel<Java.Models.Block.OakTrapdoorTop>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Trapdoor>();
         }

@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public RoseBushTop() : base("Rose Bush Top")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("rose_bush_top")
                 .WithMinVersion("1.0.0")
                 .WithDefaultModel<Java.Models.Block.RoseBushTop>()

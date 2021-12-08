@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BeeNestSide() : base("Bee Nest Side")
         {
-            AddVersion("bee_nest_side")
+            AddVersion(5, "bee_nest_side")
+                .WithMinVersion("1.15")
                 .WithDefaultModel<Java.Models.Block.BeeNest>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BeeNestSide>();
         }

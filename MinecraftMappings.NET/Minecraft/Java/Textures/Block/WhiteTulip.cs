@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,8 +7,10 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WhiteTulip() : base("White Tulip")
         {
-            AddVersion("white_tulip")
-                .WithMinVersion("1.0.0")
+            BlendMode = BlendModes.Cutout;
+
+            AddVersion(1, "white_tulip")
+                .WithMinVersion("1.7.2")
                 .WithDefaultModel<Java.Models.Block.WhiteTulip>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerWhiteTulip>();
         }

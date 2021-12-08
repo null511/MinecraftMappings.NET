@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public LargeFern() : base("Large Fern")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("large_fern")
                 .WithDefaultModel<Java.Models.Block.LargeFern>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoublePlant_Fern>();

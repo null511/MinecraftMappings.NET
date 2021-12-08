@@ -5,7 +5,7 @@ namespace MinecraftMappings.Minecraft.Java
 {
     public static class JavaVersions
     {
-        private static readonly Lazy<Version[]> allParsedLazy = new Lazy<Version[]>(() => All.Select(Version.Parse).ToArray());
+        private static readonly Lazy<Version[]> allParsedLazy = new(() => All.Select(Version.Parse).ToArray());
 
         public static Version[] AllParsed => allParsedLazy.Value;
 

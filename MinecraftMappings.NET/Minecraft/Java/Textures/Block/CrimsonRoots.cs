@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CrimsonRoots() : base("Crimson Roots")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("crimson_roots")
                 .WithDefaultModel<Java.Models.Block.CrimsonRoots>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonRoots>();

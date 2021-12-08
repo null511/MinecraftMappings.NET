@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public Bedrock() : base("Bedrock")
         {
-            AddVersion("bedrock")
+            AddVersion(0, "bedrock")
+                .WithMinVersion("1.0.0")
                 .WithDefaultModel<Java.Models.Block.Bedrock>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Bedrock>();
         }

@@ -6,7 +6,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BarrelTopOpen() : base("Barrel Top, Open")
         {
-            AddVersion("barrel_top_open")
+            AddVersion(4, "barrel_top_open")
                 .WithMinVersion("1.14")
                 .WithDefaultModel<Java.Models.Block.BarrelOpen>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BarrelTopOpen>();

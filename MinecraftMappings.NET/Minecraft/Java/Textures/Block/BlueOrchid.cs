@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,7 +7,10 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BlueOrchid() : base("Blue Orchid")
         {
-            AddVersion("blue_orchid")
+            BlendMode = BlendModes.Cutout;
+
+            AddVersion(1, "blue_orchid")
+                .WithMinVersion("1.7.2")
                 .WithDefaultModel<Java.Models.Block.BlueOrchid>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerBlueOrchid>();
         }

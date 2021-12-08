@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BasaltSide() : base("Basalt Side")
         {
-            AddVersion("basalt_side")
+            AddVersion(5, "basalt_side")
+                .WithMinVersion("1.16")
                 .WithDefaultModel<Java.Models.Block.Basalt>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BasaltSide>();
         }

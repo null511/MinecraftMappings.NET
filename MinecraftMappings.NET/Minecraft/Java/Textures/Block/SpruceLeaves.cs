@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public SpruceLeaves() : base("Spruce Leaves")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("spruce_leaves")
                 .WithDefaultModel<Java.Models.Block.SpruceLeaves>();
                 //.MapsToBedrockBlock<BedrockBlocks.LeavesSpruce>();

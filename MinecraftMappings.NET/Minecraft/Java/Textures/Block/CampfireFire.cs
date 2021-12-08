@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CampfireFire() : base("Campfire Fire")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("campfire_fire")
                 .WithDefaultModel<Java.Models.Block.Campfire>();
                 //.MapsToBedrockBlock<BedrockBlocks.CampfireFire>();

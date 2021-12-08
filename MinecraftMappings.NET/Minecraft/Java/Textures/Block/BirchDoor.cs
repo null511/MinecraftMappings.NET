@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BirchDoor() : base("Birch Door")
         {
-            AddVersion("birch_door")
+            AddVersion(1, "birch_door")
+                .WithMinVersion("1.8")
                 .WithDefaultModel<Java.Models.Block.BirchDoor>();
         }
     }

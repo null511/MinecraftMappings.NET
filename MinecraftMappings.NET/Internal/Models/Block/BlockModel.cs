@@ -15,7 +15,7 @@ namespace MinecraftMappings.Internal.Models.Block
 
     public abstract class BlockModel : IBlockModel
     {
-        protected static readonly RectangleF UVFull = new RectangleF(0f, 0f, 16f, 16f);
+        protected static readonly RectangleF UVFull = new(0f, 0f, 16f, 16f);
 
         public string Name {get; set;}
         public List<BlockModelVersion> Versions {get; set;}
@@ -45,7 +45,7 @@ namespace MinecraftMappings.Internal.Models.Block
                 .FirstOrDefault();
         }
 
-        protected RectangleF UVMap(float left, float top, float right, float bottom)
+        protected static RectangleF UVMap(float left, float top, float right, float bottom)
         {
             return new RectangleF(left, top, right - left, bottom - top);
         }

@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public AcaciaPlanks() : base("Acacia Planks")
         {
-            AddVersion("acacia_planks")
+            AddVersion(1, "acacia_planks")
+                .WithMinVersion("1.7.2")
                 .WithDefaultModel<Java.Models.Block.AcaciaPlanks>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.PlanksAcacia>();
         }

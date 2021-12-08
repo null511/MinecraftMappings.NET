@@ -6,7 +6,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public AncientDebrisSide() : base("Ancient Debris, Side")
         {
-            AddVersion("ancient_debris_side")
+            AddVersion(5, "ancient_debris_side")
                 .WithMinVersion("1.16")
                 .WithDefaultModel<Java.Models.Block.AncientDebris>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.AncientDebrisSide>();

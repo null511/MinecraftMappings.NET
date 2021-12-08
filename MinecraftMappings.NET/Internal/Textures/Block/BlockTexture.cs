@@ -13,6 +13,7 @@ namespace MinecraftMappings.Internal.Textures.Block
     public interface IBlockTexture<out TBlockVersion> : IBlockTexture
         where TBlockVersion : BlockTextureVersion
     {
+        IEnumerable<TBlockVersion> Versions {get;}
         TBlockVersion GetLatestVersion();
     }
 
@@ -39,13 +40,23 @@ namespace MinecraftMappings.Internal.Textures.Block
     public abstract class BlockTexture<TVersion> : BlockTexture, IBlockTexture<TVersion>
         where TVersion : BlockTextureVersion, new()
     {
+        public int BlendMode {get; set;}
         public List<TVersion> Versions {get;}
+
+        IEnumerable<TVersion> IBlockTexture<TVersion>.Versions => Versions;
 
 
         protected BlockTexture(string name) : base(name)
         {
+            BlendMode = BlendModes.Opaque;
             Versions = new List<TVersion>();
         }
+
+        //public TVersion FindVersionById()
+        //{
+        //    // WARN: temp hack - not actually using version!
+        //    return Versions.FirstOrDefault();
+        //}
 
         public TVersion GetLatestVersion()
         {

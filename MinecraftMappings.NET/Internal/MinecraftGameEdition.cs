@@ -29,6 +29,14 @@ namespace MinecraftMappings.Internal
         public IEnumerable<TItem> AllItems => allItemsLazy.Value;
 
 
+        public IEnumerable<TBlock> FindBlockTexturesById<TBlock, TBlockVersion>(string id)
+            where TBlock : IBlockTexture<TBlockVersion>
+            where TBlockVersion : BlockTextureVersion
+        {
+            return allBlockTexturesLazy.Value.OfType<TBlock>()
+                .Where(block => block.Versions.Any(v => string.Equals(v.Id, id, StringComparison.InvariantCultureIgnoreCase)));
+        }
+
         public IEnumerable<TBlockVersion> FindLatestBlockTextureVersionById<TBlockVersion>(string id)
             where TBlockVersion : BlockTextureVersion, new()
         {

@@ -9,9 +9,9 @@ namespace MinecraftMappings.Minecraft
 {
     public static class Minecraft
     {
-        public static MinecraftJava Java {get;} = new MinecraftJava();
+        public static MinecraftJava Java {get;} = new();
 
-        public static MinecraftBedrock Bedrock {get;} = new MinecraftBedrock();
+        public static MinecraftBedrock Bedrock {get;} = new();
     }
 
     public class MinecraftJava : MinecraftGameEdition<JavaBlockTexture, JavaBlockModel, JavaEntityTexture, JavaEntityModel, JavaItemData> {}

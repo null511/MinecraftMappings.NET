@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
         public BeetrootsStage2() : base("Beetroots, Stage 2")
         {
             AddVersion("beetroots_stage2")
-                .MapsToJavaBlock<Java.Textures.Block.BeetrootsStage2>();
+                .MapsToJavaBlock<Java.Textures.Block.Beetroots_Stage2>();
         }
     }
 }
