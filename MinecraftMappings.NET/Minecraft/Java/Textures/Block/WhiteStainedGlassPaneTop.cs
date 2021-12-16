@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WhiteStainedGlassPaneTop() : base("White Stained Glass Pane, Top")
         {
-            AddVersion("white_stained_glass_pane_top");
+            AddVersion("white_stained_glass_pane_top")
+                .WithDefaultModel<Java.Models.Block.WhiteStainedGlassPane>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlassPaneTopWhite>();
         }
     }

@@ -2,14 +2,14 @@
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BlueOrchid : JavaBlockModel
+    public class PeonyTop : JavaBlockModel
     {
-        public BlueOrchid() : base("Blue Orchid")
+        public PeonyTop() : base("Peony Top")
         {
-            AddVersion("blue_orchid", "1.0.0")
+            AddVersion("peony_top", "1.0.0")
                 .WithPath("models/block")
                 .WithParent("block/cross")
-                .AddTexture("cross", "block/blue_orchid");
+                .AddTexture("cross", "block/peony_top");
         }
     }
 }

@@ -9,8 +9,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("wither_rose");
-                //.WithDefaultModel<Java.Models.Block.WitherRose>()
+            AddVersion("wither_rose")
+                .WithMinVersion("1.14")
+                .WithDefaultModel<Java.Models.Block.WitherRose>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WitherRose>();
         }
     }

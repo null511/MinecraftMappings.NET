@@ -7,7 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public WhiteConcrete() : base("White Concrete")
         {
             AddVersion("white_concrete")
-                .WithMinVersion("1.12");
+                .WithMinVersion("1.12")
+                .WithDefaultModel<Java.Models.Block.WhiteConcrete>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ConcreteWhite>();
         }
     }

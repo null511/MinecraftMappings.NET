@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("peony_bottom");
-                //.WithDefaultModel<Java.Models.Block.PeonyBottom>()
+            AddVersion("peony_bottom")
+                .WithDefaultModel<Java.Models.Block.PeonyBottom>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FlowerPeonyBottom>();
         }
     }

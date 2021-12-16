@@ -7,7 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public YellowConcrete() : base("Yellow Concrete")
         {
             AddVersion("yellow_concrete")
-                .WithMinVersion("1.12");
+                .WithMinVersion("1.12")
+                .WithDefaultModel<Java.Models.Block.YellowConcrete>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ConcreteYellow>();
         }
     }

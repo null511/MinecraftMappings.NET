@@ -37,11 +37,12 @@ namespace MinecraftMappings.Internal
                 .Where(block => block.Versions.Any(v => string.Equals(v.Id, id, StringComparison.InvariantCultureIgnoreCase)));
         }
 
-        public IEnumerable<TBlockVersion> FindLatestBlockTextureVersionById<TBlockVersion>(string id)
+        public IEnumerable<TBlockVersion> FindBlockTextureVersionById<TBlockVersion>(string id)
             where TBlockVersion : BlockTextureVersion, new()
         {
-            return allBlockTexturesLazy.Value.OfType<IBlockTexture<TBlockVersion>>()
-                .Select(block => block.GetLatestVersion())
+            return allBlockTexturesLazy.Value
+                .OfType<IBlockTexture<TBlockVersion>>()
+                .SelectMany(block => block.Versions)
                 .Where(latest => latest.Id.Equals(id));
         }
 
@@ -96,7 +97,7 @@ namespace MinecraftMappings.Internal
         {
             if (textureId == null) return default;
 
-            var blockTextures = FindLatestBlockTextureVersionById<TBlockTextureVersion>(textureId);
+            var blockTextures = FindBlockTextureVersionById<TBlockTextureVersion>(textureId);
             var modelType = blockTextures.FirstOrDefault()?.DefaultModel;
             if (modelType == null) return default;
 

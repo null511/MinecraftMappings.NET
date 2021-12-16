@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public OakDoor() : base("Oak Door")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion("door")
                 .WithMaxVersion("1.8")
                 .WithDefaultModel<Java.Models.Block.OakDoor>();

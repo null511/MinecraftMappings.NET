@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("bubble_coral");
-                //.WithDefaultModel<Java.Models.Block.BrainCoral>()
+            AddVersion("bubble_coral")
+                .WithDefaultModel<Java.Models.Block.BubbleCoral>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.BrainCoral>();
         }
     }

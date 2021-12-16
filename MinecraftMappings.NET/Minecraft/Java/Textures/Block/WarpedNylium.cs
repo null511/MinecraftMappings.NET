@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WarpedNylium() : base("Warped Nylium")
         {
-            AddVersion("warped_nylium");
-                //.WithDefaultModel<Java.Models.Block.WarpedNylium>()
+            AddVersion("warped_nylium")
+                .WithDefaultModel<Java.Models.Block.WarpedNylium>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WarpedNylium>();
         }
     }

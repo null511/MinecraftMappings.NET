@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,6 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public OakTrapdoor() : base("Oak Trapdoor")
         {
+            BlendMode = BlendModes.Cutout;
+
             AddVersion(0, "trapdoor")
                 .WithMaxVersion("1.13")
                 .WithDefaultModel<Java.Models.Block.OakTrapdoorTop>()

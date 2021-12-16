@@ -7,7 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public YellowWool() : base("Yellow Wool")
         {
             AddVersion("yellow_wool")
-                .WithMinVersion("1.6.1");
+                .WithMinVersion("1.6.1")
+                .WithDefaultModel<Java.Models.Block.YellowWool>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WoolColoredYellow>();
         }
     }

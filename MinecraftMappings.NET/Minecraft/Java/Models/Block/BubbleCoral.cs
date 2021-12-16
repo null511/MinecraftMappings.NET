@@ -2,14 +2,14 @@
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BlueOrchid : JavaBlockModel
+    public class BubbleCoral : JavaBlockModel
     {
-        public BlueOrchid() : base("Blue Orchid")
+        public BubbleCoral() : base("Bubble Coral")
         {
-            AddVersion("blue_orchid", "1.0.0")
+            AddVersion("bubble_coral", "1.14")
                 .WithPath("models/block")
                 .WithParent("block/cross")
-                .AddTexture("cross", "block/blue_orchid");
+                .AddTexture("cross", "block/bubble_coral");
         }
     }
 }

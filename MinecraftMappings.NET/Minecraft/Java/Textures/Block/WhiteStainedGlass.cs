@@ -9,7 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Transparent;
 
-            AddVersion("white_stained_glass");
+            AddVersion("white_stained_glass")
+                .WithDefaultModel<Java.Models.Block.WhiteStainedGlass>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlassWhite>();
         }
     }

@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("warped_fungus");
-                //.WithDefaultModel<Java.Models.Block.WarpedFungus>()
+            AddVersion("warped_fungus")
+                .WithDefaultModel<Java.Models.Block.WarpedFungus>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WarpedFungus>();
         }
     }
