@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("jungle_trapdoor");
-                //.WithDefaultModel<Java.Models.Block.JungleTrapdoor>();
+            AddVersion("jungle_trapdoor")
+                .WithDefaultModel<Java.Models.Block.JungleTrapdoorTop>();
         }
     }
 }

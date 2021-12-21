@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WarpedTrapdoor() : base("Warped Trapdoor")
         {
-            AddVersion("warped_trapdoor");
-                //.WithDefaultModel<Java.Models.Block.WarpedTrapdoorTop>()
+            AddVersion("warped_trapdoor")
+                .WithDefaultModel<Java.Models.Block.WarpedTrapdoorTop>();
                 //.MapsToBedrockBlock<BedrockBlocks.WarpedTrapdoor>();
         }
     }

@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("iron_trapdoor");
-                //.WithDefaultModel<Java.Models.Block.IronTrapdoor>();
+            AddVersion("iron_trapdoor")
+                .WithDefaultModel<Java.Models.Block.IronTrapdoorTop>();
         }
     }
 }

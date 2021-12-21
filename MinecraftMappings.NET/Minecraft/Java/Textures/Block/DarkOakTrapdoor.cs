@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public DarkOakTrapdoor() : base("Dark Oak Trapdoor")
         {
             AddVersion("dark_oak_trapdoor")
-                .WithMinVersion("1.13");
-                //.WithDefaultModel<Java.Models.Block.DarkOakDoorTop>()
+                .WithMinVersion("1.13")
+                .WithDefaultModel<Java.Models.Block.DarkOakTrapdoorTop>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorBigOakUpper>();
         }
     }

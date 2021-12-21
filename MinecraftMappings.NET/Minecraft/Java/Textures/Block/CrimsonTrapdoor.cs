@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("crimson_trapdoor");
-                //.WithDefaultModel<Java.Models.Block.CrimsonTrapdoorTop>()
+            AddVersion("crimson_trapdoor")
+                .WithDefaultModel<Java.Models.Block.CrimsonTrapdoorTop>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonTrapdoor>();
         }
     }
