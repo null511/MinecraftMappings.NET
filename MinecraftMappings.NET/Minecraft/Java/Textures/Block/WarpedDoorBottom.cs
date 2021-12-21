@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WarpedDoorBottom() : base("Warped Door Bottom")
         {
-            AddVersion("warped_door_bottom");
-                //.WithDefaultModel<Java.Models.Block.WarpedDoorBottom>()
+            AddVersion("warped_door_bottom")
+                .WithDefaultModel<Java.Models.Block.WarpedDoorBottom>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WarpedDoorBottom>();
         }
     }

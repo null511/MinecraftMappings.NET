@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CrimsonDoor() : base("Crimson Door")
         {
-            AddVersion("crimson_door");
-                //.WithDefaultModel<Java.Models.Block.CrimsonDoor>();
+            AddVersion("crimson_door")
+                .WithDefaultModel<Java.Models.Block.CrimsonDoor>();
         }
     }
 }

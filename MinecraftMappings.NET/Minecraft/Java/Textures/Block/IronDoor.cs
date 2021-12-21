@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("iron_door");
-                //.WithDefaultModel<Java.Models.Block.IronDoor>();
+            AddVersion("iron_door")
+                .WithDefaultModel<Java.Models.Block.IronDoor>();
         }
     }
 }

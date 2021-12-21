@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("jungle_door_top");
-                //.WithDefaultModel<Java.Models.Block.JungleDoorTop>()
+            AddVersion("jungle_door_top")
+                .WithDefaultModel<Java.Models.Block.JungleDoorTop>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorJungleUpper>();
         }
     }

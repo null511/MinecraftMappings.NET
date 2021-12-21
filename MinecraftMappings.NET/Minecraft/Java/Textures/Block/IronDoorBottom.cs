@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public IronDoorBottom() : base("Iron Door Bottom")
         {
-            AddVersion("iron_door_bottom");
-                //.WithDefaultModel<Java.Models.Block.IronDoorBottom>()
+            AddVersion("iron_door_bottom")
+                .WithDefaultModel<Java.Models.Block.IronDoorBottom>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorIronLower>();
         }
     }

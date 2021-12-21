@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public JungleDoorBottom() : base("Jungle Door Bottom")
         {
-            AddVersion("jungle_door_bottom");
-                //.WithDefaultModel<Java.Models.Block.JungleDoorBottom>()
+            AddVersion("jungle_door_bottom")
+                .WithDefaultModel<Java.Models.Block.JungleDoorBottom>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorJungleLower>();
         }
     }

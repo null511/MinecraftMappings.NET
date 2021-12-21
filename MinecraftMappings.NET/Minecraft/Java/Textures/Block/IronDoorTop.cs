@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("iron_door_top");
-                //.WithDefaultModel<Java.Models.Block.IronDoorTop>()
+            AddVersion("iron_door_top")
+                .WithDefaultModel<Java.Models.Block.IronDoorTop>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorIronUpper>();
         }
     }

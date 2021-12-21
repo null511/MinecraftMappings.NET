@@ -2,14 +2,14 @@
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class BirchTrapdoorTop : JavaBlockModel
+    public class WarpedTrapdoorTop : JavaBlockModel
     {
-        public BirchTrapdoorTop() : base("Birch Trapdoor, Top")
+        public WarpedTrapdoorTop() : base("Warped Trapdoor, Top")
         {
-            AddVersion("birch_trapdoor_top", "1.0.0")
+            AddVersion("warped_trapdoor_top", "1.0.0")
                 .WithPath("models/block")
                 .WithParent("block/template_orientable_trapdoor_top")
-                .AddTexture("texture", "block/birch_trapdoor");
+                .AddTexture("texture", "block/warped_trapdoor");
         }
     }
 }
