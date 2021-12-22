@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("hanging_roots");
-                //.WithDefaultModel<Java.Models.Block.HangingRoots>()
+            AddVersion("hanging_roots")
+                .WithDefaultModel<Java.Models.Block.HangingRoots>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HangingRoots>();
         }
     }
