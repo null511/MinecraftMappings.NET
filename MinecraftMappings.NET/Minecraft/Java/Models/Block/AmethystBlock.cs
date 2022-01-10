@@ -9,7 +9,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Block
             AddVersion("amethyst_block", "1.17")
                 .WithPath("models/block")
                 .WithParent("block/cube_all")
-                .AddTexture("cross", "block/amethyst_block");
+                .AddTexture("all", "block/amethyst_block");
         }
     }
 }
