@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="MinecraftMappings.NET.csproj.DotSettings" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Minecraft\Bedrock\Entities\" />
   </ItemGroup>
 

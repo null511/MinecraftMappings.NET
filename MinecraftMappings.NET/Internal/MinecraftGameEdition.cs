@@ -5,6 +5,7 @@ using MinecraftMappings.Internal.Textures.Block;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using MinecraftMappings.Internal.Textures.Entity;
 
 namespace MinecraftMappings.Internal
@@ -46,12 +47,19 @@ namespace MinecraftMappings.Internal
                 .Where(latest => latest.Id.Equals(id));
         }
 
-        public IEnumerable<TEntityVersion> FindLatestEntityTextureVersionById<TEntityVersion>(string id)
+        public IEnumerable<TEntityVersion> FindLatestEntityTextureVersionById<TEntityVersion>(string id, string path = null)
             where TEntityVersion : EntityTextureVersion, new()
         {
             return allEntityTexturesLazy.Value.OfType<IEntityTexture<TEntityVersion>>()
                 .Select(entity => entity.GetLatestVersion())
-                .Where(latest => latest.Id.Equals(id));
+                .Where(latest => latest.Id.Equals(id))
+                .OrderByDescending(t => MatchesPath($@"assets/*/textures/{t.Path}", path) ? 1 : 0);
+        }
+
+        private static bool MatchesPath(string expectedExp, string actualPath)
+        {
+            // TODO: find "textures/entity/* 
+            return true;
         }
 
         public IEnumerable<TItemVersion> FindItemVersionById<TItemVersion>(string id)
@@ -104,12 +112,12 @@ namespace MinecraftMappings.Internal
             return (TBlockModel)Activator.CreateInstance(modelType);
         }
 
-        public TEntityModel GetEntityModelForTexture<TEntityVersion>(string textureId)
+        public TEntityModel GetEntityModelForTexture<TEntityVersion>(string textureId, string path = null)
             where TEntityVersion : EntityTextureVersion, new()
         {
             if (textureId == null) return default;
 
-            var entityTextures = FindLatestEntityTextureVersionById<TEntityVersion>(textureId);
+            var entityTextures = FindLatestEntityTextureVersionById<TEntityVersion>(textureId, path);
             var modelType = entityTextures.FirstOrDefault()?.DefaultModel;
             if (modelType == null) return default;
 
