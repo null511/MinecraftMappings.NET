@@ -1,8 +1,8 @@
 ﻿namespace MinecraftMappings.Internal.Models.Block
 {
-    public class BedrockBlockModel : BlockModel
+    public abstract class BedrockBlockModel : BlockModel
     {
-        public BedrockBlockModel(string name) : base(name) {}
+        protected BedrockBlockModel(string name) : base(name) {}
     }
 
     //public class BedrockModelVersion : ModelVersion

@@ -13,6 +13,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
     public interface IEntityTexture<out TEntityVersion> : IEntityTexture
         where TEntityVersion : EntityTextureVersion
     {
+        int BlendMode {get; set;}
         TEntityVersion GetLatestVersion();
     }
 
@@ -39,11 +40,13 @@ namespace MinecraftMappings.Internal.Textures.Entity
     public abstract class EntityTexture<TVersion> : EntityTexture, IEntityTexture<TVersion>
         where TVersion : EntityTextureVersion, new()
     {
+        public int BlendMode {get; set;}
         public List<TVersion> Versions {get;}
 
 
         protected EntityTexture(string name) : base(name)
         {
+            BlendMode = BlendModes.Cutout;
             Versions = new List<TVersion>();
         }
 

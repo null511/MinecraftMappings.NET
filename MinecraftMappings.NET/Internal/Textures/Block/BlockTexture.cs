@@ -13,7 +13,9 @@ namespace MinecraftMappings.Internal.Textures.Block
     public interface IBlockTexture<out TBlockVersion> : IBlockTexture
         where TBlockVersion : BlockTextureVersion
     {
+        int BlendMode {get; set;}
         IEnumerable<TBlockVersion> Versions {get;}
+
         TBlockVersion GetLatestVersion();
     }
 
