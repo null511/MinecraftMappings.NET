@@ -40,18 +40,25 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("left_hand", element => {
-                    element.Translate = new Vector3(-4f, 17.75f, 0f);
-                    element.RotationAngleZ = 57;
+                    element.Translate = new Vector3(4.5f, -18.75f, 0f);
 
-                    element.Cubes.Add(new EntityElementCube {
-                        Position = new Vector3(-15.5f, 16.75f, -1f),
-                        Size = new Vector3(12f, 2f, 2f),
-                        UV = new Vector2(32f, 0f),
-                        Inflate = -0.5f,
+                    element.Submodels.Add(new EntityElement {
+                        Name = "left_hand_rotation",
+                        Translate = new Vector3(-4f, 17.75f, 0f),
+                        RotationAngleZ = 57,
+                        
+                        Cubes = {
+                            new EntityElementCube {
+                                Position = new Vector3(-11.5f, -1f, -1f),
+                                Size = new Vector3(12f, 2f, 2f),
+                                UV = new Vector2(32f, 0f),
+                                Inflate = -0.5f,
+                            },
+                        },
                     });
                 })
                 .AddElement("right_hand", element => {
-                    element.Translate = new Vector3(-14.5f, 18.75f, 0f);
+                    element.Translate = new Vector3(-14.5f, -18.75f, 0f);
 
                     element.Submodels.Add(new EntityElement {
                         Name = "right_hand_flip",

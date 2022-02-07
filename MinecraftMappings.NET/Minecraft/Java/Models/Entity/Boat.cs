@@ -106,15 +106,6 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         Size = new Vector3(1f, 6f, 7f),
                         UV = new Vector2(62f, 20f),
                     });
-                })
-                .AddElement("bottom_no_water", element => {
-                    element.Translate = new Vector3(0f, 11f, -3.5f);
-
-                    element.Cubes.Add(new EntityElementCube {
-                        Position = new Vector3(-14f, -19f, -2.5f),
-                        Size = new Vector3(28f, 17f, 6f),
-                        UV = new Vector2(60f, 40f),
-                    });
                 });
         }
     }

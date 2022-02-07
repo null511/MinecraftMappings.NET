@@ -10,7 +10,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
             BlendMode = BlendModes.Cutout;
 
             AddVersion("grass_block_side_overlay")
-                .WithDefaultModel<Java.Models.Block.GrassBlockOverlay>();
+                .WithDefaultModel<Java.Models.Block.GrassBlock>();
                 //.MapsToBedrockBlock<BedrockBlocks.Grass>();
         }
     }
