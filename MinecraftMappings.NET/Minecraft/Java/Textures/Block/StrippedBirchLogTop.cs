@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public StrippedBirchLogTop() : base("Stripped Birch Log Top")
         {
-            AddVersion("stripped_birch_log_top");
-                //.WithDefaultModel<Java.Models.Block.StrippedBirchLog>()
+            AddVersion("stripped_birch_log_top")
+                .WithDefaultModel<Java.Models.Block.StrippedBirchLog>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StrippedBirchLogTop>();
         }
     }
