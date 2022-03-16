@@ -14,7 +14,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-4f, 0f, -4f),
                         Size = new Vector3(8f, 8f, 8f),
                     });

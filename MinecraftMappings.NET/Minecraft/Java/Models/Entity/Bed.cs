@@ -10,14 +10,19 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("bed", "1.0.0")
                 .WithTextureSize(64, 64)
                 .AddElement("foot", element => {
+                    element.Part = "foot";
                     element.Translate = new Vector3(-8f, -9f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "foot_rotation",
+                        Id = "foot_rotation",
                         Translate = new Vector3(0f, 9f, 0f),
+                        InvertAxisX = true,
+                        InvertAxisY = true,
                         RotationAngleX = 90,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, -16f, 0f),
                                 Size = new Vector3(16f, 16f, 6f),
@@ -27,12 +32,14 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
 
                         Submodels = {
                             new EntityElement {
-                                Name = "foot_left_leg",
+                                Id = "foot_left_leg",
                                 Translate = new Vector3(0f, -16f, 0f),
+                                InvertAxisX = true,
+                                InvertAxisY = true,
                                 RotationAngleX = -90,
                                 RotationAngleZ = -90,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(-3f, -9f, -8f),
                                         Size = new Vector3(3f, 3f, 3f),
@@ -41,11 +48,13 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                                 },
                             },
                             new EntityElement {
-                                Name = "foot_right_leg",
+                                Id = "foot_right_leg",
                                 Translate = new Vector3(0f, -16f, 0f),
+                                InvertAxisX = true,
+                                InvertAxisY = true,
                                 RotationAngleX = -90,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(5f, -9f, 0f),
                                         Size = new Vector3(3f, 3f, 3f),
@@ -57,14 +66,19 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("head", element => {
+                    element.Part = "head";
                     element.Translate = new Vector3(-8f, -25f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "head_rotation",
+                        Id = "head_rotation",
                         Translate = new Vector3(0f, 9f, 0f),
+                        InvertAxisX = true,
+                        InvertAxisY = true,
                         RotationAngleX = 90,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, 0f, 0f),
                                 Size = new Vector3(16f, 16f, 6f),
@@ -74,12 +88,14 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
 
                         Submodels = {
                             new EntityElement {
-                                Name = "head_left_leg",
+                                Id = "head_left_leg",
                                 Translate = new Vector3(0f, -16f, 0f),
+                                InvertAxisX = true,
+                                InvertAxisY = true,
                                 RotationAngleX = -90,
                                 RotationAngleZ = -180,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(5f, -9f, -32f),
                                         Size = new Vector3(3f, 3f, 3f),
@@ -88,12 +104,14 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                                 }
                             },
                             new EntityElement {
-                                Name = "head_right_leg",
+                                Id = "head_right_leg",
                                 Translate = new Vector3(0f, -16f, 0f),
+                                InvertAxisX = true,
+                                InvertAxisY = true,
                                 RotationAngleX = -90,
                                 RotationAngleZ = 90,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(29f, -9f, -8f),
                                         Size = new Vector3(3f, 3f, 3f),

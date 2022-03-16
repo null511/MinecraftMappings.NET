@@ -5,7 +5,10 @@ namespace MinecraftMappings.Internal.Models.Entity
 {
     public class EntityElement
     {
-        public string Name;
+        //public string Name;
+
+        public string Id;
+        public string Part;
         public Vector3 Translate;
         public float RotationAngleX;
         public float RotationAngleY;
@@ -16,22 +19,27 @@ namespace MinecraftMappings.Internal.Models.Entity
         public bool InvertAxisZ;
         public bool MirrorTexU;
         //public bool MirrorTexV;
+        public bool Attach;
+        public float Scale;
 
-        public List<EntityElementCube> Cubes {get; set;}
-        public List<EntityElement> Submodels {get; set;}
+        public List<EntityElementCube> Boxes;
+        public List<EntityElement> Submodels;
+        public EntityModelPart Model;
 
+        // TODO: Add epsilon check!
         public bool HasRotation => RotationAngleX != 0 || RotationAngleY != 0 || RotationAngleZ != 0;
 
 
         public EntityElement()
         {
-            Cubes = new List<EntityElementCube>();
+            Boxes = new List<EntityElementCube>();
             Submodels = new List<EntityElement>();
+            Scale = 1.0f;
         }
 
-        public EntityElement(string name) : this()
+        public EntityElement(string id) : this()
         {
-            Name = name;
+            Id = id;
         }
     }
 }

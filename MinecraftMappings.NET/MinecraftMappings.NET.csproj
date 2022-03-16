@@ -16,6 +16,7 @@
     <Compile Remove="Internal\Models\Entity\EntityRotation.cs" />
     <Compile Remove="Internal\Models\JavaModelVersion.cs" />
     <Compile Remove="Minecraft\Java\Models\Entity\Drowned.cs" />
+    <Compile Remove="Minecraft\Java\Models\Entity\EnchantingTableBook.cs" />
   </ItemGroup>
 
   <ItemGroup>

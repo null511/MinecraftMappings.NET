@@ -1,4 +1,5 @@
-﻿using MinecraftMappings.Internal.Textures.Block;
+﻿using MinecraftMappings.Internal;
+using MinecraftMappings.Internal.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Textures.Block
 {
@@ -6,8 +7,11 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public SunflowerFront() : base("Sunflower Front")
         {
-            AddVersion("sunflower_front");
-                //.WithDefaultModel<Java.Models.Block.SunflowerFront>()
+            BlendMode = BlendModes.Cutout;
+
+            AddVersion("sunflower_front")
+                .WithMinVersion("1.7.2")
+                .WithDefaultModel<Java.Models.Block.SunflowerTop>();
                 //.MapsToBedrockBlock<BedrockBlocks.SunflowerFront>();
         }
     }

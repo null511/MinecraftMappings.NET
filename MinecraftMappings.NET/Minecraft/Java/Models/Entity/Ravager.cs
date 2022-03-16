@@ -27,7 +27,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                                 InvertAxisY = true,
                                 MirrorTexU = true,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(-10f, 27f, -20f),
                                         Size = new Vector3(2f, 14f, 4f),
@@ -37,7 +37,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                             },
                         },
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(3f, 0f, -1f),
                                 Size = new Vector3(2f, 14f, 4f),
@@ -46,11 +46,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         },
                     });
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-8f, 14f, -24f),
                         Size = new Vector3(16f, 20f, 16f),
                     });
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-2f, 12f, -28f),
                         Size = new Vector3(4f, 8f, 4f),
                     });
@@ -61,7 +61,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-8f, 13f, -22f),
                         Size = new Vector3(16f, 3f, 16f),
                         UV = new Vector2(0f, 36f),
@@ -78,7 +78,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-7f, -6f, -7f),
                                 Size = new Vector3(14f, 16f, 20f),
@@ -97,7 +97,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(4f, 0f, 17f),
                         Size = new Vector3(8f, 37f, 8f),
                         UV = new Vector2(96f, 0f),
@@ -109,7 +109,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
                     element.MirrorTexU = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-12f, 0f, 17f),
                         Size = new Vector3(8f, 37f, 8f),
                         UV = new Vector2(96f, 0f),
@@ -120,7 +120,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(4f, 0f, -7.5f),
                         Size = new Vector3(8f, 37f, 8f),
                         UV = new Vector2(64f, 0f),
@@ -132,7 +132,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
                     element.MirrorTexU = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-12f, 0f, -7.5f),
                         Size = new Vector3(8f, 37f, 8f),
                         UV = new Vector2(64f, 0f),
@@ -143,7 +143,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-5f, 21f, -10f),
                         Size = new Vector3(10f, 10f, 18f),
                         UV = new Vector2(68f, 73f),

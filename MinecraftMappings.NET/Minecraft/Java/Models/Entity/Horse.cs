@@ -10,11 +10,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("horse", "1.0.0")
                 .WithTextureSize(64, 64)
                 .AddElement("head", element => {
+                    element.Part = "head";
                     element.Translate = new Vector3(0f, -22f, 9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-3f, 28f, -11f),
                         Size = new Vector3(6f, 5f, 7f),
                         UV_North = UVMap(7f, 20f, 13f, 25f),
@@ -26,11 +27,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("mouth", element => {
+                    element.Part = "mouth";
                     element.Translate = new Vector3(0f, -22f, 9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-2f, 28f, -16f),
                         Size = new Vector3(4f, 5f, 5f),
                         UV_North = UVMap(5f, 30f, 9f, 35f),
@@ -42,11 +44,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("left_ear", element => {
+                    element.Part = "left_ear";
                     element.Translate = new Vector3(0f, -23f, 9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(0.5f, 33f, -5.01f),
                         Size = new Vector3(2f, 3f, 1f),
                         UV_North = UVMap(20f, 17f, 22f, 20f),
@@ -58,11 +61,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("right_ear", element => {
+                    element.Part = "right_ear";
                     element.Translate = new Vector3(0f, -23f, 9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-2.5f, 33f, -5.01f),
                         Size = new Vector3(2f, 3f, 1f),
                         UV_North = UVMap(20f, 17f, 22f, 20f),
@@ -74,11 +78,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("neck", element => {
+                    element.Part = "neck";
                     element.Translate = new Vector3(0f, -22f, 8.9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-2f, 16f, -11f),
                         Size = new Vector3(4f, 12f, 7f),
                         UV_North = UVMap(7f, 42f, 11f, 54f),
@@ -90,11 +95,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("mane", element => {
+                    element.Part = "mane";
                     element.Translate = new Vector3(0f, -22f, 9f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-1f, 17f, -4f),
                         Size = new Vector3(2f, 16f, 2f),
                         UV_North = UVMap(58f, 38f, 60f, 54f),
@@ -106,11 +112,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("body", element => {
+                    element.Part = "body";
                     element.Translate = new Vector3(0f, -13f, -6f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-5f, 11f, -11f),
                         Size = new Vector3(10f, 10f, 22f),
                         UV_North = UVMap(22f, 54f, 32f, 64f),
@@ -119,15 +126,16 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         UV_West = UVMap(32f, 54f, 54f, 64f),
                         UV_Up = UVMap(32f, 54f, 22f, 32f),
                         UV_Down = UVMap(42f, 32f, 32f, 54f),
-                        Inflate = 0.05f,
+                        SizeAdd = 0.05f,
                     });
                 })
                 .AddElement("tail", element => {
+                    element.Part = "tail";
                     element.Translate = new Vector3(0f, -21f, -11f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-1.5f, 7f, 11f),
                         Size = new Vector3(3f, 14f, 4f),
                         UV_North = UVMap(46f, 40f, 49f, 54f),
@@ -139,11 +147,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("front_left_leg", element => {
+                    element.Part = "front_left_leg";
                     element.Translate = new Vector3(4f, -10f, 9.1f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-5f, 0f, -11f),
                         Size = new Vector3(4f, 11f, 4f),
                         UV_North = UVMap(56f, 25f, 52f, 36f),
@@ -155,11 +164,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("front_right_leg", element => {
+                    element.Part = "front_right_leg";
                     element.Translate = new Vector3(-4f, -10f, 9.1f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(1f, 0f, -11f),
                         Size = new Vector3(4f, 11f, 4f),
                         UV_North = UVMap(52f, 25f, 56f, 36f),
@@ -171,11 +181,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("back_left_leg", element => {
+                    element.Part = "back_left_leg";
                     element.Translate = new Vector3(4f, -10f, -8f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-5f, 0f, 7f),
                         Size = new Vector3(4f, 11f, 4f),
                         UV_North = UVMap(56f, 25f, 52f, 36f),
@@ -187,11 +198,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("back_right_leg", element => {
+                    element.Part = "back_right_leg";
                     element.Translate = new Vector3(-4f, -10f, -8f);
                     element.InvertAxisX = true;
                     element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(1f, 0f, 7f),
                         Size = new Vector3(4f, 11f, 4f),
                         UV_North = UVMap(52f, 25f, 56f, 36f),

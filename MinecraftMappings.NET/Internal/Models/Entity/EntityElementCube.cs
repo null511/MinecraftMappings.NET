@@ -9,7 +9,7 @@ namespace MinecraftMappings.Internal.Models.Entity
         public Vector3 Position;
         public Vector3 Size;
         public Vector2 UV;
-        public float Inflate;
+        public float SizeAdd;
 
         public RectangleF? UV_Up;
         public RectangleF? UV_Down;
@@ -69,21 +69,21 @@ namespace MinecraftMappings.Internal.Models.Entity
                 case ElementFaces.Up:
                 case ElementFaces.Down:
                     return (
-                        width: Size.X + Inflate,
-                        height: Size.Z + Inflate,
-                        offset: Size.Y + Inflate);
+                        width: Size.X + SizeAdd,
+                        height: Size.Z + SizeAdd,
+                        offset: Size.Y + SizeAdd);
                 case ElementFaces.North:
                 case ElementFaces.South:
                     return (
-                        width: Size.X + Inflate,
-                        height: Size.Y + Inflate,
-                        offset: Size.Z + Inflate);
+                        width: Size.X + SizeAdd,
+                        height: Size.Y + SizeAdd,
+                        offset: Size.Z + SizeAdd);
                 case ElementFaces.East:
                 case ElementFaces.West:
                     return (
-                        width: Size.Z + Inflate,
-                        height: Size.Y + Inflate,
-                        offset: Size.X + Inflate);
+                        width: Size.Z + SizeAdd,
+                        height: Size.Y + SizeAdd,
+                        offset: Size.X + SizeAdd);
                 default:
                     throw new ApplicationException($"Unknown element face '{face}'!");
             }

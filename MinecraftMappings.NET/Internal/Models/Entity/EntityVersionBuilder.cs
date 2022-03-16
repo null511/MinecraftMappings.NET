@@ -20,9 +20,9 @@ namespace MinecraftMappings.Internal.Models.Entity
             return this;
         }
 
-        public EntityVersionBuilder<TVersion> AddElement(string name, Action<EntityElement> elementAction)
+        public EntityVersionBuilder<TVersion> AddElement(string id, Action<EntityElement> elementAction)
         {
-            var element = new EntityElement(name);
+            var element = new EntityElement(id);
             entityVersion.Elements.Add(element);
 
             //var elementBuilder = new ModelElementBuilder(element);
@@ -31,12 +31,12 @@ namespace MinecraftMappings.Internal.Models.Entity
             return this;
         }
 
-        public EntityVersionBuilder<TVersion> AddElement(Action<EntityElement> elementAction) => AddElement(null, elementAction);
+        //public EntityVersionBuilder<TVersion> AddElement(Action<EntityElement> elementAction) => AddElement(null, elementAction);
 
-        public EntityVersionBuilder<TVersion> WithUVMappings(params UVRegion[] mappings)
-        {
-            entityVersion.UVMappings.AddRange(mappings);
-            return this;
-        }
+        //public EntityVersionBuilder<TVersion> WithUVMappings(params UVRegion[] mappings)
+        //{
+        //    entityVersion.UVMappings.AddRange(mappings);
+        //    return this;
+        //}
     }
 }

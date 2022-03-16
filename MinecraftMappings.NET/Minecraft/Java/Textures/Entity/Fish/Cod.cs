@@ -7,6 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Entity.Fish
         public Cod() : base("Cod")
         {
             AddVersion("cod")
+                .WithPath("entity/fish")
                 .WithDefaultModel<Java.Models.Entity.Cod>();
                 //.MapsToBedrockEntity<BedrockEntities.Cod>();
         }

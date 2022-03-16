@@ -14,6 +14,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
         where TEntityVersion : EntityTextureVersion
     {
         int BlendMode {get; set;}
+        IEnumerable<TEntityVersion> Versions {get;}
         TEntityVersion GetLatestVersion();
     }
 
@@ -42,6 +43,8 @@ namespace MinecraftMappings.Internal.Textures.Entity
     {
         public int BlendMode {get; set;}
         public List<TVersion> Versions {get;}
+
+        IEnumerable<TVersion> IEntityTexture<TVersion>.Versions => Versions;
 
 
         protected EntityTexture(string name) : base(name)

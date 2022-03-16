@@ -20,7 +20,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(0f, -3f, -7f),
                                 Size = new Vector3(15f, 10f, 14f),
@@ -35,7 +35,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         Translate = new Vector3(0f, 7f, 0f),
                         RotationAngleX = -180,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(0f, -7f, -7f),
                                 Size = new Vector3(15f, 5f, 14f),
@@ -50,7 +50,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                         Translate = new Vector3(0f, 7f, 0f),
                         RotationAngleX = -180,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(0f, -4f, 7f),
                                 Size = new Vector3(1f, 4f, 1f),

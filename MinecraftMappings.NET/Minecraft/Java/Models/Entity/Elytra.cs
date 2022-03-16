@@ -10,10 +10,13 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("elytra", "1.0.0")
                 .WithTextureSize(64, 32)
                 .AddElement("left_wing", element => {
+                    element.Part = "left_wing";
                     element.RotationAngleX = 180f;
                     element.RotationAngleZ = 180f;
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-11f, 0f, -2f),
                         Size = new Vector3(10f, 20f, 4f),
 
@@ -26,11 +29,14 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
                 })
                 .AddElement("right_wing", element => {
+                    element.Part = "right_wing";
                     element.RotationAngleX = 180f;
                     element.RotationAngleZ = 180f;
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
                     element.MirrorTexU = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(1f, 0f, -2f),
                         Size = new Vector3(10f, 20f, 4f),
 

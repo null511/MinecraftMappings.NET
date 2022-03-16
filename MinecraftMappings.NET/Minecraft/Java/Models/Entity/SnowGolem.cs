@@ -10,77 +10,98 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("snow_golem", "1.0.0")
                 .WithTextureSize(64, 64)
                 .AddElement("head", element => {
-                    element.Translate = new Vector3(0f, 20f, 0f);
+                    element.Part = "head";
+                    element.Translate = new Vector3(0f, -20f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-4f, 20f, -4f),
                         Size = new Vector3(8f, 8f, 8f),
                         UV = new Vector2(0f, 0f),
-                        Inflate = -0.5f,
-                    });
-                })
-                .AddElement("body", element => {
-                    element.Translate = new Vector3(0f, 11f, 0f);
-
-                    element.Cubes.Add(new EntityElementCube {
-                        Position = new Vector3(-5f, 11f, -5f),
-                        Size = new Vector3(10f, 10f, 10f),
-                        UV = new Vector2(0f, 16f),
-                        Inflate = -0.5f,
-                    });
-                })
-                .AddElement("body_bottom", element => {
-                    element.Translate = new Vector3(0f, 0f, 0f);
-
-                    element.Cubes.Add(new EntityElementCube {
-                        Position = new Vector3(-6f, 0f, -6f),
-                        Size = new Vector3(12f, 12f, 12f),
-                        UV = new Vector2(0f, 36f),
-                        Inflate = -0.5f,
+                        SizeAdd = -0.5f,
                     });
                 })
                 .AddElement("left_hand", element => {
+                    element.Part = "left_hand";
                     element.Translate = new Vector3(4.5f, -18.75f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "left_hand_rotation",
+                        Id = "left_hand_rotation",
                         Translate = new Vector3(-4f, 17.75f, 0f),
                         RotationAngleZ = 57,
-                        
-                        Cubes = {
+                        InvertAxisX = true,
+                        InvertAxisY = true,
+
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-11.5f, -1f, -1f),
                                 Size = new Vector3(12f, 2f, 2f),
                                 UV = new Vector2(32f, 0f),
-                                Inflate = -0.5f,
+                                SizeAdd = -0.5f,
                             },
                         },
                     });
                 })
                 .AddElement("right_hand", element => {
+                    element.Part = "right_hand";
                     element.Translate = new Vector3(-14.5f, -18.75f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "right_hand_flip",
+                        Id = "right_hand_flip",
                         Translate = new Vector3(9.5f, 17.75f, 0f),
-                        RotationAngleY = 180,
+                        RotationAngleY = -180,
+                        InvertAxisX = true,
+                        InvertAxisY = true,
 
                         Submodels = {
                             new EntityElement {
-                                Name = "right_hand_rotation",
+                                Id = "right_hand_rotation",
                                 Translate = new Vector3(5.5f, 0f, 0f),
                                 RotationAngleZ = 57,
+                                InvertAxisX = true,
+                                InvertAxisY = true,
 
-                                Cubes = {
+                                Boxes = {
                                     new EntityElementCube {
                                         Position = new Vector3(-11.5f, -1f, -1f),
                                         Size = new Vector3(12f, 2f, 2f),
                                         UV = new Vector2(32f, 0f),
-                                        Inflate = -0.5f,
+                                        SizeAdd = -0.5f,
                                     },
                                 },
                             },
                         },
+                    });
+                })
+                .AddElement("body", element => {
+                    element.Part = "body";
+                    element.Translate = new Vector3(0f, -11f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
+
+                    element.Boxes.Add(new EntityElementCube {
+                        Position = new Vector3(-5f, 11f, -5f),
+                        Size = new Vector3(10f, 10f, 10f),
+                        UV = new Vector2(0f, 16f),
+                        SizeAdd = -0.5f,
+                    });
+                })
+                .AddElement("body_bottom", element => {
+                    element.Part = "body_bottom";
+                    element.Translate = new Vector3(0f, 0f, 0f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
+
+                    element.Boxes.Add(new EntityElementCube {
+                        Position = new Vector3(-6f, 0f, -6f),
+                        Size = new Vector3(12f, 12f, 12f),
+                        UV = new Vector2(0f, 36f),
+                        SizeAdd = -0.5f,
                     });
                 });
         }

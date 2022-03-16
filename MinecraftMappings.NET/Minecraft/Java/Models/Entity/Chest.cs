@@ -13,7 +13,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.Translate = new Vector3(0f, 7f, 0f);
                     element.RotationAngleX = 180;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-7f, 4f, -7f),
                         Size = new Vector3(14f, 10f, 14f),
                         UV = new Vector2(0f, 19f),
@@ -23,7 +23,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.Translate = new Vector3(0f, 7f, 0f);
                     element.RotationAngleX = 180;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-7f, 0f, -7f),
                         Size = new Vector3(14f, 5f, 14f),
                         UV = new Vector2(0f, 0f),
@@ -33,7 +33,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.Translate = new Vector3(0f, 7f, 0f);
                     element.RotationAngleX = 180;
 
-                    element.Cubes.Add(new EntityElementCube {
+                    element.Boxes.Add(new EntityElementCube {
                         Position = new Vector3(-1f, 3f, 7f),
                         Size = new Vector3(2f, 4f, 1f),
                         UV = new Vector2(0f, 0f),

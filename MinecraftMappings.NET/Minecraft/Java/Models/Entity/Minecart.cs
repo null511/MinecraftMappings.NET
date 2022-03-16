@@ -10,15 +10,18 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
             AddVersion("minecart", "1.0.0")
                 .WithTextureSize(64, 32)
                 .AddElement("front", element => {
+                    element.Part = "front";
                     element.Translate = new Vector3(0f, -1f, -9f);
+                    element.InvertAxisX = true;
+                    element.InvertAxisY = true;
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "front2",
+                        Id = "front2",
                         RotationAngleY = -180,
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, 2f, 8f),
                                 Size = new Vector3(16f, 8f, 2f),
@@ -27,11 +30,11 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "back2",
+                        Id = "back2",
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, 2f, 8f),
                                 Size = new Vector3(16f, 8f, 2f),
@@ -40,12 +43,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "right2",
+                        Id = "right2",
                         RotationAngleY = 90,
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, 2f, 6f),
                                 Size = new Vector3(16f, 8f, 2f),
@@ -54,12 +57,12 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "left2",
+                        Id = "left2",
                         RotationAngleY = -90,
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-8f, 2f, 6f),
                                 Size = new Vector3(16f, 8f, 2f),
@@ -68,13 +71,13 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     });
 
                     element.Submodels.Add(new EntityElement {
-                        Name = "base",
+                        Id = "base",
                         RotationAngleY = 90,
                         RotationAngleZ = 90,
                         InvertAxisX = true,
                         InvertAxisY = true,
 
-                        Cubes = {
+                        Boxes = {
                             new EntityElementCube {
                                 Position = new Vector3(-10f, -8f, 0f),
                                 Size = new Vector3(20f, 16f, 2f),
