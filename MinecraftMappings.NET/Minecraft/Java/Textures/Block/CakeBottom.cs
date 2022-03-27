@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CakeBottom() : base("Cake Bottom")
         {
-            AddVersion("cake_bottom");
-                //.WithDefaultModel<Java.Models.Block.Cake>()
+            AddVersion("cake_bottom")
+                .WithDefaultModel<Java.Models.Block.Cake>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CakeBottom>();
         }
     }

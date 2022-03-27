@@ -6,8 +6,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DaylightDetectorInvertedTop() : base("Daylight Detector, Inverted Top")
         {
-            AddVersion("daylight_detector_inverted_top");
-                //.WithDefaultModel<Java.Models.Block.DaylightDetector>()
+            AddVersion("daylight_detector_inverted_top")
+                .WithMinVersion("1.5")
+                .WithDefaultModel<Java.Models.Block.DaylightDetector_Inverted>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DaylightDetectorInvertedTop>();
         }
     }

@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("fire_coral");
-                //.WithDefaultModel<Java.Models.Block.FireCoral>()
+            AddVersion("fire_coral")
+                .WithDefaultModel<Java.Models.Block.FireCoral>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FireCoral>();
         }
     }

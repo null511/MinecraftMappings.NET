@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public ChorusPlant() : base("Chorus Plant")
         {
-            AddVersion("chorus_plant");
-                //.WithDefaultModel<Java.Models.Block.ChorusFlower>()
+            AddVersion("chorus_plant")
+                .WithDefaultModel<Java.Models.Block.ChorusPlant>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ChorusFlower>();
         }
     }

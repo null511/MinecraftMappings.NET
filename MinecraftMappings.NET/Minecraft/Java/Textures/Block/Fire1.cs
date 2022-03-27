@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("fire_1");
-                //.WithDefaultModel<Java.Models.Block.Fire1>()
+            AddVersion("fire_1")
+                .WithDefaultModel<Java.Models.Block.Fire_Floor1>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Fire1>();
         }
     }

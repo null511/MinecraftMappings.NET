@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("cocoa_stage0");
-                //.WithDefaultModel<Java.Models.Block.Cocoa_Stage0>()
+            AddVersion("cocoa_stage0")
+                .WithDefaultModel<Java.Models.Block.Cocoa_Stage0>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Cocoa_Stage0>();
         }
     }

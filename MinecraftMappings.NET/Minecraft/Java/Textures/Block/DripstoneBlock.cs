@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DripstoneBlock() : base("Dripstone Block")
         {
-            AddVersion("dripstone_block");
-                //.WithDefaultModel<Java.Models.Block.DripstoneBlock>()
+            AddVersion("dripstone_block")
+                .WithDefaultModel<Java.Models.Block.DripstoneBlock>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DripstoneBlock>();
         }
     }

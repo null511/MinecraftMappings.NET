@@ -7,9 +7,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BuddingAmethyst() : base("Budding Amethyst")
         {
             AddVersion(7, "budding_amethyst")
-                .WithMinVersion("1.17");
-                //.WithDefaultModel<Java.Models.Block.BuddingAmethyst>()
-                //.MapsToBedrockBlock<BedrockBlocks.AmethystCluster>();
+                .WithMinVersion("1.17")
+                .WithDefaultModel<Java.Models.Block.BuddingAmethyst>();
+                //.MapsToBedrockBlock<BedrockBlocks.BuddingAmethyst>();
         }
     }
 }

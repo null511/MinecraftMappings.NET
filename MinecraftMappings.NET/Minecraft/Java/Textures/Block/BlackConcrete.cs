@@ -9,6 +9,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("black_concrete")
                 .WithMinVersion(new GameVersion(1, 12))
+                .WithDefaultModel<Java.Models.Block.BlackConcrete>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.ConcreteBlack>();
         }
     }

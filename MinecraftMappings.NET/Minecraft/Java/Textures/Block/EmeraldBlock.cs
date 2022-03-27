@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public EmeraldBlock() : base("Emerald Block")
         {
-            AddVersion("emerald_block");
-                //.WithDefaultModel<Java.Models.Block.EmeraldBlock>()
+            AddVersion("emerald_block")
+                .WithDefaultModel<Java.Models.Block.EmeraldBlock>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.EmeraldBlock>();
         }
     }

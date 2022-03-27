@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("cave_vines");
-                //.WithDefaultModel<Java.Models.Block.CaveVines>()
+            AddVersion("cave_vines")
+                .WithDefaultModel<Java.Models.Block.CaveVines>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CaveVines>();
         }
     }

@@ -7,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CandleLit() : base("Candle, Lit")
         {
             AddVersion("candle_lit")
-                .WithDefaultModel<Java.Models.Block.Candle_OneCandle_Lit>();
+                .WithDefaultModel<Java.Models.Block.Candle_OneCandleLit>();
                 //.MapsToBedrockBlock<BedrockBlocks.CandleLit>();
         }
     }

@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public EndPortalFrameSide() : base("End Portal Frame Side")
         {
-            AddVersion("end_portal_frame_side");
-                //.WithDefaultModel<Java.Models.Block.EndPortalFrameSide>()
+            AddVersion("end_portal_frame_side")
+                .WithDefaultModel<Java.Models.Block.EndPortalFrame>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.EndPortalFrameSide>();
         }
     }

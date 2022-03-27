@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("dark_oak_sapling");
-                //.WithDefaultModel<Java.Models.Block.DarkOakSapling>()
+            AddVersion("dark_oak_sapling")
+                .WithDefaultModel<Java.Models.Block.DarkOakSapling>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.SaplingBigOak>();
         }
     }

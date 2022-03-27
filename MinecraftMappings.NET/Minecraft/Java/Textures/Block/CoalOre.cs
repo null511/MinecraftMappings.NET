@@ -6,9 +6,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CoalOre() : base("Coal Ore")
         {
-            AddVersion("coal_ore");
-                //.WithDefaultModel<Java.Models.Block.Clay>()
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Clay>();
+            AddVersion("coal_ore")
+                .WithDefaultModel<Java.Models.Block.CoalOre>();
+                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CoalOre>();
         }
     }
 }

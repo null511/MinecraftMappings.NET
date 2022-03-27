@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DarkPrismarine() : base("Dark Prismarine")
         {
-            AddVersion("dark_prismarine");
-                //.WithDefaultModel<Java.Models.Block.DarkPrismarine>()
+            AddVersion("dark_prismarine")
+                .WithDefaultModel<Java.Models.Block.DarkPrismarine>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DarkPrismarine>();
         }
     }

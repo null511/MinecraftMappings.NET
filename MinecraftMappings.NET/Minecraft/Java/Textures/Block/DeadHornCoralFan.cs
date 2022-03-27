@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("dead_horn_coral_fan");
-                //.WithDefaultModel<Java.Models.Block.DeadHornCoralFan>()
+            AddVersion("dead_horn_coral_fan")
+                .WithDefaultModel<Java.Models.Block.DeadHornCoralFan>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeadHornCoralFan>();
         }
     }

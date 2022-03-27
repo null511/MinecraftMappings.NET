@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("dead_tube_coral");
-                //.WithDefaultModel<Java.Models.Block.DeadTubeCoral>()
+            AddVersion("dead_tube_coral")
+                .WithDefaultModel<Java.Models.Block.DeadTubeCoral>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeadTubeCoral>();
         }
     }

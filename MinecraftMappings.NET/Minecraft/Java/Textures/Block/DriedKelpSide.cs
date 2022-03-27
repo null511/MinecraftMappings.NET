@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DriedKelpSide() : base("Dried Kelp Side")
         {
-            AddVersion("dried_kelp_side");
-                //.WithDefaultModel<Java.Models.Block.DriedKelp>()
+            AddVersion("dried_kelp_side")
+                .WithDefaultModel<Java.Models.Block.DriedKelpBlock>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DriedKelpSide>();
         }
     }

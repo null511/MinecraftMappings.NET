@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("glass");
-                //.WithDefaultModel<Java.Models.Block.Glass>()
+            AddVersion("glass")
+                .WithDefaultModel<Java.Models.Block.Glass>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Glass>();
         }
     }

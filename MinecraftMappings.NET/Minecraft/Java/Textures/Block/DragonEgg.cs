@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DragonEgg() : base("Dragon Egg")
         {
-            AddVersion("dragon_egg");
-                //.WithDefaultModel<Java.Models.Block.DragonEgg>()
+            AddVersion("dragon_egg")
+                .WithDefaultModel<Java.Models.Block.DragonEgg>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DragonEgg>();
         }
     }

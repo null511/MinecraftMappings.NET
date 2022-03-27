@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DeepslateBricks() : base("Deepslate Bricks")
         {
-            AddVersion("deepslate_bricks");
-                //.WithDefaultModel<Java.Models.Block.DeepslateBricks>()
+            AddVersion("deepslate_bricks")
+                .WithDefaultModel<Java.Models.Block.DeepslateBricks>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeepslateBricks>();
         }
     }

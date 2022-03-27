@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public FrostedIce2() : base("Frosted Ice 2")
         {
-            AddVersion("frosted_ice_2");
-                //.WithDefaultModel<Java.Models.Block.FrostedIce>()
+            AddVersion("frosted_ice_2")
+                .WithDefaultModel<Java.Models.Block.FrostedIce2>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FrostedIce2>();
         }
     }

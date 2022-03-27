@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DiamondOre() : base("Diamond Ore")
         {
-            AddVersion("diamond_ore");
-                //.WithDefaultModel<Java.Models.Block.DiamondOre>()
+            AddVersion("diamond_ore")
+                .WithDefaultModel<Java.Models.Block.DiamondOre>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DiamondOre>();
         }
     }

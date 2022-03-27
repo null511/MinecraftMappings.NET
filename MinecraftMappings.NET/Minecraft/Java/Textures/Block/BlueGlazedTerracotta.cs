@@ -7,6 +7,7 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public BlueGlazedTerracotta() : base("Blue Glazed Terracotta")
         {
             AddVersion("blue_glazed_terracotta")
+                .WithDefaultModel<Java.Models.Block.BlueGlazedTerracotta>()
                 .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlazedTerracottaBlue>();
         }
     }

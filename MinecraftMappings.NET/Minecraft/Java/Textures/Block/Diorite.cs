@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public Diorite() : base("Diorite")
         {
-            AddVersion("diorite");
-                //.WithDefaultModel<Java.Models.Block.Diorite>()
+            AddVersion("diorite")
+                .WithDefaultModel<Java.Models.Block.Diorite>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Diorite>();
         }
     }

@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public DarkOakPlanks() : base("Dark Oak Planks")
         {
-            AddVersion("dark_oak_planks");
-                //.WithDefaultModel<Java.Models.Block.DarkOakPlanks>()
+            AddVersion("dark_oak_planks")
+                .WithDefaultModel<Java.Models.Block.DarkOakPlanks>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.PlanksBigOak>();
         }
     }

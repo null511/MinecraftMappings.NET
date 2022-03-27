@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public FireCoralBlock() : base("Fire Coral Block")
         {
-            AddVersion("fire_coral_block");
-                //.WithDefaultModel<Java.Models.Block.FireCoralBlock>()
+            AddVersion("fire_coral_block")
+                .WithDefaultModel<Java.Models.Block.FireCoralBlock>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.FireCoralBlock>();
         }
     }

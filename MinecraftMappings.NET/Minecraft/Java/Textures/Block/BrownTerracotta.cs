@@ -6,7 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public BrownTerracotta() : base("Brown Terracotta")
         {
-            AddVersion("brown_terracotta");
+            AddVersion("brown_terracotta")
+                .WithDefaultModel<Java.Models.Block.BrownTerracotta>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HardenedClayStainedBrown>();
         }
     }

@@ -10,8 +10,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
             BlendMode = BlendModes.Cutout;
 
             AddVersion(7, "flowering_azalea_side")
-                .WithMinVersion("1.17");
-                //.WithDefaultModel<Java.Models.Block.FloweringAzalea>()
+                .WithMinVersion("1.17")
+                .WithDefaultModel<Java.Models.Block.FloweringAzalea>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.LeavesAzaleaFloweringSide>();
         }
     }

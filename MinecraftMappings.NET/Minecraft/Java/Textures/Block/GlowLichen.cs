@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("glow_lichen");
-                //.WithDefaultModel<Java.Models.Block.GlowLichen>()
+            AddVersion("glow_lichen")
+                .WithDefaultModel<Java.Models.Block.GlowLichen>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.GlowLichen>();
         }
     }

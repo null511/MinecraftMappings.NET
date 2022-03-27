@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public EndStoneBricks() : base("End Stone Bricks")
         {
-            AddVersion("end_stone_bricks");
-                //.WithDefaultModel<Java.Models.Block.EndStoneBricks>()
+            AddVersion("end_stone_bricks")
+                .WithDefaultModel<Java.Models.Block.EndStoneBricks>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.EndStoneBricks>();
         }
     }
