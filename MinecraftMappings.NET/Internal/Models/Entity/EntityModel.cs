@@ -28,10 +28,8 @@ namespace MinecraftMappings.Internal.Models.Entity
             Name = name;
         }
 
-        protected RectangleF UVMap(float left, float top, float right, float bottom)
-        {
-            return new RectangleF(left, top, right - left, bottom - top);
-        }
+        protected static RectangleF UVMap(in float left, in float top, in float right, in float bottom) =>
+            UVHelper.UVMap(in left, in top, in right, in bottom);
 
         public static IEnumerable<T> FromAssembly<T>()
             where T : IEntityModel

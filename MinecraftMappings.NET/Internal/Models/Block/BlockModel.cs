@@ -27,7 +27,7 @@ namespace MinecraftMappings.Internal.Models.Block
             Versions = new List<BlockModelVersion>();
         }
 
-        public BlockModelVersionBuilder AddVersion(string id, string minVersion, string maxVersion = null)
+        protected BlockModelVersionBuilder AddVersion(string id, string minVersion, string maxVersion = null)
         {
             var modelVersion = new BlockModelVersion {
                 Id = id,
@@ -45,10 +45,8 @@ namespace MinecraftMappings.Internal.Models.Block
                 .FirstOrDefault();
         }
 
-        protected static RectangleF UVMap(float left, float top, float right, float bottom)
-        {
-            return new RectangleF(left, top, right - left, bottom - top);
-        }
+        protected static RectangleF UVMap(in float left, in float top, in float right, in float bottom) =>
+            UVHelper.UVMap(in left, in top, in right, in bottom);
 
         public static IEnumerable<T> FromAssembly<T>()
             where T : IBlockModel

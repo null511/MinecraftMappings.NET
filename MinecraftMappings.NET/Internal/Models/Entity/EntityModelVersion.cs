@@ -11,11 +11,13 @@ namespace MinecraftMappings.Internal.Models.Entity
 
         public string Texture {get; set;}
         public List<EntityElement> Elements {get; set;}
+        public Dictionary<string, Dictionary<ElementFaces, RectangleF>> UVMap {get; set;}
 
         
         protected EntityModelVersion()
         {
             Elements = new List<EntityElement>();
+            UVMap = new Dictionary<string, Dictionary<ElementFaces, RectangleF>>(StringComparer.InvariantCultureIgnoreCase);
         }
 
         public bool TryReplacePart(EntityElement partModel)

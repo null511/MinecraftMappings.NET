@@ -5,7 +5,7 @@ namespace MinecraftMappings.Internal.Models
 {
     public static class UVHelper
     {
-        public static RectangleF UVMap(float left, float top, float right, float bottom)
+        public static RectangleF UVMap(in float left, in float top, in float right, in float bottom)
         {
             return new RectangleF(left, top, right - left, bottom - top);
         }

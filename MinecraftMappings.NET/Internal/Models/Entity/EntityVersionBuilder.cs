@@ -24,19 +24,15 @@ namespace MinecraftMappings.Internal.Models.Entity
         {
             var element = new EntityElement(id);
             entityVersion.Elements.Add(element);
-
-            //var elementBuilder = new ModelElementBuilder(element);
             elementAction(element);
-
             return this;
         }
 
-        //public EntityVersionBuilder<TVersion> AddElement(Action<EntityElement> elementAction) => AddElement(null, elementAction);
-
-        //public EntityVersionBuilder<TVersion> WithUVMappings(params UVRegion[] mappings)
-        //{
-        //    entityVersion.UVMappings.AddRange(mappings);
-        //    return this;
-        //}
+        public EntityVersionBuilder<TVersion> AddUVMapping(string id, Action<UVMappingBuilder> action)
+        {
+            var builder = new UVMappingBuilder(entityVersion, id);
+            action(builder);
+            return this;
+        }
     }
 }

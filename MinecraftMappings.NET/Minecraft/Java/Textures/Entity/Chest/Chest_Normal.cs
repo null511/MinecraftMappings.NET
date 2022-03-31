@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Entity.Chest
         {
             AddVersion("normal")
                 .WithPath("entity/chest")
-                .WithDefaultModel<Java.Models.Entity.Chest>();
-                //.MapsToBedrockEntity<BedrockEntities.ChestNormal>();
+                .WithDefaultModel<Java.Models.Entity.Chest>()
+                .MapsToBedrockEntity<Bedrock.Models.Entities.ChestNormal>();
         }
     }
 }

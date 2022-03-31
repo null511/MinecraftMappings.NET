@@ -46,7 +46,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
         }
 
         public JavaEntityTextureVersionBuilder<TVersion> MapsToBedrockEntity<TEntity>()
-            where TEntity : BedrockEntityTexture
+            where TEntity : BedrockEntityModel
         {
             EntityVersion.MapsToBedrockEntity = typeof(TEntity);
             return this;
