@@ -17,6 +17,7 @@
     <Compile Remove="Internal\Models\JavaModelVersion.cs" />
     <Compile Remove="Minecraft\Java\Models\Entity\Drowned.cs" />
     <Compile Remove="Minecraft\Java\Models\Entity\EnchantingTableBook.cs" />
+    <Compile Remove="Minecraft\Java\Models\Entity\MagmaCubeX.cs" />
   </ItemGroup>
 
   <ItemGroup>

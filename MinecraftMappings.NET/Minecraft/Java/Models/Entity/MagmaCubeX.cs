@@ -5,9 +5,9 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
 {
     public class MagmaCube : JavaEntityModel
     {
-        public MagmaCube() : base("Magma Cube, Open")
+        public MagmaCube() : base("Magma Cube")
         {
-            AddVersion("magma_cube_open", "1.0.0")
+            AddVersion("magma_cube", "1.0.0")
                 .WithTextureSize(64, 32)
                 .AddElement("segment1", element => {
                     element.Part = "segment1";
@@ -16,7 +16,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 9.1f, -4f),
+                        Position = new Vector3(-4f, 7f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(0f, 0f),
                     });
@@ -28,7 +28,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 7.8f, -4f),
+                        Position = new Vector3(-4f, 6f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(0f, 1f),
                     });
@@ -40,7 +40,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 6.5f, -4f),
+                        Position = new Vector3(-4f, 5f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(24f, 10f),
                     });
@@ -52,7 +52,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 5.2f, -4f),
+                        Position = new Vector3(-4f, 4f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(24f, 19f),
                     });
@@ -64,7 +64,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 3.9f, -4f),
+                        Position = new Vector3(-4f, 3f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(0f, 4f),
                     });
@@ -76,7 +76,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 2.6f, -4f),
+                        Position = new Vector3(-4f, 2f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(0f, 5f),
                     });
@@ -88,7 +88,7 @@ namespace MinecraftMappings.Minecraft.Java.Models.Entity
                     element.InvertAxisY = true;
 
                     element.Boxes.Add(new EntityElementCube {
-                        Position = new Vector3(-4f, 1.3f, -4f),
+                        Position = new Vector3(-4f, 1f, -4f),
                         Size = new Vector3(8f, 1f, 8f),
                         UV = new Vector2(0f, 6f),
                     });
