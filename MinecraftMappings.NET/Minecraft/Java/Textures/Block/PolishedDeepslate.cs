@@ -6,9 +6,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public PolishedDeepslate() : base("Polished Deepslate")
         {
-            AddVersion("polished_deepslate");
+            AddVersion("polished_deepslate")
                 //.WithDefaultModel<Java.Models.Block.PolishedDeepslate>()
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.PolishedDeepslate>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.PolishedDeepslate>();
         }
     }
 }

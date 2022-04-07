@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion("warped_stem")
                 .WithMinVersion("1.16")
-                .WithDefaultModel<Java.Models.Block.WarpedStem>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WarpedStem>();
+                .WithDefaultModel<Java.Models.Block.WarpedStem>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus.WarpedStemSide>();
         }
     }
 }

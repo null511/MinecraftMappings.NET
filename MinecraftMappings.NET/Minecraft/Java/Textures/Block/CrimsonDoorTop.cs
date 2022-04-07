@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public CrimsonDoorTop() : base("Crimson Door Top")
         {
             AddVersion("crimson_door_top")
-                .WithDefaultModel<Java.Models.Block.CrimsonDoorTop>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DoorCrimsonUpper>();
+                .WithDefaultModel<Java.Models.Block.CrimsonDoorTop>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus.CrimsonDoorTop>();
         }
     }
 }

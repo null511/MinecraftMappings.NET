@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public StrippedWarpedStemTop() : base("Stripped Warped Stem Top")
         {
             AddVersion("stripped_warped_stem_top")
-                .WithDefaultModel<Java.Models.Block.StrippedWarpedStem>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StrippedWarpedStemTop>();
+                .WithDefaultModel<Java.Models.Block.StrippedWarpedStem>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus.StrippedWarpedStemTop>();
         }
     }
 }

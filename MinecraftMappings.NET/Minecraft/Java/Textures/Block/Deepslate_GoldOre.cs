@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Deepslate_GoldOre() : base("Deepslate Gold Ore")
         {
             AddVersion("deepslate_gold_ore")
-                .WithDefaultModel<Java.Models.Block.Deepslate_GoldOre>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeepslateGoldOre>();
+                .WithDefaultModel<Java.Models.Block.Deepslate_GoldOre>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.Deepslate_GoldOre>();
         }
     }
 }

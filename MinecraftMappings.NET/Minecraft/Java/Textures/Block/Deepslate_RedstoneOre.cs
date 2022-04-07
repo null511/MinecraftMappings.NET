@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Deepslate_RedstoneOre() : base("Deepslate Redstone Ore")
         {
             AddVersion("deepslate_redstone_ore")
-                .WithDefaultModel<Java.Models.Block.Deepslate_RedstoneOre>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeepslateRedstoneOre>();
+                .WithDefaultModel<Java.Models.Block.Deepslate_RedstoneOre>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.Deepslate_RedstoneOre>();
         }
     }
 }

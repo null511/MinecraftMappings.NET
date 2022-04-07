@@ -1,5 +1,4 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
-using MinecraftMappings.Minecraft.Java.Textures.Block;
 
 namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
 {
@@ -8,7 +7,7 @@ namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
         public LogAcaciaTop() : base("Log Acacia, Top")
         {
             AddVersion("log_acacia_top")
-                .MapsToJavaBlock<AcaciaLogTop>();
+                .MapsToJavaBlock<Java.Textures.Block.AcaciaLogTop>();
         }
     }
 }

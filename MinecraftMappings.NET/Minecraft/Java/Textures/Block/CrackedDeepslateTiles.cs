@@ -6,9 +6,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CrackedDeepslateTiles() : base("Cracked Deepslate Tiles")
         {
-            AddVersion("cracked_deepslate_tiles");
+            AddVersion("cracked_deepslate_tiles")
                 //.WithDefaultModel<Java.Models.Block.CrackedDeepslateTiles>()
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrackedDeepslateTiles>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.CrackedDeepslateTiles>();
         }
     }
 }

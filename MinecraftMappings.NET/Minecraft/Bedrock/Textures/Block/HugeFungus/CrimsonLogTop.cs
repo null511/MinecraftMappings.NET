@@ -1,6 +1,6 @@
 ﻿using MinecraftMappings.Internal.Textures.Block;
 
-namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block
+namespace MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus
 {
     public class CrimsonLogTop : BedrockBlockTexture
     {

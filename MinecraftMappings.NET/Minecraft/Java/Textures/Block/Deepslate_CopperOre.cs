@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Deepslate_CopperOre() : base("Deepslate Copper Ore")
         {
             AddVersion("deepslate_copper_ore")
-                .WithDefaultModel<Java.Models.Block.Deepslate_CopperOre>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeepslateCopperOre>();
+                .WithDefaultModel<Java.Models.Block.Deepslate_CopperOre>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.Deepslate_CopperOre>();
         }
     }
 }

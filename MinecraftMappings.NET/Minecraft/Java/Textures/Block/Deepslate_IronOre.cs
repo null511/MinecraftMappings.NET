@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Deepslate_IronOre() : base("Deepslate Iron Ore")
         {
             AddVersion("deepslate_iron_ore")
-                .WithDefaultModel<Java.Models.Block.Deepslate_IronOre>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.DeepslateIronOre>();
+                .WithDefaultModel<Java.Models.Block.Deepslate_IronOre>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.Deepslate_IronOre>();
         }
     }
 }

@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public Deepslate() : base("Deepslate")
         {
             AddVersion("deepslate")
-                .WithDefaultModel<Java.Models.Block.Deepslate>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate>();
+                .WithDefaultModel<Java.Models.Block.Deepslate>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.Deepslate.Deepslate>();
         }
     }
 }

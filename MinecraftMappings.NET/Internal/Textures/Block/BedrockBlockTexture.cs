@@ -2,6 +2,9 @@
 {
     public abstract class BedrockBlockTexture : BlockTexture<BedrockBlockTextureVersion>
     {
+        public int FrameCount {get; set;} = 1;
+
+
         protected BedrockBlockTexture(string name) : base(name) {}
 
         protected BedrockBlockVersionBuilder<BedrockBlockTextureVersion> AddVersion(string id)

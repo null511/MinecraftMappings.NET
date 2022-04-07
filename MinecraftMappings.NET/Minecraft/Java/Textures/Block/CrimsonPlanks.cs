@@ -6,9 +6,9 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public CrimsonPlanks() : base("Crimson Planks")
         {
-            AddVersion("crimson_planks");
+            AddVersion("crimson_planks")
                 //.WithDefaultModel<Java.Models.Block.CrimsonPlanks>()
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.CrimsonPlanks>();
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus.CrimsonPlanks>();
         }
     }
 }

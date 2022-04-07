@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         public WarpedPlanks() : base("Warped Planks")
         {
             AddVersion("warped_planks")
-                .WithDefaultModel<Java.Models.Block.WarpedPlanks>();
-                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WarpedPlanks>();
+                .WithDefaultModel<Java.Models.Block.WarpedPlanks>()
+                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.HugeFungus.WarpedPlanks>();
         }
     }
 }
