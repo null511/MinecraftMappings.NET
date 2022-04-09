@@ -10,51 +10,78 @@ namespace MinecraftMappings.Internal.Models
             return new RectangleF(left, top, right - left, bottom - top);
         }
 
-        public static RectangleF GetDefaultUv(ModelElement element, in ElementFaces face)
+        public static void UVMap(in float left, in float top, in float right, in float bottom, out RectangleF region)
         {
-            return face switch {
-                ElementFaces.Up => UVMap(element.From.X, element.From.Z, element.To.X, element.To.Z),
-                ElementFaces.Down => UVMap(element.From.X, element.To.Z, element.To.X, element.From.Z),
-                ElementFaces.North => UVMap(element.To.X, element.From.Y, element.From.X, element.To.Y),
-                ElementFaces.South => UVMap(element.From.X, element.From.Y, element.To.X, element.To.Y),
-                ElementFaces.West => UVMap(element.From.Z, element.From.Y, element.To.Z, element.To.Y),
-                ElementFaces.East => UVMap(element.To.Z, element.From.Y, element.From.Z, element.To.Y),
-                _ => throw new ApplicationException($"Unknown element face '{face}'!")
-            };
+            region.Left = left;
+            region.Top = top;
+            region.Right = right;
+            region.Bottom = bottom;
         }
 
-        public static RectangleF GetRotatedRegion(in RectangleF uv, in int uvRotation)
+        public static void GetDefaultUv(ModelElement element, in ElementFaces face, out RectangleF region)
         {
-            return uvRotation switch {
-                0 => new RectangleF {
-                    Left = uv.Left,
-                    Top = uv.Top,
-                    Right = uv.Right,
-                    Bottom = uv.Bottom,
-                },
-                90 => new RectangleF {
-                    Left = uv.Bottom,
-                    Top = uv.Left,
-                    Right = uv.Top,
-                    Bottom = uv.Right,
-                },
-                180 => new RectangleF {
-                    Left = uv.Right,
-                    Top = uv.Bottom,
-                    Right = uv.Left,
-                    Bottom = uv.Top,
-                },
-                270 => new RectangleF {
-                    Left = uv.Top,
-                    Top = uv.Right,
-                    Right = uv.Bottom,
-                    Bottom = uv.Left,
-                },
-                _ => throw new ApplicationException($"Invalid block model texture rotation value '{uvRotation}'!")
-            };
+            GetDefaultFaceUv(in element.From, in element.To, in face, out region);
         }
 
-        public static string GetFaceName(in string elementName, in ElementFaces face)
+        private static void GetDefaultFaceUv(in Vector3 from, in Vector3 to, in ElementFaces face, out RectangleF region)
+        {
+            switch (face) {
+                case ElementFaces.Up:
+                    UVMap(from.X, from.Z, to.X, to.Z, out region);
+                    break;
+                case ElementFaces.Down:
+                    UVMap(from.X, to.Z, to.X, from.Z, out region);
+                    break;
+                case ElementFaces.North:
+                    UVMap(to.X, 16f - to.Y, from.X, 16f - from.Y, out region);
+                    break;
+                case ElementFaces.South:
+                    UVMap(from.X, 16f - to.Y, to.X, 16f - from.Y, out region);
+                    break;
+                case ElementFaces.West:
+                    UVMap(from.Z, 16f - to.Y, to.Z, 16f - from.Y, out region);
+                    break;
+                case ElementFaces.East:
+                    UVMap(to.Z, 16f - to.Y, from.Z, 16f - from.Y, out region);
+                    break;
+                default:
+                    throw new ApplicationException($"Unknown element face '{face}'!");
+            }
+        }
+
+        public static void GetRotatedRegion(in RectangleF uv, in int uvRotation, out RectangleF region)
+        {
+            switch (uvRotation) {
+                case 0:
+                    region.Left = uv.Left;
+                    region.Top = uv.Top;
+                    region.Right = uv.Right;
+                    region.Bottom = uv.Bottom;
+                    break;
+                case 90:
+                    region.Left = uv.Bottom;
+                    region.Top = uv.Left;
+                    region.Right = uv.Top;
+                    region.Bottom = uv.Right;
+                    break;
+                case 180:
+                    region.Left = uv.Right;
+                    region.Top = uv.Bottom;
+                    region.Right = uv.Left;
+                    region.Bottom = uv.Top;
+                    break;
+                case 270:
+                    region.Left = uv.Top;
+                    region.Top = uv.Right;
+                    region.Right = uv.Bottom;
+                    region.Bottom = uv.Left;
+                    break;
+                default:
+                    throw new ApplicationException($"Invalid block model texture rotation value '{uvRotation}'!");
+            }
+        }
+
+        public static string GetElementFaceName(in string elementName, in ElementFaces face)
         {
             var faceName = GetFaceName(face);
             return $"{elementName}-{faceName}";

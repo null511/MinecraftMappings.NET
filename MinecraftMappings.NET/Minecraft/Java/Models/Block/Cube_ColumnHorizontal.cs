@@ -4,9 +4,9 @@ using SharpDX;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class CubeColumnHorizontal : JavaBlockModel
+    public class Cube_ColumnHorizontal : JavaBlockModel
     {
-        public CubeColumnHorizontal() : base("Cube Column, Horizontal")
+        public Cube_ColumnHorizontal() : base("Cube Column, Horizontal")
         {
             AddVersion("cube_column_horizontal", "1.0.0")
                 .WithPath("models/block")

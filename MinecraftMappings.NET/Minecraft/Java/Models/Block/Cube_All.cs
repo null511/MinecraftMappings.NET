@@ -2,9 +2,9 @@
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class CubeAll : JavaBlockModel
+    public class Cube_All : JavaBlockModel
     {
-        public CubeAll() : base("Cube, All")
+        public Cube_All() : base("Cube, All")
         {
             AddVersion("cube_all", "1.0.0")
                 .WithPath("models/block")

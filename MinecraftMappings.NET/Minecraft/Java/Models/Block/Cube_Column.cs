@@ -2,15 +2,15 @@
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class CubeBottomTop : JavaBlockModel
+    public class Cube_Column : JavaBlockModel
     {
-        public CubeBottomTop() : base("Cube, Bottom & Top")
+        public Cube_Column() : base("Cube, Column")
         {
-            AddVersion("cube_bottom_top", "1.0.0")
+            AddVersion("cube_column", "1.0.0")
                 .WithPath("models/block")
                 .WithParent("block/cube")
-                .AddTexture("up", "#top")
-                .AddTexture("down", "#bottom")
+                .AddTexture("up", "#end")
+                .AddTexture("down", "#end")
                 .AddTexture("north", "#side")
                 .AddTexture("south", "#side")
                 .AddTexture("west", "#side")

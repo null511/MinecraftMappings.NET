@@ -1,17 +1,16 @@
-﻿using MinecraftMappings.Internal.Models;
-using MinecraftMappings.Internal.Models.Block;
+﻿using MinecraftMappings.Internal.Models.Block;
 
 namespace MinecraftMappings.Minecraft.Java.Models.Block
 {
-    public class CubeColumn : JavaBlockModel
+    public class Cube_BottomTop : JavaBlockModel
     {
-        public CubeColumn() : base("Cube, Column")
+        public Cube_BottomTop() : base("Cube, Bottom & Top")
         {
-            AddVersion("cube_column", "1.0.0")
+            AddVersion("cube_bottom_top", "1.0.0")
                 .WithPath("models/block")
                 .WithParent("block/cube")
-                .AddTexture("up", "#end")
-                .AddTexture("down", "#end")
+                .AddTexture("up", "#top")
+                .AddTexture("down", "#bottom")
                 .AddTexture("north", "#side")
                 .AddTexture("south", "#side")
                 .AddTexture("west", "#side")
