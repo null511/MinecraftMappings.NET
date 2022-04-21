@@ -10,6 +10,7 @@
     <Copyright>Copyright 2021 Joshua Miller</Copyright>
     <RootNamespace>MinecraftMappings</RootNamespace>
     <LangVersion>latest</LangVersion>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
