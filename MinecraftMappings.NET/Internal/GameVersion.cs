@@ -19,7 +19,6 @@ namespace MinecraftMappings.Internal
             Revision = revision;
         }
 
-
         public static GameVersion Parse(string version)
         {
             if (version == null) throw new ArgumentNullException(nameof(version));
@@ -38,5 +37,7 @@ namespace MinecraftMappings.Internal
                     throw new ApplicationException($"Unable to parse version '{version}'!");
             }
         }
+
+        public static implicit operator GameVersion(string version) => Parse(version);
     }
 }

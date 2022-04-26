@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Entity.Illager
         public Pillager() : base("Pillager")
         {
             AddVersion("pillager")
-                .WithPath("entity/illager");
-                //.WithDefaultModel<Java.Models.Entity.Pillager>();
+                .WithPath("entity/illager")
+                .WithDefaultModel<Java.Models.Entity.Pillager>();
                 //.MapsToBedrockEntity<BedrockEntities.Pillager>();
         }
     }
