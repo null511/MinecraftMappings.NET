@@ -4,7 +4,7 @@
     <Version>0.1.5</Version>
     <FileVersion>0.1.5</FileVersion>
     <AssemblyVersion>0.1.5</AssemblyVersion>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.0;net4.8</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <Authors>Null511</Authors>
     <Description>A collection of Block and Entity mappings for Minecraft Java and Bedrock.</Description>
     <Copyright>Copyright 2021 Joshua Miller</Copyright>
