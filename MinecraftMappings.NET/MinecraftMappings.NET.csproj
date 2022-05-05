@@ -11,6 +11,7 @@
     <RootNamespace>MinecraftMappings</RootNamespace>
     <LangVersion>latest</LangVersion>
     <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
