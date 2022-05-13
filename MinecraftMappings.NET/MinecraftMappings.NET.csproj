@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>0.1.6</Version>
-    <FileVersion>0.1.6</FileVersion>
-    <AssemblyVersion>0.1.6</AssemblyVersion>
+    <Version>0.1.7</Version>
+    <FileVersion>0.1.7</FileVersion>
+    <AssemblyVersion>0.1.7</AssemblyVersion>
     <TargetFrameworks>netcoreapp3.1;netstandard2.0</TargetFrameworks>
     <Authors>Null511</Authors>
     <Description>A collection of Block and Entity mappings for Minecraft Java and Bedrock.</Description>
@@ -21,6 +21,7 @@
     <Compile Remove="Minecraft\Java\Models\Entity\Drowned.cs" />
     <Compile Remove="Minecraft\Java\Models\Entity\EnchantingTableBook.cs" />
     <Compile Remove="Minecraft\Java\Models\Entity\MagmaCubeX.cs" />
+    <Compile Remove="Minecraft\Java\Textures\Block\WhiteShulkerBox.cs" />
   </ItemGroup>
 
   <ItemGroup>

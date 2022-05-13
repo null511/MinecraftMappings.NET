@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("wheat_stage3");
-                //.WithDefaultModel<Java.Models.Block.Wheat_Stage3>()
+            AddVersion("wheat_stage3")
+                .WithDefaultModel<Java.Models.Block.Wheat_Stage3>();
                 //.MapsToBedrockBlock<BedrockBlocks.Wheat_Stage3>();
         }
     }

@@ -9,8 +9,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             BlendMode = BlendModes.Cutout;
 
-            AddVersion("weeping_vines_plant");
-                //.WithDefaultModel<Java.Models.Block.WeepingVinesPlant>()
+            AddVersion("weeping_vines_plant")
+                .WithDefaultModel<Java.Models.Block.WeepingVinesPlant>();
                 //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.WeepingVinesPlant>();
         }
     }

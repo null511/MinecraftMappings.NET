@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public SeaPickle() : base("Sea Pickle")
         {
-            AddVersion("sea_pickle");
-                //.WithDefaultModel<Java.Models.Block.SeaPickle>()
+            AddVersion("sea_pickle")
+                .WithDefaultModel<Java.Models.Block.SeaPickle>();
                 //.MapsToBedrockBlock<BedrockBlocks.SeaPickle>();
         }
     }

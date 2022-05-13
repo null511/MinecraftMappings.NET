@@ -6,8 +6,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
     {
         public WetSponge() : base("Wet Sponge")
         {
-            AddVersion("wet_sponge");
-                //.WithDefaultModel<Java.Models.Block.WetSponge>()
+            AddVersion("wet_sponge")
+                .WithDefaultModel<Java.Models.Block.WetSponge>();
                 //.MapsToBedrockBlock<BedrockBlocks.WetSponge>();
         }
     }
