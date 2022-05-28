@@ -7,8 +7,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Entity.Piglin
         public ZombifiedPiglin() : base("Zombified Piglin")
         {
             AddVersion("zombified_piglin")
-                .WithPath("entity/piglin");
-                //.WithDefaultModel<Java.Models.Entity.ZombifiedPiglin>();
+                .WithPath("entity/piglin")
+                .WithDefaultModel<Java.Models.Entity.ZombifiedPiglin>();
                 //.MapsToBedrockEntity<BedrockEntities.Pig>();
         }
     }
