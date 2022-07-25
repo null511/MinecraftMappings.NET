@@ -824,6 +824,21 @@ namespace MinecraftMappings.Minecraft.LegacyJavaToBedrockMappings
             ["assets/minecraft/textures/block/warped_stem"] = "textures/blocks/huge_fungus/warped_stem_side",
             ["assets/minecraft/textures/block/warped_stem_top"] = "textures/blocks/huge_fungus/warped_stem_top",
             ["assets/minecraft/textures/block/warped_trapdoor"] = "textures/blocks/huge_fungus/warped_trapdoor",
+            
+            // 1.19+ - Shivamzter (Forgive me if I did anything wrong it was my first time.)
+            ["assets/minecraft/textures/block/mangrove_leaves"] = "textures/blocks/mangrove_leaves",
+            ["assets/minecraft/textures/block/mangrove_planks"] = "textures/blocks/mangrove_planks",
+            ["assets/minecraft/textures/block/mangrove_log_top"] = "textures/blocks/mangrove_log_top",
+            ["assets/minecraft/textures/block/mangrove_log"] = "textures/blocks/mangrove_log_side",
+            ["assets/minecraft/textures/block/mangrove_door_top"] = "textures/blocks/mangrove_door_top",
+            ["assets/minecraft/textures/block/mangrove_door_bottom"] = "textures/blocks/mangrove_door_bottom",
+            ["assets/minecraft/textures/block/stripped_mangrove_log_top"] = "textures/blocks/stripped_mangrove_log_top",
+            ["assets/minecraft/textures/block/stripped_mangrove_log"] = "textures/blocks/stripped_mangrove_log_side",
+            ["assets/minecraft/textures/block/muddy_mangrove_roots_top"] = "textures/blocks/muddy_mangrove_roots_top",
+            ["assets/minecraft/textures/block/muddy_mangrove_roots_side"] = "textures/blocks/muddy_mangrove_roots_side",
+            ["assets/minecraft/textures/block/mangrove_trapdoor"] = "textures/blocks/mangrove_trapdoor",
+            ["assets/minecraft/textures/block/mangrove_roots_top"] = "textures/blocks/mangrove_roots_top",
+            ["assets/minecraft/textures/block/mangrove_roots_side"] = "textures/blocks/mangrove_roots_side",
         }) {}
     }
 }
