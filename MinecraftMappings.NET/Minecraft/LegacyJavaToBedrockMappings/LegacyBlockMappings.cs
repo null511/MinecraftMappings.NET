@@ -839,6 +839,9 @@ namespace MinecraftMappings.Minecraft.LegacyJavaToBedrockMappings
             ["assets/minecraft/textures/block/mangrove_trapdoor"] = "textures/blocks/mangrove_trapdoor",
             ["assets/minecraft/textures/block/mangrove_roots_top"] = "textures/blocks/mangrove_roots_top",
             ["assets/minecraft/textures/block/mangrove_roots_side"] = "textures/blocks/mangrove_roots_side",
+            ["assets/minecraft/textures/block/mud"] = "textures/blocks/mud",
+            ["assets/minecraft/textures/block/packed_mud"] = "textures/blocks/packed_mud",
+            ["assets/minecraft/textures/block/mud_bricks"] = "textures/blocks/mud_bricks",
         }) {}
     }
 }
