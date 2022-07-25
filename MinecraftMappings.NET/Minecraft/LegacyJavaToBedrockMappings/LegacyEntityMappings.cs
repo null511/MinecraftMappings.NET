@@ -242,6 +242,9 @@ namespace MinecraftMappings.Minecraft.LegacyJavaToBedrockMappings
             ["assets/minecraft/textures/entity/trident_riptide"] = "textures/entity/trident_riptide",
             ["assets/minecraft/textures/entity/wandering_trader"] = "textures/entity/wandering_trader",
             ["assets/minecraft/textures/entity/witch"] = "textures/entity/witch",
+            // 1.19+ - Shivamzter
+            ["assets/minecraft/textures/entity/boat/mangrove"] = "textures/entity/boat/boat_mangrove",
+            ["assets/minecraft/textures/entity/signs/mangrove"] = "textures/entity/sign_mangrove",
         }) {}
     }
 }
