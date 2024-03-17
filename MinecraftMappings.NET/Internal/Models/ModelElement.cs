@@ -7,16 +7,16 @@ namespace MinecraftMappings.Internal.Models
 {
     public class ModelElement
     {
-        public string Name;
+        public string? Name;
         public Vector3 From;
         public Vector3 To;
-        public ModelElementRotation Rotation;
-        public ModelFace FaceUp;
-        public ModelFace FaceDown;
-        public ModelFace FaceNorth;
-        public ModelFace FaceSouth;
-        public ModelFace FaceWest;
-        public ModelFace FaceEast;
+        public ModelElementRotation? Rotation;
+        public ModelFace? FaceUp;
+        public ModelFace? FaceDown;
+        public ModelFace? FaceNorth;
+        public ModelFace? FaceSouth;
+        public ModelFace? FaceWest;
+        public ModelFace? FaceEast;
 
         public static IEnumerable<ElementFaces> AllFaces =>
             Enum.GetValues(typeof(ElementFaces)).OfType<ElementFaces>();
@@ -31,7 +31,7 @@ namespace MinecraftMappings.Internal.Models
             }
         }
 
-        public ModelFace GetFace(in ElementFaces face)
+        public ModelFace? GetFace(in ElementFaces face)
         {
             switch (face) {
                 case ElementFaces.Up:

@@ -4,7 +4,7 @@ namespace MinecraftMappings.Internal.Models
 {
     public class ModelFace
     {
-        public string Texture;
+        public string? Texture;
         public RectangleF? UV;
         public int? Rotation;
 

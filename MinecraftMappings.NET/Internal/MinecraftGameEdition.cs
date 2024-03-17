@@ -7,10 +7,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using MinecraftMappings.Internal.Extensions;
 
 namespace MinecraftMappings.Internal
 {
-    public abstract class MinecraftGameEdition<TBlockTexture, TBlockModel, TEntityTexture, TEntityModel, TItem>
+    public class MinecraftGameEdition
+    {
+        // TODO: move to instance class so bedrock works!
+        protected static readonly Regex EntityPathExp = new(@"(?:^|[\\/])textures[\\/]entity[\\/]([\w/]+)[\\/]\w+$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+    }
+
+    public abstract class MinecraftGameEdition<TBlockTexture, TBlockModel, TEntityTexture, TEntityModel, TItem> : MinecraftGameEdition
         where TBlockTexture : IBlockTexture
         where TBlockModel : IBlockModel
         where TEntityTexture : IEntityTexture
@@ -29,11 +36,9 @@ namespace MinecraftMappings.Internal
         public IEnumerable<TEntityModel> AllEntityModels => allEntityModelsLazy.Value;
         public IEnumerable<TItem> AllItems => allItemsLazy.Value;
 
-        // TODO: move to instance class so bedrock works!
-        private static readonly Regex entityPathExp = new Regex(@"(?:^|[\\/])textures[\\/]entity[\\/]([\w/]+)[\\/]\w+$", RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
 
-        public IEnumerable<TBlock> FindBlockTexturesById<TBlock, TBlockVersion>(string id, string path = null)
+        public IEnumerable<TBlock> FindBlockTexturesById<TBlock, TBlockVersion>(string id, string? path = null)
             where TBlock : IBlockTexture<TBlockVersion>
             where TBlockVersion : BlockTextureVersion
         {
@@ -57,10 +62,10 @@ namespace MinecraftMappings.Internal
             return allBlockTexturesLazy.Value
                 .OfType<IBlockTexture<TBlockVersion>>()
                 .SelectMany(block => block.Versions)
-                .Where(latest => latest.Id.Equals(id));
+                .Where(latest => string.Equals(latest.Id, id, StringComparison.OrdinalIgnoreCase));
         }
 
-        public IEnumerable<TEntityVersion> FindLatestEntityTextureVersionById<TEntityVersion>(string id, string path = null)
+        public IEnumerable<TEntityVersion> FindLatestEntityTextureVersionById<TEntityVersion>(string id, string? path = null)
             where TEntityVersion : EntityTextureVersion, new()
         {
             var searchPath = $"{path}/{id}";
@@ -68,10 +73,10 @@ namespace MinecraftMappings.Internal
             return allEntityTexturesLazy.Value
                 .OfType<IEntityTexture<TEntityVersion>>()
                 .Select(entity => entity.GetLatestVersion())
-                .Where(latest => latest.Id.Equals(id))
+                .WhereNotNull(latest => string.Equals(latest.Id, id, StringComparison.OrdinalIgnoreCase))
                 .OrderByDescending(t => {
                     // TODO: regex to get entity/* path?
-                    var pathMatch = entityPathExp.Match(searchPath);
+                    var pathMatch = EntityPathExp.Match(searchPath);
                     if (pathMatch.Success && pathMatch.Groups.Count == 2) {
                         var entityPath = pathMatch.Groups[1].Value;
                         if (string.Equals(t.Path, $"entity/{entityPath}", StringComparison.InvariantCultureIgnoreCase)) return 2;
@@ -81,7 +86,7 @@ namespace MinecraftMappings.Internal
                 });
         }
 
-        private static bool MatchesPath(string expectedExp, string actualPath)
+        private static bool MatchesPath(string expectedExp, string? actualPath)
         {
             // TODO: find "textures/entity/* 
             return true;
@@ -90,17 +95,17 @@ namespace MinecraftMappings.Internal
         public IEnumerable<TItemVersion> FindItemVersionById<TItemVersion>(string id)
             where TItemVersion : ItemDataVersion, new()
         {
-            return allItemsLazy.Value.OfType<IItemData<TItemVersion>>()
-                .Select(item => item.GetLatestVersion())
-                .Where(latest => latest.Id.Equals(id));
+            return allItemsLazy.Value
+                .OfType<IItemData<TItemVersion>>().Select(item => item.GetLatestVersion())
+                .WhereNotNull(latest => string.Equals(latest.Id, id, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<TEntityTextureVersion> FindEntityTextureVersionById<TEntityTextureVersion>(string id)
             where TEntityTextureVersion : EntityTextureVersion, new()
         {
-            return allEntityTexturesLazy.Value.OfType<IEntityTexture<TEntityTextureVersion>>()
-                .Select(entity => entity.GetLatestVersion())
-                .Where(latest => latest.Id.Equals(id));
+            return allEntityTexturesLazy.Value
+                .OfType<IEntityTexture<TEntityTextureVersion>>().Select(entity => entity.GetLatestVersion())
+                .WhereNotNull(latest => string.Equals(id, latest.Id, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<TEntityVersion> FindEntityModelVersionById<TEntityVersion>(string id)
@@ -108,24 +113,24 @@ namespace MinecraftMappings.Internal
         {
             return allEntityModelsLazy.Value.OfType<IEntityModel<TEntityVersion>>()
                 .Select(entity => entity.GetLatestVersion())
-                .Where(latest => latest != null && latest.Id.Equals(id));
+                .WhereNotNull(latest => string.Equals(latest.Id, id, StringComparison.OrdinalIgnoreCase));
         }
 
         public IEnumerable<TEntityVersion> GetEntitiesByVersion<TEntityVersion>(Version version)
             where TEntityVersion : EntityModelVersion, new()
         {
             return allEntityModelsLazy.Value.OfType<IEntityModel<TEntityVersion>>()
-                .Select(entity => entity.GetVersion(version));
+                .Select(entity => entity.GetVersion(version)).WhereNotNull();
         }
 
         public IEnumerable<BlockModelVersion> FindBlockModelVersionById(string id)
         {
-            return allBlockModelsLazy.Value.OfType<IBlockModel>()
-                .Select(model => model.GetLatestVersion())
-                .Where(latest => latest.Id.Equals(id));
+            return allBlockModelsLazy.Value
+                .OfType<IBlockModel>().Select(model => model.GetLatestVersion())
+                .WhereNotNull(latest => string.Equals(latest.Id, id, StringComparison.OrdinalIgnoreCase));
         }
 
-        public TBlockModel GetBlockModelForTexture<TBlockTextureVersion>(string textureId)
+        public TBlockModel? GetBlockModelForTexture<TBlockTextureVersion>(string? textureId)
             where TBlockTextureVersion : BlockTextureVersion, new()
         {
             if (textureId == null) return default;
@@ -134,10 +139,10 @@ namespace MinecraftMappings.Internal
             var modelType = blockTextures.FirstOrDefault()?.DefaultModel;
             if (modelType == null) return default;
 
-            return (TBlockModel)Activator.CreateInstance(modelType);
+            return (TBlockModel?)Activator.CreateInstance(modelType);
         }
 
-        public TEntityModel GetEntityModelForTexture<TEntityVersion>(string textureId, string path = null)
+        public TEntityModel? GetEntityModelForTexture<TEntityVersion>(string? textureId, string? path = null)
             where TEntityVersion : EntityTextureVersion, new()
         {
             if (textureId == null) return default;
@@ -146,7 +151,7 @@ namespace MinecraftMappings.Internal
             var modelType = entityTextures.FirstOrDefault()?.DefaultModel;
             if (modelType == null) return default;
 
-            return (TEntityModel)Activator.CreateInstance(modelType);
+            return (TEntityModel?)Activator.CreateInstance(modelType);
         }
     }
 }

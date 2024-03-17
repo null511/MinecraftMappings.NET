@@ -10,7 +10,7 @@ namespace MinecraftMappings.Internal.Models.Entity
         //public string Part {get; set;}
         //public bool Attach {get; set;}
         //public float Scale {get; set;}
-        public string Texture;
+        public string? Texture;
         public Vector2 TextureSize;
         public List<EntityElement> Submodels;
 

@@ -1,4 +1,5 @@
-﻿using SharpDX;
+﻿using MinecraftMappings.Internal.Extensions;
+using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,8 @@ namespace MinecraftMappings.Internal.Models.Entity
     public interface IEntityModel<out TEntityVersion> : IEntityModel
         where TEntityVersion : EntityModelVersion, new()
     {
-        TEntityVersion GetLatestVersion();
-        TEntityVersion GetVersion(Version version);
+        TEntityVersion? GetLatestVersion();
+        TEntityVersion? GetVersion(Version version);
     }
 
     public abstract class EntityModel : IEntityModel
@@ -37,7 +38,8 @@ namespace MinecraftMappings.Internal.Models.Entity
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => !t.IsAbstract)
                 .Where(t => typeof(T).IsAssignableFrom(t))
-                .Select(t => (T) Activator.CreateInstance(t));
+                .Select(t => (T?) Activator.CreateInstance(t))
+                .WhereNotNull();
         }
     }
 
@@ -63,13 +65,13 @@ namespace MinecraftMappings.Internal.Models.Entity
             return new EntityVersionBuilder<TVersion>(entityVersion);
         }
 
-        public TVersion GetLatestVersion()
+        public TVersion? GetLatestVersion()
         {
             return Versions.OrderByDescending(v => v.ParsedMinVersion)
                 .FirstOrDefault();
         }
 
-        public TVersion GetVersion(Version version)
+        public TVersion? GetVersion(Version version)
         {
             return Versions.OrderByDescending(e => e.ParsedMinVersion)
                 .FirstOrDefault(e => e.ParsedMinVersion <= version);

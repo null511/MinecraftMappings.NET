@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MinecraftMappings.Internal.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -13,7 +14,7 @@ namespace MinecraftMappings.Internal.Items
     public interface IItemData<out TItemVersion> : IItemData
         where TItemVersion : ItemDataVersion
     {
-        TItemVersion GetLatestVersion();
+        TItemVersion? GetLatestVersion();
     }
 
     public abstract class ItemData : IItemData
@@ -32,7 +33,8 @@ namespace MinecraftMappings.Internal.Items
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => t.IsClass && !t.IsAbstract)
                 .Where(t => typeof(T).IsAssignableFrom(t))
-                .Select(t => (T) Activator.CreateInstance(t));
+                .Select(t => (T?) Activator.CreateInstance(t))
+                .WhereNotNull();
         }
     }
 
@@ -47,13 +49,13 @@ namespace MinecraftMappings.Internal.Items
             Versions = new List<TVersion>();
         }
 
-        public TVersion GetLatestVersion()
+        public TVersion? GetLatestVersion()
         {
             // WARN: temp hack - not actually using version!
             return Versions.FirstOrDefault();
         }
 
-        protected void AddVersion(string id, Action<TVersion> versionAction = null)
+        protected void AddVersion(string id, Action<TVersion>? versionAction = null)
         {
             var version = new TVersion {
                 Id = id,

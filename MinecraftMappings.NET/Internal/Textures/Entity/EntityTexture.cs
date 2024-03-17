@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MinecraftMappings.Internal.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -15,7 +16,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
     {
         int BlendMode {get; set;}
         IEnumerable<TEntityVersion> Versions {get;}
-        TEntityVersion GetLatestVersion();
+        TEntityVersion? GetLatestVersion();
     }
 
     public abstract class EntityTexture : IEntityTexture
@@ -34,7 +35,8 @@ namespace MinecraftMappings.Internal.Textures.Entity
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => t.IsClass && !t.IsAbstract)
                 .Where(t => typeof(T).IsAssignableFrom(t))
-                .Select(t => (T) Activator.CreateInstance(t));
+                .Select(t => (T?) Activator.CreateInstance(t))
+                .WhereNotNull();
         }
     }
 
@@ -53,7 +55,7 @@ namespace MinecraftMappings.Internal.Textures.Entity
             Versions = new List<TVersion>();
         }
 
-        public TVersion GetLatestVersion()
+        public TVersion? GetLatestVersion()
         {
             // WARN: temp hack - not actually using version!
             return Versions.FirstOrDefault();

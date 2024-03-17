@@ -35,7 +35,7 @@ namespace MinecraftMappings.Internal.Models.Block
             return AddElement(null, elementAction);
         }
 
-        public BlockModelVersionBuilder AddElement(string name, Action<ModelElement> elementAction)
+        public BlockModelVersionBuilder AddElement(string? name, Action<ModelElement> elementAction)
         {
             var element = new ModelElement {
                 Name = name,

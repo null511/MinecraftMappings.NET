@@ -6,10 +6,10 @@ namespace MinecraftMappings.Internal.Models.Entity
 {
     public abstract class EntityModelVersion : Versionable
     {
-        public string Id {get; set;}
+        public string? Id {get; set;}
         public Vector2 TextureSize;
 
-        public string Texture {get; set;}
+        public string? Texture {get; set;}
         public List<EntityElement> Elements {get; set;}
         public Dictionary<string, Dictionary<ElementFaces, RectangleF>> UVMap {get; set;}
 

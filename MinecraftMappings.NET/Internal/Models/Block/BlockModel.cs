@@ -1,4 +1,5 @@
-﻿using SharpDX;
+﻿using MinecraftMappings.Internal.Extensions;
+using SharpDX;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace MinecraftMappings.Internal.Models.Block
     public interface IBlockModel
     {
         string Name {get;}
-        BlockModelVersion GetLatestVersion();
+        BlockModelVersion? GetLatestVersion();
         //ModelVersion GetVersion(Version version);
     }
 
@@ -27,7 +28,7 @@ namespace MinecraftMappings.Internal.Models.Block
             Versions = new List<BlockModelVersion>();
         }
 
-        protected BlockModelVersionBuilder AddVersion(string id, string minVersion, string maxVersion = null)
+        protected BlockModelVersionBuilder AddVersion(string id, string minVersion, string? maxVersion = null)
         {
             var modelVersion = new BlockModelVersion {
                 Id = id,
@@ -39,7 +40,7 @@ namespace MinecraftMappings.Internal.Models.Block
             return new BlockModelVersionBuilder(modelVersion);
         }
 
-        public BlockModelVersion GetLatestVersion()
+        public BlockModelVersion? GetLatestVersion()
         {
             return Versions.OrderByDescending(v => v.ParsedMinVersion)
                 .FirstOrDefault();
@@ -54,7 +55,8 @@ namespace MinecraftMappings.Internal.Models.Block
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => !t.IsAbstract)
                 .Where(t => typeof(T).IsAssignableFrom(t))
-                .Select(t => (T) Activator.CreateInstance(t));
+                .Select(t => (T?) Activator.CreateInstance(t))
+                .WhereNotNull();
         }
     }
 }

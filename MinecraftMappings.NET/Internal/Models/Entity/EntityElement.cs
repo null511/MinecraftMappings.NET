@@ -7,8 +7,8 @@ namespace MinecraftMappings.Internal.Models.Entity
     {
         //public string Name;
 
-        public string Id;
-        public string Part;
+        public string? Id;
+        public string? Part;
         public Vector3 Translate;
         public float RotationAngleX;
         public float RotationAngleY;
@@ -24,7 +24,7 @@ namespace MinecraftMappings.Internal.Models.Entity
 
         public List<EntityElementCube> Boxes;
         public List<EntityElement> Submodels;
-        public EntityModelPart Model;
+        public EntityModelPart? Model;
 
         // TODO: Add epsilon check!
         public bool HasRotation => RotationAngleX != 0 || RotationAngleY != 0 || RotationAngleZ != 0;

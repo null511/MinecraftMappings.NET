@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MinecraftMappings.Internal.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -16,7 +17,7 @@ namespace MinecraftMappings.Internal.Textures.Block
         int BlendMode {get; set;}
         IEnumerable<TBlockVersion> Versions {get;}
 
-        TBlockVersion GetLatestVersion();
+        TBlockVersion? GetLatestVersion();
     }
 
     public abstract class BlockTexture : IBlockTexture
@@ -35,7 +36,8 @@ namespace MinecraftMappings.Internal.Textures.Block
             return Assembly.GetExecutingAssembly()
                 .ExportedTypes.Where(t => t.IsClass && !t.IsAbstract)
                 .Where(t => typeof(T).IsAssignableFrom(t))
-                .Select(t => (T) Activator.CreateInstance(t));
+                .Select(t => (T?) Activator.CreateInstance(t))
+                .WhereNotNull();
         }
     }
 
@@ -60,7 +62,7 @@ namespace MinecraftMappings.Internal.Textures.Block
         //    return Versions.FirstOrDefault();
         //}
 
-        public TVersion GetLatestVersion()
+        public TVersion? GetLatestVersion()
         {
             // WARN: temp hack - not actually using version!
             return Versions.FirstOrDefault();
