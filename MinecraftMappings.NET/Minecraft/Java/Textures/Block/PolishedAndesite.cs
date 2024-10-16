@@ -8,8 +8,8 @@ namespace MinecraftMappings.Minecraft.Java.Textures.Block
         {
             AddVersion(1, "polished_andesite")
                 .WithMinVersion("1.8")
-                .WithDefaultModel<Java.Models.Block.Andesite>()
-                .MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StoneAndesite>();
+                .WithDefaultModel<Java.Models.Block.PolishedAndesite>();
+                //.MapsToBedrockBlock<MinecraftMappings.Minecraft.Bedrock.Textures.Block.StoneAndesite>();
         }
     }
 }
